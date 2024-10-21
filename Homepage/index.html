@@ -1,93 +1,131 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="StyleSheet.css" />
   </head>
-  <body>
-    <div class="container">
-      <input type="radio" name="slider" id="item-1" checked />
-      <input type="radio" name="slider" id="item-2" />
-      <input type="radio" name="slider" id="item-3" />
-      <input type="radio" name="slider" id="item-4" />
-      <!-- New radio button -->
 
-      <div class="cards">
-        <label class="card" for="item-1" id="song-1">
-          <img
-            src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80"
-            alt="song"
-          />
-        </label>
-        <label class="card" for="item-2" id="song-2">
-          <img
-            src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80"
-            alt="song"
-          />
-        </label>
-        <label class="card" for="item-3" id="song-3">
-          <img
-            src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
-            alt="song"
-          />
-        </label>
-        <label class="card" for="item-4" id="song-4">
-          <img src="/Homepage/Content/pic1.jpg" alt="song" />
-        </label>
-      </div>
-      <div class="player">
-        <div class="upper-part">
-          <div class="play-icon">
-            <svg
-              width="20"
-              height="20"
-              fill="#2992dc"
-              stroke="#2992dc"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              class="feather feather-play"
-              viewBox="0 0 24 24"
-            >
-              <defs />
-              <path d="M5 3l14 9-14 9V3z" />
-            </svg>
-          </div>
-          <div class="info-area" id="test">
-            <label class="song-info" id="song-info-1">
-              <div class="title">Bunker</div>
-              <div class="sub-line">
-                <div class="subtitle">Balthazar</div>
-                <div class="time">4.05</div>
-              </div>
-            </label>
-            <label class="song-info" id="song-info-2">
-              <div class="title">Words Remain</div>
-              <div class="sub-line">
-                <div class="subtitle">Moderator</div>
-                <div class="time">4.05</div>
-              </div>
-            </label>
-            <label class="song-info" id="song-info-3">
-              <div class="title">Falling Out</div>
-              <div class="sub-line">
-                <div class="subtitle">Otzeki</div>
-                <div class="time">4.05</div>
-              </div>
-            </label>
-          </div>
-        </div>
-        <div class="progress-bar">
-          <span class="progress"></span>
-        </div>
-      </div>
+  <body>
+    <br />
+    <h1 style="text-align: center; font-family: monospace; font-size: 42px">
+      3D Carousel
+    </h1>
+    <br /><br />
+
+    <section id="slider">
+      <input type="radio" name="slider" id="s1" />
+      <input type="radio" name="slider" id="s2" />
+      <input type="radio" name="slider" id="s3" checked />
+      <input type="radio" name="slider" id="s4" />
+      <input type="radio" name="slider" id="s5" />
+
+      <label for="s1" id="slide1">
+        <img
+          src="image/E_WEB_17.png"
+          alt="Image 1"
+          height="100%"
+          width="100%"
+        />
+      </label>
+
+      <label for="s2" id="slide2">
+        <img
+          src="image/E_WEB_11.png"
+          alt="Image 2"
+          height="100%"
+          width="100%"
+        />
+      </label>
+
+      <label for="s3" id="slide3">
+        <img
+          src="image/E_WEB_02.png"
+          alt="Image 3"
+          height="100%"
+          width="100%"
+        />
+      </label>
+
+      <label for="s4" id="slide4">
+        <img
+          src="image/E_WEB_03.png"
+          alt="Image 4"
+          height="100%"
+          width="100%"
+        />
+      </label>
+
+      <label for="s5" id="slide5">
+        <img
+          src="image/E_WEB_01.png"
+          alt="Image 6"
+          height="100%"
+          width="100%"
+        />
+      </label>
+    </section>
+    <br /><br />
+    <div class="card">
+      <h2 class="image-title">SDG 2</h2>
+      <p class="image-description">Description for Image 3</p>
     </div>
-    <script>
-      $("input").on("change", function () {
-        $("body").toggleClass("blue");
-      });
-    </script>
   </body>
+  <script>
+    // Wait until the DOM is fully loaded
+    document.addEventListener("DOMContentLoaded", function () {
+      // Store references to each image's data along with colors and text colors for each SDG
+      const imageData = {
+        s1: {
+          title: "SDG 17",
+          description: "Description for Image 1",
+          color: "#3357FF",
+          textColor: "#FFFFFF",
+        },
+        s2: {
+          title: "SDG 11",
+          description: "Description for Image 2",
+          color: "#ffd133",
+          textColor: "#000000",
+        },
+        s3: {
+          title: "SDG 2",
+          description: "Description for Image 3",
+          color: "#ffa533",
+          textColor: "#FFFFFF",
+        },
+        s4: {
+          title: "SDG 3",
+          description: "Description for Image 4",
+          color: "#33FF57",
+          textColor: "#000000",
+        },
+        s5: {
+          title: "SDG 1",
+          description: "Description for Image 5",
+          color: "#ff0902",
+          textColor: "#FFFFFF",
+        },
+      };
+
+      // Select all radio buttons and card elements
+      const radios = document.querySelectorAll('input[type="radio"]');
+      const imageTitle = document.querySelector(".image-title");
+      const imageDescription = document.querySelector(".image-description");
+      const card = document.querySelector(".card");
+
+      // Add change event listener to update the card
+      radios.forEach((radio) => {
+        radio.addEventListener("change", function () {
+          if (this.checked) {
+            const data = imageData[this.id]; // Get the image data based on radio button ID
+            imageTitle.textContent = data.title; // Update title
+            imageDescription.textContent = data.description; // Update description
+            card.style.backgroundColor = data.color; // Update the card background color
+            card.style.color = data.textColor; // Update the card font color
+          }
+        });
+      });
+    });
+  </script>
 </html>

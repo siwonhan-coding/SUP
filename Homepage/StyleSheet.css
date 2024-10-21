@@ -1,0 +1,133 @@
+﻿* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 20px;
+  background: #eee;
+  user-select: none;
+  background-color: grey;
+}
+[type="radio"] {
+  display: none;
+  cursor: pointer;
+}
+#slider {
+  height: 25vw;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+#slider label {
+  margin: auto;
+  width: 30%;
+  height: 100%;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+/* Left and right image styling */
+#s1:checked ~ #slide4,
+#s2:checked ~ #slide5,
+#s3:checked ~ #slide1,
+#s4:checked ~ #slide2,
+#s5:checked ~ #slide3 {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+  transform: translate3d(-40%, 0, -200px); /* Move farther left */
+}
+
+#s1:checked ~ #slide5,
+#s2:checked ~ #slide1,
+#s3:checked ~ #slide2,
+#s4:checked ~ #slide3,
+#s5:checked ~ #slide4 {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  transform: translate3d(40%, 0, -200px); /* Move farther right */
+}
+
+/* Center (selected) image styling */
+#s1:checked ~ #slide1,
+#s2:checked ~ #slide2,
+#s3:checked ~ #slide3,
+#s4:checked ~ #slide4,
+#s5:checked ~ #slide5 {
+  box-shadow: 0 13px 25px 0 rgba(0, 0, 0, 0.3), 0 11px 7px 0 rgba(0, 0, 0, 0.19);
+  transform: translate3d(0, 0, 0); /* Centered */
+}
+
+/* Left and right images closer to center */
+#s1:checked ~ #slide2,
+#s2:checked ~ #slide3,
+#s3:checked ~ #slide4,
+#s4:checked ~ #slide5,
+#s5:checked ~ #slide1 {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  transform: translate3d(-20%, 0, -100px); /* Closer to center on the left */
+}
+
+#s1:checked ~ #slide3,
+#s2:checked ~ #slide4,
+#s3:checked ~ #slide5,
+#s4:checked ~ #slide1,
+#s5:checked ~ #slide2 {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  transform: translate3d(20%, 0, -100px); /* Closer to center on the right */
+}
+.card {
+  margin: 0 auto;
+  padding: 2em;
+  width: 300px;
+  background: #ffa533;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.card::after,
+.card::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(
+    from var(--angle),
+    #ff4545,
+    #00ff99,
+    #006aff
+  );
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+  animation: 5s spin linear infinite;
+}
+.card::before {
+  filter: blur(1.5rem);
+  opacity: 1;
+}
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
