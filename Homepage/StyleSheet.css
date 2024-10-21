@@ -127,7 +127,8 @@ body {
     from var(--angle),
     #ff4545,
     #00ff99,
-    #006aff
+    #006aff,
+    #ff4545
   );
   top: 50%;
   left: 50%;
@@ -138,7 +139,7 @@ body {
   animation: 5s spin linear infinite;
 }
 .card::before {
-  filter: blur(1.5rem);
+  filter: blur(0.7rem);
   opacity: 1;
 }
 
