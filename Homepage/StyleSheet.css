@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   padding: 20px;
   background: #eee;
@@ -192,6 +193,11 @@ body {
     width: 350px;
     padding: 2.5em;
   }
+  nav ul li a {
+    font-size: 6em; /* Adjust the size as needed */
+    opacity: 1; /* Ensure nav items are visible */
+    pointer-events: auto; /* Ensure nav items are clickable */
+  }
 }
 
 /* Adjusting for small screens */
@@ -275,6 +281,7 @@ nav {
   z-index: 100;
   top: 0;
   bottom: 0;
+  padding: 20px;
 }
 
 nav ul {
@@ -283,7 +290,7 @@ nav ul {
 
 nav ul li {
   margin: 5px;
-  padding: 30px;
+  padding: 20px;
 }
 
 nav ul li a {
@@ -306,7 +313,7 @@ nav ul li a:after {
   bottom: -10px;
   left: 0;
   transform-origin: left;
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
   transform: scaleX(0);
 }
 
@@ -342,7 +349,7 @@ nav .close div::after {
   width: 30px;
   height: 4px;
   background: #fff;
-  transition: background 0.5s ease;
+  transition: background 0.3s ease;
 }
 nav .close div::before {
   transform: rotate(-45deg);
