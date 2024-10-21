@@ -138,37 +138,80 @@ body {
   }
 }
 
-@media (max-width: 500px) {
+/* Media Queries for Mobile Responsiveness */
+
+/* Adjusting for large screens */
+@media (min-width: 1024px) {
   #slider {
-    height: 80vw; /* Increase height for mobile devices */
+    height: 25vw;
   }
+
   body {
-    background-color: #ff6f00;
+    background-color: black;
   }
 
   #slider label {
-    width: 90%; /* Larger images for mobile screens */
+    width: 30%;
   }
 
   .card {
-    width: 80%; /* Scale the card to take up more space on mobile */
-    padding: 1.5em;
+    width: 300px;
+    padding: 2em;
   }
 }
-@media (max-width: 768px) {
+
+/* Adjusting for medium screens */
+@media (min-width: 768px) and (max-width: 1023px) {
   #slider {
-    height: 50vw; /* Increase height for mobile devices */
+    height: 40vw;
+  }
+
+  #slider label {
+    width: 40%;
   }
   body {
     background-color: red;
   }
 
-  #slider label {
-    width: 90%; /* Larger images for mobile screens */
+  .card {
+    width: 250px;
+    padding: 1.5em;
+  }
+}
+
+/* Adjusting for small screens */
+@media (max-width: 767px) {
+  #slider {
+    height: 50vw;
   }
 
+  #slider label {
+    width: 50%;
+  }
+
+  body {
+    background-color: greenyellow;
+  }
   .card {
-    width: 80%; /* Scale the card to take up more space on mobile */
-    padding: 1.5em;
+    width: 200px;
+    padding: 1em;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  #slider {
+    height: 60vw;
+  }
+
+  #slider label {
+    width: 80%;
+  }
+  body {
+    background-color: aqua;
+  }
+  .card {
+    width: 180px;
+    padding: 1em;
   }
 }
