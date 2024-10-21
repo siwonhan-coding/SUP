@@ -11,7 +11,7 @@ body {
   padding: 20px;
   background: #eee;
   user-select: none;
-  background-color: grey;
+  background-color: #333333;
   width: 100%;
   overflow: hidden;
 }
@@ -161,7 +161,7 @@ body {
   }
 
   body {
-    background-color: grey;
+    background-color: #333333;
   }
 
   #slider label {
@@ -185,7 +185,7 @@ body {
     width: 65%;
   }
   body {
-    background-color: red;
+    background-color: #333333;
     padding-top: 20%;
   }
 
@@ -211,7 +211,7 @@ body {
   }
 
   body {
-    background-color: greenyellow;
+    background-color: #333333;
   }
   .card {
     width: 200px;
@@ -229,7 +229,7 @@ body {
     width: 80%;
   }
   body {
-    background-color: aqua;
+    background-color: #333333;
   }
   .card {
     width: 180px;
