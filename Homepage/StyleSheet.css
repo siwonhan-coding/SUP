@@ -138,17 +138,37 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   #slider {
-    height: 1020px; /* Further increase height for mobile */
+    height: 80vw; /* Increase height for mobile devices */
+  }
+  body {
+    background-color: #ff6f00;
   }
 
   #slider label {
-    width: 70%; /* Make images occupy most of the screen width */
+    width: 90%; /* Larger images for mobile screens */
   }
 
   .card {
-    width: 200px; /* Further adjust the card width */
-    padding: 1em; /* Further reduce padding */
+    width: 80%; /* Scale the card to take up more space on mobile */
+    padding: 1.5em;
+  }
+}
+@media (max-width: 768px) {
+  #slider {
+    height: 50vw; /* Increase height for mobile devices */
+  }
+  body {
+    background-color: red;
+  }
+
+  #slider label {
+    width: 90%; /* Larger images for mobile screens */
+  }
+
+  .card {
+    width: 80%; /* Scale the card to take up more space on mobile */
+    padding: 1.5em;
   }
 }
