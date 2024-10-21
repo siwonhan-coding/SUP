@@ -138,29 +138,13 @@ body {
   }
 }
 
-/* Media Queries for Mobile Responsiveness */
-@media (max-width: 768px) {
-  #slider {
-    height: 50vw; /* Increase the height for mobile */
-  }
-
-  #slider label {
-    width: 60%; /* Make images larger */
-  }
-
-  .card {
-    width: 250px; /* Adjust the card width */
-    padding: 1.5em; /* Reduce padding for smaller screens */
-  }
-}
-
 @media (max-width: 480px) {
   #slider {
-    height: 60vw; /* Further increase the height for smaller screens */
+    height: 1020px; /* Further increase height for mobile */
   }
 
   #slider label {
-    width: 80%; /* Make images even larger */
+    width: 70%; /* Make images occupy most of the screen width */
   }
 
   .card {
