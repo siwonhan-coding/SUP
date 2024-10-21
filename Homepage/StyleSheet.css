@@ -163,19 +163,21 @@ body {
 /* Adjusting for medium screens */
 @media (min-width: 768px) and (max-width: 1023px) {
   #slider {
-    height: 40vw;
+    height: 60vw;
+    /* padding-top: 20px; */
   }
 
   #slider label {
-    width: 40%;
+    width: 65%;
   }
   body {
     background-color: red;
+    padding-top: 20%;
   }
 
   .card {
-    width: 250px;
-    padding: 1.5em;
+    width: 350px;
+    padding: 2.5em;
   }
 }
 
@@ -186,7 +188,7 @@ body {
   }
 
   #slider label {
-    width: 50%;
+    width: 70%;
   }
 
   body {
