@@ -154,7 +154,7 @@ body {
   }
 
   body {
-    background-color: black;
+    background-color: grey;
   }
 
   #slider label {
@@ -223,4 +223,142 @@ body {
     width: 180px;
     padding: 1em;
   }
+}
+
+.container {
+  cursor: pointer;
+  top: 5%;
+  right: 5%;
+  width: 30px;
+  height: 20px;
+  z-index: 100; /* Ensure it's clickable */
+}
+
+.bars {
+  width: 30px;
+  height: 4px;
+  background: #000;
+}
+
+.bars::before,
+.bars::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background: #000;
+}
+
+.bars::before {
+  margin-top: 9px;
+}
+
+.bars::after {
+  margin-top: 18px;
+}
+
+nav {
+  position: fixed; /* Change to fixed or keep as absolute depending on your layout */
+  width: 100%;
+  height: 30px;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.8
+  ); /* Add a semi-transparent background for better visibility */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0; /* Keep it aligned to the right */
+  z-index: 100; /* Ensure the nav is on top */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0; /* Add padding to align */
+  margin: 0; /* Reset margin */
+}
+
+nav ul li {
+  margin: 50px 0; /* Adjust margin as needed */
+}
+
+nav ul li a {
+  color: #fafafa;
+  font-size: 2em;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  opacity: 0; /* Ensure it fades in */
+  pointer-events: none; /* Ensure it doesn't interfere with clicks */
+  z-index: 100; /* Keep links on top */
+}
+
+nav ul li a:after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 3px;
+  border-radius: 5px;
+  background: #fff;
+  bottom: -10px;
+  left: 0;
+  transform-origin: left;
+  transition: transform 0.5s ease;
+  transform: scaleX(0);
+}
+
+nav ul li a:hover:after {
+  transform: scaleX(1);
+}
+
+nav .close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 6%;
+  right: 5%;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none; /* Disable clicks until visible */
+}
+
+nav h2 {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  opacity: 0;
+  pointer-events: none;
+  color: #fff;
+  font-size: 2em;
+}
+
+/* Other Navigation Elements */
+nav .close div::before,
+nav .close div::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  transition: background 0.5s ease;
+}
+
+nav .close div::before {
+  transform: rotate(-45deg);
+}
+
+nav .close div::after {
+  transform: rotate(45deg);
+}
+
+nav .close:hover div::before,
+nav .close:hover div::after {
+  background: rgb(209, 3, 3);
+}
+
+/* Ensure the carousel images have a lower z-index */
+#slider label {
+  z-index: 1; /* Lower than the navigation */
 }
