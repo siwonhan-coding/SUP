@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0; /* Global padding reset */
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 60%;
+  overflow-x: hidden;
+}
+
+:root {
+  --bg-color: #F2DAD0;
+  --second-bg-color: #001005;
+  --text-color: white;
+  --main-color: #3a393b;
+  --about-me-color: white;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+h4 {
+  font-size: 3em;
+  padding: 10px; /* Set to 10px for consistency */
+  line-height: 1.2; /* Adjust the line-height for better vertical alignment */
+}
+
+.logo {
+  font-size: 3rem;
+  color: var(--text-color);
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 12%;
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.animated-text {
+  display: inline-block;
+  width: 100%;
+  font-size: 3em; /* Match font size with h4 */
+  line-height: 1.2; /* Adjust the line-height */
+  height: 1em; /* Adjust height based on the text size */
+  white-space: nowrap;
+  margin: 0; /* Remove margin */
+  padding: 10px; /* Set padding to 10px for consistency */
+  overflow: hidden;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+.heading {
+  text-align: left;
+  font-size: 4em;
+  margin: 20px;
+}
+
+.skills {
+  background-color: var(--bg-color);
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr; /* One column layout */
+  grid-template-rows: repeat(auto-fit, minmax(100px, auto)); /* Stack items vertically */
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.skill-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  height: 300px;
+  border-radius: 3rem;
+  cursor: pointer;
+  border: 5px solid transparent;
+  transition: 0.4s ease-in-out;
+}
+
+.skill-box:hover {
+  background-color: var(--second-bg-color);
+  color: var(--main-color);
+  border: 5px solid var(--main-color);
+  transform: scale(1.03);
+}
+
+.skill-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  padding: 5rem;
+}
+
+.skill-info i {
+  font-size: 8rem;
+}
+
+.skill-info h4 {
+  margin: 2rem 0;
+  font-weight: 800;
+}
+
+.skill-info ul {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.skill-info li {
+  text-align: left;
+}
+
+.footer {
+  background-color: var(--bg-color);
+  padding: 10px 0;
+  margin-top: 10px;
+}
+
+.footer .social-icons {
+  text-align: center;
+}
+
+footer ul {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.footer ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.footer ul li a {
+  color: white;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease-in-out;
+}
+
+.footer ul li a:hover {
+  border-bottom: 3px solid var(--main-color);  
+}
+
+.footer .copyright {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 16px;
+}
+
+@media(max-width: 1024px) {
+  #menu-icon {
+      display: block;
+  }
+
+  .navbar {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 50%;
+      padding: 1rem 3rem;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-left: 2px solid var(--main-color);
+      border-bottom: 2px solid var(--main-color);
+      border-bottom-left-radius: 2rem;
+      display: none;
+  }
+
+  .navbar a {
+      display: block;
+      font-size: 2rem;
+      margin: 3rem 0;
+      color: white;
+  }
+
+  .navbar.active {
+      display: block;
+  }
+
+  .home {
+      flex-direction: column-reverse;
+      margin: 5rem 0;
+      gap: 5rem;
+  }
+
+  .home-content {
+      align-items: center;
+      text-align: center;
+  }
+
+  .home-img img {
+      width: 52vw;
+  }
+
+  .about {
+      flex-direction: column-reverse;
+      text-align: center;
+  }
+
+  .about h2 {
+      text-align: center;
+      margin: 2rem 0;
+  }
+
+  .about img {
+      width: 52vw;
+  }
+
+  .contact form {
+      flex-direction: column;
+  }
+}
