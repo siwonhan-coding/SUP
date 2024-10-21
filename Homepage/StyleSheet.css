@@ -283,6 +283,7 @@ nav ul {
 
 nav ul li {
   margin: 5px;
+  padding: 20px;
 }
 
 nav ul li a {
@@ -293,7 +294,6 @@ nav ul li a {
   position: relative;
   opacity: 0;
   pointer-events: none;
-  text-shadow: 3px 3px 3px white;
 }
 
 nav ul li a:after {
