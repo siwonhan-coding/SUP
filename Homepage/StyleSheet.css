@@ -13,7 +13,7 @@ body {
   user-select: none;
   background-color: #333333;
   width: 100%;
-  overflow: hidden;
+
 }
 
 /* Hide radio buttons */
@@ -142,6 +142,23 @@ body {
 .card::before {
   filter: blur(1.5rem); /* Similar blur */
   opacity: 0.5; /* Matching the opacity */
+}
+main {
+  color:white;
+  text-align: right; /* Aligns text to the right */
+  padding: 8vh 10vw 0 10vw;
+  min-height: vh; /* Adjust the minimum height for better spacing */
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(20px); /* Start hidden elements slightly below */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth fade and slide-in */
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0); /* Smooth slide-in effect */
 }
 
 /* Spin animation keyframe */

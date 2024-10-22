@@ -87,3 +87,19 @@ document.addEventListener("DOMContentLoaded", function () {
     tl.reverse(); // Reverse animation
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const hiddenElements = document.querySelectorAll('.hidden'); // Ensure 'hidden' elements are selected properly
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show'); // Add 'show' class when the element is in view
+      } else {
+        entry.target.classList.remove('show'); // Remove 'show' class when out of view
+      }
+    });
+  });
+
+  hiddenElements.forEach((el) => observer.observe(el)); // Apply observer to each hidden element
+});
