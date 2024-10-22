@@ -145,20 +145,34 @@ body {
 }
 main {
   color:white;
+  font-size: 2em;
+  padding: 10vh 10vw 0vh 10vw;
   text-align: right; /* Aligns text to the right */
-  padding: 8vh 10vw 0 10vw;
-  min-height: vh; /* Adjust the minimum height for better spacing */
+  min-height: 10vh; /* Adjust the minimum height for better spacing */
+}
+main h1{
+  padding-top: 10vh;
 }
 
 .hidden {
   opacity: 0;
-  transform: translateY(20px); /* Start hidden elements slightly below */
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth fade and slide-in */
+  transform: translateX(-100%); /* Start hidden elements slightly below */
+  transition: all 1s; /* Smooth fade and slide-in */
 }
 
 .show {
   opacity: 1;
+  filter:blur(0);
   transform: translateY(0); /* Smooth slide-in effect */
+}
+main p {
+  font-size: 1em; /* Smaller size for paragraphs */
+}
+@media(prefers-reduces-motion)
+{
+  .hidden{
+    transition:none;
+  }
 }
 
 /* Spin animation keyframe */
