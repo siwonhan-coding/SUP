@@ -396,3 +396,19 @@ nav .close:hover div::before,
 nav .close:hover div::after {
   background: rgb(209, 3, 3);
 }
+p {
+  font-size: 5rem;
+}
+main {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.right,
+.right2 {
+  margin-top: 40px;
+  text-align: end;
+}
+.left {
+  margin-top: 40px;
+}
