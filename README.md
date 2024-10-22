@@ -1,2 +1,2 @@
 # SUP
-[View index.html](../Homepage/index.html)
+[Link to Live Page](https://your-username.github.io/your-repo-name/your-file.html)
