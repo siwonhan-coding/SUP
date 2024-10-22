@@ -122,7 +122,7 @@ body {
   content: "";
   position: absolute;
   height: 110%;
-  width: 106%;
+  width: 105%;
   background-image: conic-gradient(
     from var(--angle),
     #ff4545,
