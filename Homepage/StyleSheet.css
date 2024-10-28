@@ -13,7 +13,6 @@ body {
   user-select: none;
   background-color: #333333;
   width: 100%;
-
 }
 
 /* Hide radio buttons */
@@ -144,13 +143,13 @@ body {
   opacity: 0.5; /* Matching the opacity */
 }
 main {
-  color:white;
+  color: white;
   font-size: 2em;
   padding: 10vh 10vw 0vh 10vw;
   text-align: right; /* Aligns text to the right */
   min-height: 10vh; /* Adjust the minimum height for better spacing */
 }
-main h1{
+main h1 {
   padding-top: 10vh;
 }
 
@@ -162,16 +161,15 @@ main h1{
 
 .show {
   opacity: 1;
-  filter:blur(0);
+  filter: blur(0);
   transform: translateY(0); /* Smooth slide-in effect */
 }
 main p {
   font-size: 1em; /* Smaller size for paragraphs */
 }
-@media(prefers-reduces-motion)
-{
-  .hidden{
-    transition:none;
+@media (prefers-reduces-motion) {
+  .hidden {
+    transition: none;
   }
 }
 
@@ -282,7 +280,7 @@ main p {
 .bars {
   width: 30px;
   height: 4px;
-  background: #000;
+  background: white;
 }
 
 .bars::before,
@@ -291,7 +289,7 @@ main p {
   position: absolute;
   width: 30px;
   height: 4px;
-  background: #000;
+  background: white;
 }
 
 .bars::before {

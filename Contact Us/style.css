@@ -286,7 +286,7 @@ footer ul {
 .bars {
   width: 30px;
   height: 4px;
-  background: #000;
+  background: white;
 }
 
 .bars::before,
@@ -295,7 +295,7 @@ footer ul {
   position: absolute;
   width: 30px;
   height: 4px;
-  background: #000;
+  background: white;
 }
 
 .bars::before {
