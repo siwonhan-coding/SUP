@@ -400,13 +400,18 @@ nav .close:hover div::before,
 nav .close:hover div::after {
   background: rgb(209, 3, 3);
 }
+a:focus,
+a:hover {
+  color: white;
+  text-decoration: none;
+}
 /* Animation 1 */
 #textSlider.row {
   margin-top: 20vh;
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-75%, -50%);
   width: 100% !important;
 }
 #textSlider div {
@@ -475,6 +480,7 @@ nav .close:hover div::after {
   #textSlider.row {
     margin-right: 0px !important;
     margin-left: 0px !important;
+    transform: translate(-50%, -50%);
   }
   .iamCol {
     text-align: center;
@@ -484,9 +490,19 @@ nav .close:hover div::after {
     display: inline !important;
   }
   .slideCol {
-    font-size: 25pt;
+    font-size: 20pt;
     text-align: center;
     margin-top: -20px;
+  }
+  h1#page-logo {
+    transform: translate(-50%, -50%);
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+  }
+  h2#page2-logo {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    text-align: center;
   }
 }
 
@@ -565,17 +581,17 @@ nav .close:hover div::after {
 
   h1#page-logo {
     font: bold 6rem "Arial", sans-serif;
-
+    text-align: end;
     animation: clip-path-reveal-1 3s ease infinite alternate;
   }
   h2#page2-logo {
     font: bold 6rem "Arial", sans-serif;
-
-    animation: clip-path-reveal-1 6s ease infinite alternate;
+    text-align: end;
+    animation: clip-path-reveal-1 3s ease infinite alternate;
   }
 }
 
-@keyframes line-animation {
+/* @keyframes line-animation {
   0% {
     transform: scaleX(0);
   }
@@ -585,7 +601,7 @@ nav .close:hover div::after {
   20%,
   25% {
     transform: scaleX(1);
-    top: calc(100% - 2px);
+    top: calc(100% - 20px);
   }
   50% {
     transform: scaleX(1);
@@ -600,7 +616,7 @@ nav .close:hover div::after {
     transform: scaleX(0.2);
     top: 0px;
   }
-}
+} */
 
 @keyframes clip-path-reveal-1 {
   0%,
@@ -610,4 +626,60 @@ nav .close:hover div::after {
   50% {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
+}
+
+/* Animation 3 */
+.content {
+  width: 100%;
+  max-width: 60ch;
+  margin: 0;
+  padding-top: 3rem;
+}
+
+.marquee {
+  position: relative;
+  width: 100%;
+  height: 1.5em;
+  font-size: 5em;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.marquee_text {
+  position: absolute;
+  min-width: 100%;
+  white-space: nowrap;
+  animation: marquee 30s infinite linear;
+}
+
+@keyframes marquee {
+  from {
+    translate: 70%;
+  }
+  to {
+    translate: -70%;
+  }
+}
+
+.marquee_blur {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background-color: black;
+  background-image: linear-gradient(to right, white, 1rem, transparent 50%),
+    linear-gradient(to left, white, 1rem, transparent 50%);
+  filter: contrast(15);
+}
+
+.marquee_blur p {
+  filter: blur(0.07em);
+}
+
+.marquee_clear {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
 }
