@@ -301,7 +301,11 @@ footer ul {
 .bars::before {
   margin-top: 9px;
 }
-
+a:focus,
+a:hover {
+  color: white;
+  text-decoration: none;
+}
 .bars::after {
   margin-top: 18px;
 }
