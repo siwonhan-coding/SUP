@@ -400,6 +400,11 @@ nav .close:hover div::before,
 nav .close:hover div::after {
   background: rgb(209, 3, 3);
 }
+a:focus,
+a:hover {
+  color: white;
+  text-decoration: none;
+}
 /* Animation 1 */
 #textSlider.row {
   margin-top: 20vh;
