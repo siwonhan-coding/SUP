@@ -10,7 +10,8 @@
 body {
   padding: 20px;
   /* user-select: none; */
-  background-color: #fdfdfd;
+  /* background-color: black; */
+  background-color: wheat;
   width: 100%;
 }
 h1 {
@@ -139,6 +140,7 @@ h1 {
   align-items: center;
   justify-content: center;
   color: #fff;
+
   font-size: 0px;
   width: 280px;
   height: 270px;
@@ -181,8 +183,11 @@ h1 {
 }
 
 .carousel__item[data-pos="-1"],
-.carousel__item[data-pos="1"] {
-  box-shadow: inset;
+.carousel__item[data-pos="1"],
+.carousel__item[data-pos="-2"],
+.carousel__item[data-pos="2"],
+.carousel__item[data-pos="0"] {
+  box-shadow: 0 20px 50px 7px rgba(0, 0, 0);
 }
 
 .carousel__item[data-pos="-1"] {
@@ -193,11 +198,6 @@ h1 {
 .carousel__item[data-pos="1"] {
   transform: translateX(40%) scale(0.9);
   z-index: 4;
-}
-
-.carousel__item[data-pos="-2"],
-.carousel__item[data-pos="2"] {
-  box-shadow: inset;
 }
 
 .carousel__item[data-pos="-2"] {
@@ -246,10 +246,10 @@ h1 {
   width: 105%;
   background-image: conic-gradient(
     from var(--angle),
-    #ff6961,
-    #ffd347,
-    #fdfd96,
-    #ffffff,
+    #fa1004,
+    #fd06d4,
+    #2206fd,
+    #a603fe,
     #1982c4
   );
   top: 50%;
@@ -265,7 +265,7 @@ h1 {
   opacity: 0.5; /* Matching the opacity */
 }
 main {
-  color: white;
+  color: black;
   font-size: 2em;
   padding: 10vh 10vw 0vh 10vw;
   text-align: right; /* Aligns text to the right */
@@ -308,13 +308,13 @@ main p {
 /* Media Queries for Mobile Responsiveness */
 
 /* Adjusting for large screens */
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   #slider {
     height: 25vw;
   }
 
   body {
-    background-color: white;
+    background-color: black;
   }
 
   #slider label {
@@ -325,7 +325,7 @@ main p {
     width: 300px;
     padding: 2em;
   }
-}
+} */
 
 /* Adjusting for medium screens */
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -338,7 +338,7 @@ main p {
     width: 65%;
   }
   body {
-    background-color: white;
+    background-color: #e9dcc9;
     padding-top: 20%;
   }
 
@@ -545,7 +545,7 @@ nav .close:hover div::after {
   max-height: 5rem;
   display: block;
   margin: 0 auto;
-  fill: white;
+  fill: black;
 }
 
 .wrapper {
@@ -564,7 +564,7 @@ nav .close:hover div::after {
   float: left;
   margin: 0.5rem 1rem 0.5rem 0;
   color: #353c4a;
-  border: 0.125rem solid #f3f3f3;
+  border: 0.2rem solid black;
   box-shadow: 0 0 8px 0 rgba(50, 50, 50, 0.15);
   border-radius: 50%;
   transition: 250ms;

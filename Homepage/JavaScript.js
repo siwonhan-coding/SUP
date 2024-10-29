@@ -1,59 +1,59 @@
 ﻿// Wait until the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
-  // Store references to each image's data along with colors and text colors for each SDG
+  // Store references to each image's data with colors and text colors for each SDG
   const imageData = {
-    s1: {
-      title: "SDG 17",
-      description: "Description for Image 1",
-      color: "#3357FF",
-      textColor: "#FFFFFF",
-    },
-    s2: {
+    1: {
       title: "SDG 11",
-      description: "Description for Image 2",
+      description: "Description for Image 1",
       color: "#ffd133",
       textColor: "#000000",
     },
-    s3: {
-      title: "SDG 2",
-      description: "Description for Image 3",
-      color: "#ffa533",
-      textColor: "#FFFFFF",
-    },
-    s4: {
+    2: {
       title: "SDG 3",
-      description: "Description for Image 4",
+      description: "Description for Image 2",
       color: "#33FF57",
       textColor: "#000000",
     },
-    s5: {
+    3: {
+      title: "SDG 2",
+      description: "Description for Image 3",
+      color: "#ffa533",
+      textColor: "#000000",
+    },
+    4: {
       title: "SDG 1",
+      description: "Description for Image 4",
+      color: "#fb4640",
+      textColor: "#000000",
+    },
+    5: {
+      title: "SDG 17",
       description: "Description for Image 5",
-      color: "#ff0902",
-      textColor: "#FFFFFF",
+      color: "  #2ba0ff",
+      textColor: "#000000",
     },
   };
 
-  // Select all radio buttons and card elements
-  const radios = document.querySelectorAll('input[type="radio"]');
+  // Select all carousel items and card elements
+  const carouselItems = document.querySelectorAll(".carousel__item");
   const imageTitle = document.querySelector(".image-title");
   const imageDescription = document.querySelector(".image-description");
   const card = document.querySelector(".card");
 
-  // Add change event listener to update the card
-  radios.forEach((radio) => {
-    radio.addEventListener("change", function () {
-      if (this.checked) {
-        const data = imageData[this.id]; // Get the image data based on radio button ID
-        imageTitle.textContent = data.title; // Update title
-        imageDescription.textContent = data.description; // Update description
-        card.style.backgroundColor = data.color; // Update the card background color
-        card.style.color = data.textColor; // Update the card font color
-      }
+  // Add click event listener to each carousel item
+  carouselItems.forEach((item, index) => {
+    item.addEventListener("click", function () {
+      const dataId = index + 1; // Get data based on item index (1-5)
+      const data = imageData[dataId]; // Get image data
+
+      // Update card with selected data
+      imageTitle.textContent = data.title;
+      imageDescription.textContent = data.description;
+      card.style.backgroundColor = data.color;
+      card.style.color = data.textColor;
     });
   });
 });
-
 document.addEventListener("DOMContentLoaded", function () {
   const open = document.querySelector(".container");
   const close = document.querySelector(".close");
