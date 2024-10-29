@@ -683,3 +683,13 @@ a:hover {
   display: grid;
   place-items: center;
 }
+#typed-text {
+  font-size: 4em; /* Adjust to your preference */
+}
+
+/* Smaller font size on small screens */
+@media (max-width: 600px) {
+  #typed-text {
+    font-size: 1.5em; /* Adjust for smaller screens */
+  }
+}
