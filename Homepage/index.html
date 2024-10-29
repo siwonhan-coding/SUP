@@ -5,7 +5,6 @@
     <title>Homepage</title>
     <link rel="stylesheet" href="StyleSheet.css" />
   </head>
-
   <body>
     <h1>#FoodForAll</h1>
     <div class="container">
@@ -111,7 +110,9 @@
         In Simcoe Muskoka it is a serious public health problem
       </h3>
     </main>
-    <footer>
+    <div class="footer">
+      <div class="bubbles"></div>
+      <div class="content">
       <svg class="svg--source" width="0" height="0" aria-hidden="true">
         <symbol id="svg--instagram" viewBox="0 0 24 24">
           <path
@@ -132,7 +133,7 @@
           />
         </symbol>
       </svg>
-
+<!-- for the social links  -->
       <div class="wrapper">
         <div class="connect">
           <a href="" class="share instagram">
@@ -144,18 +145,35 @@
 
           <a href="" rel="author" class="share linkedin">
             <svg role="presentation" class="svg--icon">
-              <use xlink:href="#svg--linkedin" />
-              <span class="clip">Linkedin</span>
+                <use xlink:href="#svg--linkedin"></use>
             </svg>
-          </a>
-
-          <a href="" class="share youtube">
+            <span class="clip">Linkedin</span>
+        </a>
+        
+        <a href="" class="share youtube">
             <svg role="presentation" class="svg--icon">
-              <use xlink:href="#svg--youtube" />
-              <span class="clip">YOU-TUBE</span>
+                <use xlink:href="#svg--youtube"></use>
             </svg>
-          </a>
+            <span class="clip">YOU-TUBE</span>
+        </a>
         </div>
+  </div>
+  <div class="navLinks">
+  <ul>
+    <li><a href="../Homepage/index.html">Home</a></li>
+    <li><a href="../About Page/index.html" target="_blank">About</a></li>
+    <li><a href="../Contact Us/index.html" target="_blank">Contact</a></li>
+  </ul>
+</div>
+  <!-- for the bubble shape -->
+  <svg style="position: fixed; top: 100vh;">
+      <defs>
+          <filter id="blob">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="blob" />
+          </filter>
+      </defs>
+  </svg>
       </div>
     </footer>
   </body>
