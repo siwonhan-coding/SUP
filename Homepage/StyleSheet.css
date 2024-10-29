@@ -9,16 +9,15 @@
 
 body {
   padding: 20px;
-  /* user-select: none; */
-  /* background-color: black; */
   background-color: wheat;
   width: 100%;
 }
 h1 {
-  text-align: start;
+  text-align: center;
   color: #fd4d4f;
   font-size: 3em;
   font-weight: bolder;
+  z-index: 300;
 }
 
 /* [type="radio"] {
@@ -114,7 +113,7 @@ h1 {
   width: 300px;
   background: #ffa533;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 25px;
   position: relative;
 }
 .carousel {
@@ -122,7 +121,6 @@ h1 {
   width: 100%;
   height: 100%;
   align-items: center;
-  font-family: Arial;
 }
 
 .carousel__list {
@@ -209,9 +207,9 @@ h1 {
   transform: translateX(70%) scale(0.8);
   z-index: 3;
 }
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .carousel__item {
-    width: 180px;
+    width: 200px;
     height: 170px;
   }
 
@@ -230,7 +228,7 @@ h1 {
   .carousel__item[data-pos="2"] {
     transform: translateX(50%) scale(0.7);
   }
-}
+} */
 /* Adding animation for the card background */
 @property --angle {
   syntax: "<angle>";
@@ -243,7 +241,7 @@ h1 {
   content: "";
   position: absolute;
   height: 110%;
-  width: 105%;
+  width: 104%;
   background-image: conic-gradient(
     from var(--angle),
     #fa1004,
@@ -257,10 +255,11 @@ h1 {
   translate: -50% -50%;
   z-index: -1;
   padding: 3px;
-  border-radius: 10px;
+  border-radius: 30px;
   animation: 3s spin linear infinite; /* Matching the second animation */
 }
 .card::before {
+  border-radius: 30px;
   filter: blur(1.5rem); /* Similar blur */
   opacity: 0.5; /* Matching the opacity */
 }
@@ -329,27 +328,48 @@ main p {
 
 /* Adjusting for medium screens */
 @media (min-width: 768px) and (max-width: 1023px) {
-  #slider {
-    height: 60vw;
-    /* padding-top: 20px; */
-  }
-
-  #slider label {
-    width: 65%;
-  }
   body {
     background-color: #e9dcc9;
     padding-top: 20%;
+    margin: 0;
   }
 
   .card {
-    width: 350px;
-    padding: 2.5em;
+    width: 500px;
+    font-size: 2em;
+    margin-top: 30%;
   }
   nav ul li a {
-    font-size: 6em; /* Adjust the size as needed */
+    font-size: 3em; /* Adjust the size as needed */
     opacity: 1; /* Ensure nav items are visible */
     pointer-events: auto; /* Ensure nav items are clickable */
+  }
+  .carousel__item {
+    width: 530px;
+    height: 500px;
+  }
+
+  .carousel__item[data-pos="-1"] {
+    transform: translateX(-30%) scale(0.8);
+  }
+
+  .carousel__item[data-pos="1"] {
+    transform: translateX(30%) scale(0.8);
+  }
+
+  .carousel__item[data-pos="-2"] {
+    transform: translateX(-50%) scale(0.7);
+  }
+
+  .carousel__item[data-pos="2"] {
+    transform: translateX(50%) scale(0.7);
+  }
+  h1 {
+    margin-top: -10%;
+    font-size: 4em;
+    text-align: center;
+    z-index: 300000;
+    /* position: sticky; */
   }
 }
 
@@ -367,7 +387,7 @@ main p {
     background-color: white;
   }
   .card {
-    width: 200px;
+    width: 280px;
     padding: 1em;
   }
 }
@@ -519,9 +539,7 @@ nav .close:hover div::after {
 }
 
 /* Ensure the carousel images have a lower z-index */
-#slider label {
-  z-index: 1; /* Lower than the navigation */
-}
+
 /* Footer icons */
 .clip {
   border: 0;
