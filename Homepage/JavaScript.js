@@ -62,17 +62,17 @@ document.addEventListener("DOMContentLoaded", function () {
   var tl = gsap.timeline({
     paused: true,
     reversed: true,
-    defaults: { duration: 1, ease: "expo.inOut" },
+    defaults: { duration: 0.5, ease: "expo.inOut" },
   });
 
   tl.to("nav", { right: 0 }) // Move nav into view
     .to("nav", { height: "100vh" }, "-=0.1") // Expand to full height
     .to(
       "nav ul li a",
-      { opacity: 1, pointerEvents: "all", stagger: 0.2 }, // Show menu items
+      { opacity: 1, pointerEvents: "all", stagger: 0.5 }, // Show menu items
       "-=0.8"
     )
-    .to(".close", { opacity: 1, pointerEvents: "all" }, "-=0.8") // Show close button
+    .to(".close", { opacity: 1, pointerEvents: "all" }, "-=0.2") // Show close button
     .to("nav h2", { opacity: 1 }, "-=1"); // Show heading
 
   // Open button click event
@@ -89,17 +89,60 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const hiddenElements = document.querySelectorAll('.hidden'); // Ensure 'hidden' elements are selected properly
-  
+  const hiddenElements = document.querySelectorAll(".hidden"); // Ensure 'hidden' elements are selected properly
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('show'); // Add 'show' class when the element is in view
+        entry.target.classList.add("show"); // Add 'show' class when the element is in view
       } else {
-        entry.target.classList.remove('show'); // Remove 'show' class when out of view
+        entry.target.classList.remove("show"); // Remove 'show' class when out of view
       }
     });
   });
 
   hiddenElements.forEach((el) => observer.observe(el)); // Apply observer to each hidden element
 });
+const state = {};
+const carouselList = document.querySelector(".carousel__list");
+const carouselItems = document.querySelectorAll(".carousel__item");
+const elems = Array.from(carouselItems);
+
+carouselList.addEventListener("click", function (event) {
+  var newActive = event.target;
+  var isItem = newActive.closest(".carousel__item");
+
+  if (!isItem || newActive.classList.contains("carousel__item_active")) {
+    return;
+  }
+
+  update(newActive);
+});
+
+const update = function (newActive) {
+  const newActivePos = newActive.dataset.pos;
+
+  const current = elems.find((elem) => elem.dataset.pos == 0);
+  const prev = elems.find((elem) => elem.dataset.pos == -1);
+  const next = elems.find((elem) => elem.dataset.pos == 1);
+  const first = elems.find((elem) => elem.dataset.pos == -2);
+  const last = elems.find((elem) => elem.dataset.pos == 2);
+
+  current.classList.remove("carousel__item_active");
+
+  [current, prev, next, first, last].forEach((item) => {
+    var itemPos = item.dataset.pos;
+
+    item.dataset.pos = getPos(itemPos, newActivePos);
+  });
+};
+
+const getPos = function (current, active) {
+  const diff = current - active;
+
+  if (Math.abs(current - active) > 2) {
+    return -current;
+  }
+
+  return diff;
+};

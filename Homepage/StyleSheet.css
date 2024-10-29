@@ -9,26 +9,21 @@
 
 body {
   padding: 20px;
-  user-select: none;
-  background-color: #333333;
+  /* user-select: none; */
+  background-color: #fdfdfd;
   width: 100%;
 }
-img {
-  height: 100%;
-  width: 100%;
-  overflow-clip-margin: content-box;
-  overflow: clip;
+h1 {
+  text-align: start;
+  color: #fd4d4f;
+  font-size: 3em;
+  font-weight: bolder;
 }
 
-[type="radio"] {
+/* [type="radio"] {
   display: none;
 }
-.slider-wrapper {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-/* Main slider container */
+
 #slider {
   height: 25vw;
   position: relative;
@@ -39,10 +34,9 @@ img {
   overflow: hidden;
 }
 
-/* Styling for slider labels (cards) */
+
 #slider label {
   margin: auto;
-  width: 30%;
   height: 100%;
   border-radius: 4px;
   position: absolute;
@@ -54,16 +48,16 @@ img {
   -webkit-transition: -webkit-transform 0.4s ease;
 }
 
-/* Left and right image styling */
+
 #s1:checked ~ #slide4,
 #s2:checked ~ #slide5,
 #s3:checked ~ #slide1,
 #s4:checked ~ #slide2,
 #s5:checked ~ #slide3 {
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+  box-shadow: 6px 1px 4px 10px rgba(0, 0, 0, 0.37);
   -moz-transform: translate3d(-40%, 0, -200px);
   -webkit-transform: translate3d(-40%, 0, -200px);
-  transform: translate3d(-40%, 0, -200px); /* Move farther left */
+  transform: translate3d(-40%, 0, -200px);
 }
 
 #s1:checked ~ #slide5,
@@ -71,33 +65,35 @@ img {
 #s3:checked ~ #slide2,
 #s4:checked ~ #slide3,
 #s5:checked ~ #slide4 {
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
-  transform: translate3d(40%, 0, -200px); /* Move farther right */
+  box-shadow: 6px 6px 10px 10px rgba(0, 0, 0, 0.3),
+    6px 2px 2px 10px rgba(0, 0, 0, 0.2);
+  transform: translate3d(40%, 0, -200px);
   -moz-transform: translate3d(40%, 0, -200px);
   -webkit-transform: translate3d(40%, 0, -200px);
 }
 
-/* Center (selected) image styling */
+
 #s1:checked ~ #slide1,
 #s2:checked ~ #slide2,
 #s3:checked ~ #slide3,
 #s4:checked ~ #slide4,
 #s5:checked ~ #slide5 {
-  box-shadow: 0 13px 25px 0 rgba(0, 0, 0, 0.3), 0 11px 7px 0 rgba(0, 0, 0, 0.19);
-  transform: translate3d(0, 0, 0); /* Centered */
+  box-shadow: 6px 13px 25px 10px rgba(0, 0, 0, 0.3),
+    6px 11px 7px 10px rgba(0, 0, 0, 0.2);
+  transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
-  z-index: 2;
+  z-index: 200;
 }
 
-/* Left and right images closer to center */
 #s1:checked ~ #slide2,
 #s2:checked ~ #slide3,
 #s3:checked ~ #slide4,
 #s4:checked ~ #slide5,
 #s5:checked ~ #slide1 {
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
-  transform: translate3d(-20%, 0, -100px); /* Closer to center on the left */
+  box-shadow: 6px 6px 10px 10px rgba(0, 0, 0, 0.3),
+    6px 2px 2px 10px rgba(0, 0, 0, 0.2);
+  transform: translate3d(-20%, 0, -100px);
   -moz-transform: translate3d(-20%, 0, -100px);
   -webkit-transform: translate3d(-20%, 0, -100px);
 }
@@ -107,11 +103,10 @@ img {
 #s3:checked ~ #slide5,
 #s4:checked ~ #slide1,
 #s5:checked ~ #slide2 {
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
-  transform: translate3d(20%, 0, -100px); /* Closer to center on the right */
+  box-shadow: 0 6px 10px 10px rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  transform: translate3d(20%, 0, -100px);
   -moz-transform: translate3d(20%, 0, -100px);
-}
-/* Styling for card element */
+} */
 .card {
   margin: 0 auto;
   padding: 2em;
@@ -121,7 +116,121 @@ img {
   border-radius: 10px;
   position: relative;
 }
+.carousel {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  font-family: Arial;
+}
 
+.carousel__list {
+  display: flex;
+  list-style: none;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  justify-content: center;
+  perspective: 300px;
+}
+
+.carousel__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0px;
+  width: 280px;
+  height: 270px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
+  position: absolute;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+
+.carousel__item:nth-child(1) {
+  background: url(image/E_WEB_11.png);
+  background-size: contain;
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+}
+
+.carousel__item:nth-child(2) {
+  background: url(image/E_WEB_03.png);
+  background-size: contain;
+}
+
+.carousel__item:nth-child(3) {
+  background: url(image/E_WEB_02.png);
+  background-size: contain;
+}
+
+.carousel__item:nth-child(4) {
+  background: url(image/E_WEB_01.png);
+  background-size: contain;
+}
+
+.carousel__item:nth-child(5) {
+  background: url(image/E_WEB_17.png);
+  background-size: contain;
+}
+
+.carousel__item[data-pos="0"] {
+  z-index: 5;
+}
+
+.carousel__item[data-pos="-1"],
+.carousel__item[data-pos="1"] {
+  box-shadow: inset;
+}
+
+.carousel__item[data-pos="-1"] {
+  transform: translateX(-40%) scale(0.9);
+  z-index: 4;
+}
+
+.carousel__item[data-pos="1"] {
+  transform: translateX(40%) scale(0.9);
+  z-index: 4;
+}
+
+.carousel__item[data-pos="-2"],
+.carousel__item[data-pos="2"] {
+  box-shadow: inset;
+}
+
+.carousel__item[data-pos="-2"] {
+  transform: translateX(-70%) scale(0.8);
+  z-index: 3;
+}
+
+.carousel__item[data-pos="2"] {
+  transform: translateX(70%) scale(0.8);
+  z-index: 3;
+}
+@media (max-width: 480px) {
+  .carousel__item {
+    width: 180px;
+    height: 170px;
+  }
+
+  .carousel__item[data-pos="-1"] {
+    transform: translateX(-30%) scale(0.8);
+  }
+
+  .carousel__item[data-pos="1"] {
+    transform: translateX(30%) scale(0.8);
+  }
+
+  .carousel__item[data-pos="-2"] {
+    transform: translateX(-50%) scale(0.7);
+  }
+
+  .carousel__item[data-pos="2"] {
+    transform: translateX(50%) scale(0.7);
+  }
+}
 /* Adding animation for the card background */
 @property --angle {
   syntax: "<angle>";
@@ -137,11 +246,11 @@ img {
   width: 105%;
   background-image: conic-gradient(
     from var(--angle),
-    #ff4545,
-    #00ff99,
-    #006aff,
-    #ff0095,
-    #ff4545
+    #ff6961,
+    #ffd347,
+    #fdfd96,
+    #ffffff,
+    #1982c4
   );
   top: 50%;
   left: 50%;
@@ -205,7 +314,7 @@ main p {
   }
 
   body {
-    background-color: #333333;
+    background-color: white;
   }
 
   #slider label {
@@ -229,7 +338,7 @@ main p {
     width: 65%;
   }
   body {
-    background-color: #333333;
+    background-color: white;
     padding-top: 20%;
   }
 
@@ -255,7 +364,7 @@ main p {
   }
 
   body {
-    background-color: #333333;
+    background-color: white;
   }
   .card {
     width: 200px;
@@ -273,7 +382,7 @@ main p {
     width: 80%;
   }
   body {
-    background-color: #333333;
+    background-color: white;
   }
   .card {
     width: 180px;
@@ -293,7 +402,7 @@ main p {
 .bars {
   width: 30px;
   height: 4px;
-  background: white;
+  background: black;
 }
 
 .bars::before,
@@ -302,7 +411,7 @@ main p {
   position: absolute;
   width: 30px;
   height: 4px;
-  background: white;
+  background: black;
 }
 
 .bars::before {
@@ -317,7 +426,7 @@ nav {
   position: fixed;
   width: 100%;
   height: 30px;
-  background: #000;
+  background: #f7f4e3;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -338,7 +447,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fafafa;
+  color: #fd4d4f;
   font-size: 4em;
   text-decoration: none;
   font-weight: 500;
@@ -353,11 +462,11 @@ nav ul li a:after {
   position: absolute;
   height: 3px;
   border-radius: 5px;
-  background: #fff;
+  background: #fd4d4f;
   bottom: -10px;
   left: 0;
   transform-origin: left;
-  transition: transform 0.3s ease;
+  transition: transform 0.1s ease;
   transform: scaleX(0);
 }
 
@@ -382,8 +491,9 @@ nav h2 {
   left: 5%;
   opacity: 0;
   pointer-events: none;
-  color: #fff;
-  font-size: 2em;
+  color: #fd4d4f;
+  font-weight: bolder;
+  font-size: 4em;
 }
 
 nav .close div::before,
@@ -392,8 +502,8 @@ nav .close div::after {
   position: absolute;
   width: 30px;
   height: 4px;
-  background: #fff;
-  transition: background 0.3s ease;
+  background: black;
+  transition: background 0.1s ease;
 }
 nav .close div::before {
   transform: rotate(-45deg);
