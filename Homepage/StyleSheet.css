@@ -12,12 +12,16 @@ body {
   background-color: wheat;
   width: 100%;
 }
-h1 {
-  text-align: center;
+.header {
+  /* display: inline-block; */
+  max-width: 20%;
   color: #fd4d4f;
-  font-size: 3em;
+  font-size: 2em;
   font-weight: bolder;
-  z-index: 300;
+  z-index: 500;
+  position: sticky;
+  text-align: center;
+  margin: 0 auto;
 }
 
 /* [type="radio"] {
@@ -307,24 +311,32 @@ main p {
 /* Media Queries for Mobile Responsiveness */
 
 /* Adjusting for large screens */
-/* @media (min-width: 1024px) {
+@media (min-width: 1024px) {
   #slider {
     height: 25vw;
   }
 
   body {
-    background-color: black;
+    background-color: #e9dcc9;
   }
 
-  #slider label {
-    width: 30%;
-  }
+ 
 
   .card {
     width: 300px;
     padding: 2em;
   }
-} */
+  .header {
+    color: #fd4d4f;
+    font-size: 2em;
+    font-weight: bolder;
+    z-index: 500;
+    position: sticky;
+    max-width: 40%;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
 
 /* Adjusting for medium screens */
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -364,24 +376,20 @@ main p {
   .carousel__item[data-pos="2"] {
     transform: translateX(50%) scale(0.7);
   }
-  h1 {
-    margin-top: -10%;
-    font-size: 4em;
+  .header {
+    color: #fd4d4f;
+    font-size: 2em;
+    font-weight: bolder;
+    z-index: 500;
+    position: sticky;
+    max-width: 40%;
     text-align: center;
-    z-index: 300000;
-    /* position: sticky; */
+    margin: 0 auto;
   }
 }
 
 /* Adjusting for small screens */
 @media (max-width: 767px) {
-  #slider {
-    height: 50vw;
-  }
-
-  #slider label {
-    width: 70%;
-  }
 
   body {
     background-color: white;
@@ -394,13 +402,6 @@ main p {
 
 /* Very small screens */
 @media (max-width: 480px) {
-  #slider {
-    height: 60vw;
-  }
-
-  #slider label {
-    width: 80%;
-  }
   body {
     background-color: white;
   }
