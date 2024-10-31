@@ -111,7 +111,6 @@ body {
   font-weight: 600; /* Increase font weight for better visibility */
 }
 
-
 /* Transform lines to form an "X" for the close button */
 .nav-container .checkbox:checked + .hamburger-lines .line1 {
   transform: rotate(45deg) translate(0, 0);
@@ -140,3 +139,4 @@ body {
   color: #0e2431;
   z-index: 6; /* Ensure the logo is on top */
 }
+
