@@ -4,9 +4,19 @@
     <meta charset="utf-8" />
     <title>Homepage</title>
     <link rel="stylesheet" href="StyleSheet.css" />
+    <link rel="stylesheet" href="/navbar/navbar.css" />
   </head>
   <body>
-    <div class="header">
+    <div id="navbar-placeholder"></div>
+    <script>
+      // Fetch and insert the navbar content
+      fetch("/navbar/navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-placeholder").innerHTML = data;
+        });
+    </script>
+    <!-- <div class="header">
       <h1>#FoodForAll</h1>
     </div>
     <div class="container">
@@ -21,7 +31,7 @@
         <li><a href="../About Page/index.html" target="_blank">About</a></li>
         <li><a href="../Contact Us/index.html" target="_blank">Contact</a></li>
       </ul>
-    </nav>
+    </nav> -->
     <br />
     <br /><br />
     <div class="carousel">
@@ -33,6 +43,7 @@
         <li class="carousel__item" data-pos="2" data-id="5">5</li>
       </ul>
     </div>
+
     <!-- <section id="slider">
         <input type="radio" name="slider" id="s1" checked />
         <input type="radio" name="slider" id="s2" />
@@ -195,5 +206,6 @@
     </footer>
   </body>
   <script src="JavaScript.js"></script>
+  <script src="/navbar/navbar.js"></script>
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
 </html>
