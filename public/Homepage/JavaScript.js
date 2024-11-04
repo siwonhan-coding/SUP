@@ -4,31 +4,31 @@ document.addEventListener("DOMContentLoaded", function () {
   const imageData = {
     1: {
       title: "SDG 11",
-      description: "Description for Image 1",
-      color: "#ffd133",
+      description: "Sustainable Cities and Communities aims to make cities inclusive, safe, resilient, and sustainable for everyone.",
+      color: "#ffa533",
       textColor: "#000000",
     },
     2: {
       title: "SDG 3",
-      description: "Description for Image 2",
+      description: "Good Health and Well-being aims to ensure healthy lives and promote well-being for people of all ages.",
       color: "#33FF57",
       textColor: "#000000",
     },
     3: {
       title: "SDG 2",
-      description: "Description for Image 3",
-      color: "#ffa533",
+      description: "Zero Hunger aims to end hunger, achieve food security, improve nutrition, and promote sustainable agriculture.",
+      color: "#ffd133",
       textColor: "#000000",
     },
     4: {
       title: "SDG 1",
-      description: "Description for Image 4",
+      description: "No Poverty aims to end poverty in all its forms everywhere and ensure everyone has basic living standards and social protection.",
       color: "#fb4640",
       textColor: "#000000",
     },
     5: {
       title: "SDG 17",
-      description: "Description for Image 5",
+      description: "Partnerships for the Goals is about working together globally to achieve all the sustainable development goals.",
       color: "  #2ba0ff",
       textColor: "#000000",
     },
