@@ -8,7 +8,6 @@
 }
 .card {
   margin: 0 auto;
-  padding: 2em;
   width: 300px;
   background: #ffcc00  ;
   text-align: center;
@@ -16,6 +15,7 @@
   position: relative;
 }
 .carousel {
+  padding: 5%;
   display: flex;
   width: 100%;
   height: 100%;
@@ -37,7 +37,6 @@
   align-items: center;
   justify-content: center;
   color: #fff;
-
   font-size: 0px;
   width: 280px;
   height: 270px;
@@ -51,8 +50,6 @@
 .carousel__item:nth-child(1) {
   background: url(image/E_WEB_11.png);
   background-size: contain;
-  /* background-position: center; */
-  /* background-repeat: no-repeat; */
 }
 
 .carousel__item:nth-child(2) {
@@ -106,28 +103,6 @@
   transform: translateX(70%) scale(0.8);
   z-index: 3;
 }
-/* @media (max-width: 480px) {
-  .carousel__item {
-    width: 200px;
-    height: 170px;
-  }
-
-  .carousel__item[data-pos="-1"] {
-    transform: translateX(-30%) scale(0.8);
-  }
-
-  .carousel__item[data-pos="1"] {
-    transform: translateX(30%) scale(0.8);
-  }
-
-  .carousel__item[data-pos="-2"] {
-    transform: translateX(-50%) scale(0.7);
-  }
-
-  .carousel__item[data-pos="2"] {
-    transform: translateX(50%) scale(0.7);
-  }
-} */
 /* Adding animation for the card background */
 @property --angle {
   syntax: "<angle>";
@@ -153,7 +128,6 @@
   left: 50%;
   translate: -50% -50%;
   z-index: -1;
-  padding: 3px;
   border-radius: 30px;
   animation: 3s spin linear infinite; /* Matching the second animation */
 }
@@ -170,7 +144,7 @@ main {
   min-height: 10vh; /* Adjust the minimum height for better spacing */
 }
 main h1 {
-  padding-top: 10vh;
+  padding-top: 5vh;
 }
 
 .hidden {
@@ -207,10 +181,6 @@ main p {
 
 /* Adjusting for large screens */
 @media (min-width: 1024px) {
-  #slider {
-    height: 25vw;
-  }
-
   body {
     background-color: #e9dcc9;
   }
@@ -272,6 +242,14 @@ main p {
   body {
     background-color: #ecf8f8;
   }
+  .carousel {
+    padding: 0;
+    padding-top: 10%;
+  }
+  .card {
+    width: 300px;
+    margin: 0 auto;
+  }
   .carousel__item {
     width: 200px;
     height: 200px;
@@ -293,9 +271,6 @@ main p {
     transform: translateX(50%) scale(0.7);
   }
 }
-
-/* 
-/* Ensure the carousel images have a lower z-index */
 
 /* Footer icons */
 .clip {
@@ -325,7 +300,6 @@ main p {
 
 .wrapper {
   width: 100%;
-  /* height: 100vh; */
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -392,7 +366,6 @@ main p {
   height: 2rem; /* Adjust height for the bubble area */
   background: var(--footer-background);
   filter: url("#blob");
-  /* overflow: hidden; */
 }
 
 .footer .bubbles .bubble {
@@ -407,7 +380,6 @@ main p {
 
 .footer .content {
   z-index: 2;
-  /* display: grid; */
   grid-template-columns: 1fr auto;
   grid-gap: 4rem;
   padding: 2rem;
