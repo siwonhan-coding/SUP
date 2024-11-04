@@ -285,7 +285,7 @@ main p {
 /* Very small screens */
 @media (max-width: 480px) {
   body {
-    background-color: black;
+    background-color: pink;
   }
   .carousel__item {
     width: 200px;
