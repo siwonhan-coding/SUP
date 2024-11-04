@@ -238,11 +238,11 @@ main p {
 
 /* Adjusting for medium screens */
 @media (min-width: 768px) and (max-width: 1023px) {
-  /* body {
-    background-color: #e9dcc9;
+  body {
+    background-color: white;
     padding-top: 20%;
     margin: 0;
-  } */
+  }
 
   .card {
     width: 500px;
@@ -285,11 +285,27 @@ main p {
 /* Very small screens */
 @media (max-width: 480px) {
   body {
-    background-color: white;
+    background-color: pink;
   }
-  .card {
-    width: 180px;
-    padding: 1em;
+  .carousel__item {
+    width: 200px;
+    height: 200px;
+  }
+
+  .carousel__item[data-pos="-1"] {
+    transform: translateX(-30%) scale(0.8);
+  }
+
+  .carousel__item[data-pos="1"] {
+    transform: translateX(30%) scale(0.8);
+  }
+
+  .carousel__item[data-pos="-2"] {
+    transform: translateX(-50%) scale(0.7);
+  }
+
+  .carousel__item[data-pos="2"] {
+    transform: translateX(50%) scale(0.7);
   }
 }
 
