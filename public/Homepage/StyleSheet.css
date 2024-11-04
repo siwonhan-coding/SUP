@@ -9,7 +9,7 @@
 .card {
   margin: 0 auto;
   width: 300px;
-  background: #ffa533;
+  background: #ffcc00  ;
   text-align: center;
   border-radius: 25px;
   position: relative;
@@ -240,7 +240,7 @@ main p {
 /* Very small screens */
 @media (max-width: 480px) {
   body {
-    background-color: pink;
+    background-color: #ecf8f8;
   }
   .carousel {
     padding: 0;
