@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Page</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/navbar/navbar.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -14,20 +15,15 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'/>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <body>
-<div class="container">
-      <div class="bars"></div>
-    </div>
-    <nav>
-      <h2 style="font-size: 4rem">#FoodForAll</h2>
-      <div class="close">
-        <div></div>
-      </div>
-      <ul>
-        <li><a href="../Homepage\index.html" target="_blank">Home</a></li>
-        <li><a href="../About Page/index.html">About</a></li>
-        <li><a href="../Contact Us/index.html" target="_blank">Contact</a></li>
-      </ul>
-    </nav>
+<div id="navbar-placeholder"></div>
+    <script>
+      // Fetch and insert the navbar content
+      fetch("/navbar/navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-placeholder").innerHTML = data;
+        });
+    </script>
 <section class="skills" id="skills">
   <h2 class="animated-text" id="typed-text"></h2>
   <h4> To provide awareness of the growing food insecurity in simcoe county and whole canada here is a short video</h4>
@@ -137,5 +133,6 @@
   });
 </script>
     <script src="script.js"></script>
+    <script src="/navbar/navbar.js"></script>
 </body>
 </html>
