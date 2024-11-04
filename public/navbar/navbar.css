@@ -28,7 +28,9 @@ body {
 }
 
 .navbar .menu-items {
-  display: flex;
+  display: flex; 
+    font-size: 4rem; /* Make menu items larger */
+    font-weight: 700; /* Increase font weight for better visibility */
 }
 
 .navbar .nav-container li {

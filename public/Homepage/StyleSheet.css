@@ -14,6 +14,12 @@
   border-radius: 25px;
   position: relative;
 }
+
+.bold-orange {
+  font-weight: bold;
+  color: orange;
+}
+
 .carousel {
   padding: 5%;
   display: flex;
@@ -81,7 +87,7 @@
 .carousel__item[data-pos="-2"],
 .carousel__item[data-pos="2"],
 .carousel__item[data-pos="0"] {
-  box-shadow: 0 20px 50px 7px rgba(0, 0, 0);
+  box-shadow: 0 5px 10px 2px rgba(0, 0, 0);
 }
 
 .carousel__item[data-pos="-1"] {
@@ -182,7 +188,7 @@ main p {
 /* Adjusting for large screens */
 @media (min-width: 1024px) {
   body {
-    background-color: #e9dcc9;
+    background-color: #effffa;
   }
 
   .card {
@@ -194,7 +200,7 @@ main p {
 /* Adjusting for medium screens */
 @media (min-width: 768px) and (max-width: 1023px) {
   body {
-    background-color: white;
+    background-color: #effffa;
     padding-top: 20%;
     margin: 0;
   }
@@ -240,7 +246,7 @@ main p {
 /* Very small screens */
 @media (max-width: 480px) {
   body {
-    background-color: #ecf8f8;
+    background-color: #d7f9f1;
   }
   .carousel {
     padding: 0;
