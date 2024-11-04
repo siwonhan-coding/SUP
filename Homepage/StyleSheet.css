@@ -393,7 +393,7 @@ main p {
   filter: url("#blob");
   /* overflow: hidden; */
 }
-
+/* 
 .footer .bubbles .bubble {
   position: absolute;
   left: var(--position, 50%);
@@ -402,7 +402,7 @@ main p {
   animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
     bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
   transform: translate(-50%, 100%);
-}
+} */
 
 .footer .content {
   z-index: 2;
