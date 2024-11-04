@@ -100,20 +100,20 @@ body {
   width: 100vw;
   transform: translateY(-100%);
   transition: transform 0.5s ease-in-out;
-  background-color: #fff; /* Set background color to white */
+  background-color: #fe9920; /* Set background color to white */
   z-index: 4; /* Ensure the menu is below the hamburger lines */
 }
 
 .navbar .menu-items li {
   /* margin-bottom: 0.5rem; Increase spacing between items if needed */
-  font-size: 4rem; /* Make menu items larger */
+  font-size: 4rem; /* Make menu items larger */ 
   font-weight: 600; /* Increase font weight for better visibility */
 }
 
 /* Transform lines to form an "X" for the close button */
 .nav-container .checkbox:checked + .hamburger-lines .line1 {
   transform: rotate(45deg) translate(0, 0);
-  background: orange; /* Change color to orange */
+  background: rgb(255, 255, 255); /* Change color to orange */
 }
 
 .nav-container .checkbox:checked + .hamburger-lines .line2 {
@@ -122,7 +122,7 @@ body {
 
 .nav-container .checkbox:checked + .hamburger-lines .line3 {
   transform: rotate(-45deg) translate(0, 0);
-  background: orange; /* Change color to orange */
+  background: rgb(255, 255, 255); /* Change color to orange */
 }
 
 .nav-container .checkbox:checked ~ .menu-items {
