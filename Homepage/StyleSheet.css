@@ -7,10 +7,19 @@
   padding: 0;
 }
 
-body {
+/* body {
   padding: 20px;
   background-color: wheat;
   width: 100%;
+} */
+body {
+  display: grid;
+  grid-template-rows: 1fr 10rem auto;
+  grid-template-areas: "main" "." "footer";
+  overflow-x: hidden;
+  background: #f5f7fa;
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
 }
 .card {
   margin: 0 auto;
@@ -234,7 +243,7 @@ main p {
     padding-top: 20%;
     margin: 0;
   } */
-  
+
   .card {
     width: 500px;
     font-size: 2em;
@@ -366,66 +375,80 @@ main p {
 /* ----------------FOR FOOTER-------------------- */
 .footer {
   z-index: 1;
-  --footer-background: #d8631f;
+  --footer-background: #ed5565;
   display: grid;
   position: relative;
   grid-area: footer;
-  min-height: 20rem;
+  min-height: 12rem;
 }
 
 .footer .bubbles {
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
-  height: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%; /* Adjust the width if you want more narrow bubbles */
+  height: 2rem; /* Adjust height for the bubble area */
   background: var(--footer-background);
   filter: url("#blob");
+  /* overflow: hidden; */
 }
 
-.footer .bubble {
+.footer .bubbles .bubble {
   position: absolute;
   left: var(--position, 50%);
   background: var(--footer-background);
   border-radius: 100%;
   animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
     bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
-  transform: translate(-100%, 100%);
+  transform: translate(-50%, 100%);
 }
 
 .footer .content {
   z-index: 2;
-  /* display: grid;
+  /* display: grid; */
+  grid-template-columns: 1fr auto;
   grid-gap: 4rem;
-margin: 0; */
+  padding: 2rem;
   background: var(--footer-background);
+}
+
+.footer .content a,
+.footer .content p {
+  color: #f5f7fa;
+  text-decoration: none;
+}
+
+.footer .content b {
+  color: white;
+}
+
+.footer .content p {
+  margin: 0;
+  font-size: 0.75rem;
 }
 
 .footer .content > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* padding: 2em; */
-}
-.navLinks ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
 }
 
-.navLinks ul li {
-  margin: 2px;
+.footer .content > div > div {
+  margin: 0.25rem 0;
 }
 
-.navLinks ul li a {
-  padding: 20px;
-  color: #fdfafa;
-  font-size: 1.5em; /* Adjusted for readability */
-  text-decoration: none;
-  font-weight: 500;
+.footer .content > div > div > * {
+  margin-right: 0.5rem;
+}
+
+.footer .content .image {
+  align-self: center;
+  width: 4rem;
+  height: 4rem;
+  margin: 0.25rem 0;
+  background-size: cover;
+  background-position: center;
 }
 
 @keyframes bubble-size {
