@@ -15,7 +15,6 @@ body {
 }
 
 .navbar {
-  padding: 2em;
   width: 100%;
   box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
 }
@@ -143,6 +142,7 @@ body {
   .logo {
     font-size: 3em;
   }
+ 
   .navbar .nav-container a {
     font-size: 5rem;
     padding: 0.7rem;
