@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Define a route for the main page to serve the index.html from the 'public/homepage' folder
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'homepage', 'index.html'));
+  res.sendFile(path.join(__dirname, 'public', 'Homepage', 'index.html'));
 });
 
 // Start the server
