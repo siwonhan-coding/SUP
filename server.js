@@ -7,9 +7,9 @@ const PORT = 3000; // You can choose a different port if needed
 // Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Define a route for the main page
+// Define a route for the main page to serve the index.html from the 'public/homepage' folder
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'public', 'Homepage', 'index.html'));
 });
 
 // Start the server
