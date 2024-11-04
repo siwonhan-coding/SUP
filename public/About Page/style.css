@@ -1,10 +1,7 @@
-@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,900);
-@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
 * {
   margin: 0;
-  padding: 0; /* Global padding reset */
+  padding: 0;
   box-sizing: border-box;
   text-decoration: none;
   border: none;
@@ -12,10 +9,7 @@
   scroll-behavior: smooth;
 }
 
-html {
-  font-size: 60%;
-  overflow-x: hidden;
-}
+
 
 :root {
   --bg-color: wheat;
@@ -32,8 +26,8 @@ body {
 
 h4 {
   font-size: 3em;
-  padding: 10px; /* Set to 10px for consistency */
-  line-height: 1.2; /* Adjust the line-height for better vertical alignment */
+  padding: 10px;
+  line-height: 1.2;
 }
 
 section {
@@ -55,12 +49,11 @@ section {
 .animated-text {
   display: inline-block;
   width: 100%;
-  font-size: 3em; /* Match font size with h4 */
-  line-height: 1.2; /* Adjust the line-height */
-  height: 1em; /* Adjust height based on the text size */
+  font-size: 3em;
+  line-height: 1.2;
+  height: 1em;
   white-space: nowrap;
-  margin: 0; /* Remove margin */
-  /* Set padding to 10px for consistency */
+  margin: 0;
   overflow: hidden;
   animation: fadeInUp 2s ease-in-out;
   margin: 13px;
@@ -72,11 +65,8 @@ section {
 
 .skills-container {
   display: grid;
-  grid-template-columns: 1fr; /* One column layout */
-  grid-template-rows: repeat(
-    auto-fit,
-    minmax(100px, auto)
-  ); /* Stack items vertically */
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fit, minmax(100px, auto));
   align-items: center;
   gap: 2.5rem;
 }
@@ -185,11 +175,6 @@ footer ul {
 
   .contact form {
     flex-direction: column;
-  }
-  nav ul li a {
-    font-size: 6em; /* Adjust the size as needed */
-    opacity: 1; /* Ensure nav items are visible */
-    pointer-events: auto; /* Ensure nav items are clickable */
   }
 }
 
