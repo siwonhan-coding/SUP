@@ -20,7 +20,7 @@
     <div id="navbar-placeholder"></div>
     <script>
       // Fetch and insert the navbar content
-      fetch("/navbar/navbar.html")
+      fetch("../navbar/navbar.html")
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("navbar-placeholder").innerHTML = data;
@@ -37,6 +37,6 @@
     ></div>
     <script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
     <script src="script.js"></script>
-    <script src="/navbar/navbar.js"></script>
+    <script src="../navbar/navbar.js"></script>
   </body>
 </html>
