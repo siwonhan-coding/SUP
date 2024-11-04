@@ -17,13 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
     3: {
       title: "SDG 2",
       description: "Zero Hunger aims to end hunger, achieve food security, improve nutrition, and promote sustainable agriculture.",
-      color: "#ffd133",
+      color: "#ffcc00",
       textColor: "#000000",
     },
     4: {
       title: "SDG 1",
       description: "No Poverty aims to end poverty in all its forms everywhere and ensure everyone has basic living standards and social protection.",
-      color: "#fb4640",
+      color: "#ff5050",
       textColor: "#000000",
     },
     5: {
