@@ -287,10 +287,6 @@ main p {
   body {
     background-color: black;
   }
-  .card {
-    width: 180px;
-    padding: 1em;
-  }
   .carousel__item {
     width: 200px;
     height: 200px;
