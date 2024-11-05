@@ -1,4 +1,4 @@
-﻿/* General reset and body styling */
+﻿﻿/* General reset and body styling */
 *,
 *::before,
 *::after {
@@ -323,5 +323,179 @@ main p {
 
   .carousel__item[data-pos="2"] {
     transform: translateX(50%) scale(0.7);
+  }
+}
+
+/* Footer icons */
+.clip {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.svg--source {
+  display: none;
+}
+
+.svg--icon {
+  width: 100%;
+  max-width: 3rem;
+  height: 100%;
+  max-height: 5rem;
+  display: block;
+  margin: 0 auto;
+  fill: black;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.share {
+  width: 5rem;
+  height: 5rem;
+  float: left;
+  margin: 0.5rem 1rem 0.5rem 0;
+  color: #353c4a;
+  border: 0.2rem solid black;
+  box-shadow: 0 0 8px 0 rgba(50, 50, 50, 0.15);
+  border-radius: 50%;
+  transition: 250ms;
+}
+
+.share:last-child {
+  margin-right: 0;
+}
+
+.share:focus {
+  outline-color: inherit;
+}
+
+.linkedin:hover,
+.linkedin:focus {
+  color: #00aced;
+  box-shadow: 0 0 24px 0 #00aced;
+  background-color: #00aced;
+}
+
+.youtube:hover,
+.youtube:focus {
+  color: #cd201f;
+  box-shadow: 0 0 24px 0 #cd201f;
+  background-color: #cd201f;
+}
+
+.instagram:hover,
+.instagram:focus {
+  color: #e4405f;
+  box-shadow: 0 0 24px 0 #e4405f;
+  background-color: #e4405f;
+}
+/* ----------------FOR FOOTER-------------------- */
+.footer {
+  z-index: 1;
+  --footer-background: orange;
+  display: grid;
+  position: relative;
+  grid-area: footer;
+  min-height: 12rem;
+  padding-top: 3rem;
+}
+
+.footer .bubbles {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%; /* Adjust the width if you want more narrow bubbles */
+  height: 2rem; /* Adjust height for the bubble area */
+  background: var(--footer-background);
+  filter: url("#blob");
+}
+
+.footer .bubbles .bubble {
+  position: absolute;
+  left: var(--position, 50%);
+  background: var(--footer-background);
+  border-radius: 100%;
+  animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
+    bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+  transform: translate(-50%, 100%);
+}
+
+.footer .content {
+  z-index: 2;
+  grid-template-columns: 1fr auto;
+  grid-gap: 4rem;
+  padding: 2rem;
+  background: var(--footer-background);
+}
+
+.footer .content a,
+.footer .content p {
+  color: #f5f7fa;
+  text-decoration: none;
+}
+
+.footer .content b {
+  color: white;
+}
+
+.footer .content p {
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+.footer .content > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer .content > div > div {
+  margin: 0.25rem 0;
+}
+
+.footer .content > div > div > * {
+  margin-right: 0.5rem;
+}
+
+.footer .content .image {
+  align-self: center;
+  width: 4rem;
+  height: 4rem;
+  margin: 0.25rem 0;
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes bubble-size {
+  0%,
+  75% {
+    width: var(--size, 4rem);
+    height: var(--size, 4rem);
+  }
+  100% {
+    width: 0rem;
+    height: 0rem;
+  }
+}
+
+@keyframes bubble-move {
+  0% {
+    bottom: -4rem;
+  }
+  100% {
+    bottom: var(--distance, 10rem);
   }
 }

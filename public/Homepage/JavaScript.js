@@ -1,34 +1,39 @@
-﻿// Wait until the DOM is fully loaded
+﻿﻿// Wait until the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
   // Store references to each image's data with colors and text colors for each SDG
   const imageData = {
     1: {
       title: "SDG 11",
-      description: "Sustainable Cities and Communities aims to make cities inclusive, safe, resilient, and sustainable for everyone.",
+      description:
+        "Sustainable Cities and Communities aims to make cities inclusive, safe, resilient, and sustainable for everyone.",
       color: "#ffa533",
       textColor: "#000000",
     },
     2: {
       title: "SDG 3",
-      description: "Good Health and Well-being aims to ensure healthy lives and promote well-being for people of all ages.",
+      description:
+        "Good Health and Well-being aims to ensure healthy lives and promote well-being for people of all ages.",
       color: "#33FF57",
       textColor: "#000000",
     },
     3: {
       title: "SDG 2",
-      description: "Zero Hunger aims to end hunger, achieve food security, improve nutrition, and promote sustainable agriculture.",
+      description:
+        "Zero Hunger aims to end hunger, achieve food security, improve nutrition, and promote sustainable agriculture.",
       color: "#ffcc00",
       textColor: "#000000",
     },
     4: {
       title: "SDG 1",
-      description: "No Poverty aims to end poverty in all its forms everywhere and ensure everyone has basic living standards and social protection.",
+      description:
+        "No Poverty aims to end poverty in all its forms everywhere and ensure everyone has basic living standards and social protection.",
       color: "#ff5050",
       textColor: "#000000",
     },
     5: {
       title: "SDG 17",
-      description: "Partnerships for the Goals is about working together globally to achieve all the sustainable development goals.",
+      description:
+        "Partnerships for the Goals is about working together globally to achieve all the sustainable development goals.",
       color: "  #2ba0ff",
       textColor: "#000000",
     },
@@ -112,4 +117,3 @@ const getPos = function (current, active) {
 
   return diff;
 };
-
