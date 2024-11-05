@@ -365,7 +365,7 @@ main p {
 /* ----------------FOR FOOTER-------------------- */
 .footer {
   z-index: 1;
-  --footer-background: #ed5565;
+  --footer-background: orange;
   display: grid;
   position: relative;
   grid-area: footer;
