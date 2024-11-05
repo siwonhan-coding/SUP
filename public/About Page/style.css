@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -8,8 +7,6 @@
   outline: none;
   scroll-behavior: smooth;
 }
-
-
 
 :root {
   --bg-color: wheat;
@@ -32,7 +29,7 @@ h4 {
 
 section {
   min-height: 100vh;
-  padding: 10rem 12%;
+  padding: 5rem 12%;
 }
 
 @keyframes fadeInUp {
@@ -117,45 +114,177 @@ section {
   text-align: left;
 }
 
+.clip {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.svg--source {
+  display: none;
+}
+
+.svg--icon {
+  width: 100%;
+  max-width: 3rem;
+  height: 100%;
+  max-height: 5rem;
+  display: block;
+  margin: 0 auto;
+  fill: black;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.share {
+  width: 5rem;
+  height: 5rem;
+  float: left;
+  margin: 0.5rem 1rem 0.5rem 0;
+  color: #353c4a;
+  border: 0.2rem solid black;
+  box-shadow: 0 0 8px 0 rgba(50, 50, 50, 0.15);
+  border-radius: 50%;
+  transition: 250ms;
+}
+
+.share:last-child {
+  margin-right: 0;
+}
+
+.share:focus {
+  outline-color: inherit;
+}
+
+.linkedin:hover,
+.linkedin:focus {
+  color: #00aced;
+  box-shadow: 0 0 24px 0 #00aced;
+  background-color: #00aced;
+}
+
+.youtube:hover,
+.youtube:focus {
+  color: #cd201f;
+  box-shadow: 0 0 24px 0 #cd201f;
+  background-color: #cd201f;
+}
+
+.instagram:hover,
+.instagram:focus {
+  color: #e4405f;
+  box-shadow: 0 0 24px 0 #e4405f;
+  background-color: #e4405f;
+}
+/* ----------------FOR FOOTER-------------------- */
 .footer {
-  background-color: var(--bg-color);
-  padding: 10px 0;
-  margin-top: 10px;
+  z-index: 1;
+  --footer-background: orange;
+  display: grid;
+  position: relative;
+  grid-area: footer;
+  min-height: 12rem;
+  padding-top: 3rem;
 }
 
-.footer .social-buttons {
-  text-align: center;
-  padding: 20px;
-}
-i {
-  font-size: 5rem;
-  padding: 10px;
-}
-
-footer ul {
-  text-align: center;
-  font-size: 1.8rem;
+.footer .bubbles {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%; /* Adjust the width if you want more narrow bubbles */
+  height: 2rem; /* Adjust height for the bubble area */
+  background: var(--footer-background);
+  filter: url("#blob");
 }
 
-.footer ul li {
-  display: inline-block;
-  margin-left: 20px;
+.footer .bubbles .bubble {
+  position: absolute;
+  left: var(--position, 50%);
+  background: var(--footer-background);
+  border-radius: 100%;
+  animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
+    bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+  transform: translate(-50%, 100%);
 }
 
-.footer ul li a {
+.footer .content {
+  z-index: 2;
+  grid-template-columns: 1fr auto;
+  grid-gap: 4rem;
+  padding: 2rem;
+  background: var(--footer-background);
+}
+
+.footer .content a,
+.footer .content p {
+  color: #f5f7fa;
+  text-decoration: none;
+}
+
+.footer .content b {
   color: white;
-  border-bottom: 3px solid transparent;
-  transition: 0.3s ease-in-out;
 }
 
-.footer ul li a:hover {
-  border-bottom: 3px solid var(--main-color);
+.footer .content p {
+  margin: 0;
+  font-size: 0.75rem;
 }
 
-.footer .copyright {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 16px;
+.footer .content > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer .content > div > div {
+  margin: 0.25rem 0;
+}
+
+.footer .content > div > div > * {
+  margin-right: 0.5rem;
+}
+
+.footer .content .image {
+  align-self: center;
+  width: 4rem;
+  height: 4rem;
+  margin: 0.25rem 0;
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes bubble-size {
+  0%,
+  75% {
+    width: var(--size, 4rem);
+    height: var(--size, 4rem);
+  }
+  100% {
+    width: 0rem;
+    height: 0rem;
+  }
+}
+
+@keyframes bubble-move {
+  0% {
+    bottom: -4rem;
+  }
+  100% {
+    bottom: var(--distance, 10rem);
+  }
 }
 
 @media (max-width: 1024px) {
@@ -163,7 +292,9 @@ footer ul {
     flex-direction: column-reverse;
     text-align: center;
   }
-
+  section {
+    padding: 2em;
+  }
   .about h2 {
     text-align: center;
     margin: 2rem 0;
@@ -176,87 +307,6 @@ footer ul {
   .contact form {
     flex-direction: column;
   }
-}
-
-.social-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-}
-
-.social-button {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline: none;
-  width: 64px;
-  height: 64px;
-  text-decoration: none;
-  border-radius: 100%;
-  background: #fff;
-  text-align: center;
-}
-.social-button::after {
-  content: "";
-  position: absolute;
-  top: -1px;
-  left: 50%;
-  display: block;
-  width: 0;
-  height: 0;
-  border-radius: 100%;
-  transition: 0.3s;
-}
-.social-button:focus,
-.social-button:hover {
-  color: #fff;
-}
-.social-button:focus::after,
-.social-button:hover::after {
-  width: calc(100% + 2px);
-  height: calc(100% + 2px);
-  margin-left: calc(-50% - 1px);
-}
-.social-button i,
-.social-button svg {
-  position: relative;
-  z-index: 1;
-  transition: 0.3s;
-}
-.social-button i {
-  font-size: 25.6px;
-}
-.social-button svg {
-  height: 40%;
-  width: 40%;
-}
-.social-button--mail {
-  color: #0072c6;
-}
-.social-button--mail::after {
-  background: #0072c6;
-}
-
-.social-button--linkedin {
-  color: #0077b5;
-}
-.social-button--linkedin::after {
-  background: #0077b5;
-}
-
-.social-button--instagram {
-  color: #e4405f;
-}
-.social-button--instagram::after {
-  background: #e4405f;
-}
-.social-button--youtube {
-  color: #ff0a02;
-}
-.social-button--youtube::after {
-  background: #ff0a02;
 }
 
 /* Animation 1 */
@@ -483,7 +533,7 @@ footer ul {
 }
 
 /* Animation 3 */
-.content {
+.content-1 {
   width: 100%;
   max-width: 60ch;
   margin: 0;
