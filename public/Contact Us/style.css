@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  ;
 }
 
 body {
@@ -140,3 +141,8 @@ body {
   z-index: 6; /* Ensure the logo is on top */
 }
 
+@media (max-width: 480px) {
+  body {
+    background-color: #d7f9f1;
+  }
+}
