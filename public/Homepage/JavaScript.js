@@ -117,3 +117,37 @@ const getPos = function (current, active) {
 
   return diff;
 };
+/**
+ * ---------------------------------------
+ * This demo was created using amCharts 4.
+ *
+ * For more information visit:
+ * https://www.amcharts.com/
+ *
+ * Documentation is available at:
+ * https://www.amcharts.com/docs/v4/
+ * ---------------------------------------
+ */
+
+ // amCharts 4 Pie Chart Initialization
+ am4core.useTheme(am4themes_animated);
+ am4core.useTheme(am4themes_dataviz);
+
+ // Create chart instance
+ const chart = am4core.create("chartdiv", am4charts.PieChart);
+
+ // Add data
+ chart.data = [
+   { "category": "Single Parents", "percent": 28 },
+   { "category": "Unattached", "percent": 17 },
+   { "category": "Couples with Children", "percent": 10 },
+   { "category": "Couples without Children", "percent": 7 },
+ ];
+
+ // Add and configure Series
+ const pieSeries = chart.series.push(new am4charts.PieSeries());
+ pieSeries.dataFields.value = "percent";
+ pieSeries.dataFields.category = "category";
+
+ pieSeries.slices.template.showOnInit = true;
+ pieSeries.slices.template.hiddenState.properties.shiftRadius = 1;

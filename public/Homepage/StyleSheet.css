@@ -497,3 +497,19 @@ main p {
     bottom: var(--distance, 10rem);
   }
 }
+/* For thr pie chart */
+
+/* Ensure the container adjusts based on screen size */
+#chartdiv {
+  width: 100%;
+  height: 400px; 
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  #chartdiv {
+    height: 300px; /* Reduce height for smaller screens */
+  }
+}
