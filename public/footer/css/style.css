@@ -20,6 +20,7 @@ a {
   margin: 0 0 1rem 0; /* Adjusted margin to decrease space */
   font-family: "Poppins", sans-serif;
   z-index: 2;
+  text-align: center;
   grid-template-columns: 1fr auto;
   grid-gap: 4rem;
   padding: 2rem;
@@ -101,8 +102,8 @@ a {
   top: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 70%; /* Adjust the width if you want more narrow bubbles */
-  height: 2rem; /* Adjust height for the bubble area */
+  width: 70%; 
+  height: 2rem; 
   background: var(--footer-background);
   filter: url("#blob");
 }
@@ -184,20 +185,61 @@ a {
   }
 }
 
+
 .footer-16371 .nav-links {
   padding: 0;
-  margin: 0 0 1rem 0; /* Adjusted margin to decrease space */
-}
-
-.footer-16371 .social {
-  margin-bottom: 1rem; /* Adjusted margin to decrease space */
+  margin: 1rem 0 1.5rem 0; /* Adjusted margin to decrease space */
 }
 
 .footer-16371 .copyright {
-  margin-top: 1rem; /* Adjusted margin to decrease space */
+  margin-top: 4rem; /* Adjusted margin to decrease space */
   color: #999999;
 }
 
 .circular-logo {
   border-radius: 50%;
+  width: 5rem; /* Reduced size */
+  height: 5rem; /* Reduced size */
 }
+
+.footer-16371 .footer-site-logo {
+  margin-bottom: 1rem;
+}
+
+/* .footer {
+  position: relative;
+  overflow: hidden;  
+  background: #f8f9fa;  
+  padding: 50px 0;  
+}
+
+.bubbles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -5rem;  
+  border-radius: 50%;
+  background-color: orange;  
+  animation: floatUp 4s ease-in-out infinite;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh);  
+    opacity: 0;
+  }
+} */
