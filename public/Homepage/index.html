@@ -1,15 +1,65 @@
-﻿﻿<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage</title>
     <link rel="stylesheet" href="StyleSheet.css" />
     <link rel="stylesheet" href="../navbar/navbar.css" />
-    <script src="https://www.amcharts.com/lib/4/core.js"></script>
-    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
-    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
-    <script src="https://www.amcharts.com/lib/4/themes/dataviz.js"></script>
+    <link rel="stylesheet" href="../footer/fonts/icomoon/style.css" />
+    <link rel="stylesheet" href="../footer/css/style.css" />
+    <style>
+      /* Ensure the footer container has a relative position */
+      footer {
+        position: relative;
+        text-align: center;
+        padding: 40px 20px; /* Adjust padding to ensure enough space */
+      }
+
+      /* Positioning the bubbles */
+      .footer {
+        position: relative;
+        z-index: 1;
+      }
+
+      .bubbles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none; /* Prevent the bubbles from blocking clicks on footer content */
+      }
+
+      #footer {
+        position: relative;
+        z-index: 2; /* Ensure content appears above the bubbles */
+        color: white; /* Adjust text color if necessary */
+        padding: 20px;
+      }
+
+      .bubble {
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.5); /* Color of the bubbles */
+        border-radius: 50%;
+        animation: bubble-animation 10s infinite;
+      }
+
+      @keyframes bubble-animation {
+        0% {
+          transform: translateY(0);
+          opacity: 0.5;
+        }
+        50% {
+          transform: translateY(-50px);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 0.5;
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="navbar-placeholder"></div>
@@ -41,126 +91,34 @@
       <h1>What is household <div class="bold-orange" style="display: inline;">food insecurity</div>?</h1>
     </main>
     <main class="hidden">
-      <img src="../Homepage/image/The par.webp" alt="Food Insecurity" width="70%" style="border-radius: 15px;" />
+      <img src="../Homepage/image/DALL·E 2024-11-04 15.42.15 - A detailed scene depicting a small family in their modest kitchen, emphasizing a color palette of earthy tones with orange and yellow accents. The par.webp" alt="Food Insecurity" width="70%" style="border-radius: 15px;" />
     </main>
     <main class="hidden">
       <p>
-        Household food insecurity refers to the <div class="underline-pseudo">lack of consistent </div><div class="underline-pseudo"> access </div><div class="underline-pseudo"> to sufficient </div> <div class="underline-pseudo"> and nutritious food,</div> which impacts the health and well-being of families.
+        Household food insecurity refers to the <div class="underline-pseudo">lack of consistent</div><div class="underline-pseudo">access</div><div class="underline-pseudo"> to sufficient</div><div class="underline-pseudo">and nutritious food,</div> which impacts the health and well-being of families.
       </p>
     </main>
-    <main class="hidden"></main>
-    <div id="chartdiv" style="max-width: 100%;margin-right: 0 ;"></div>
-    <footer>
-      <div class="main">
-        <div class="footer">
-          <div class="bubbles">
-            <script>
-              for (let i = 0; i < 128; i++) {
-                document.write(
-                  `<div class="bubble" style="--size:${
-                    2 + Math.random() * 4
-                  }rem; --distance:${6 + Math.random() * 4}rem; --position:${
-                    -5 + Math.random() * 110
-                  }%; --time:${2 + Math.random() * 2}s; --delay:${
-                    -1 * (2 + Math.random() * 2)
-                  }s;"></div>`
-                );
-              }
-            </script>
-          </div>
-          <div class="content">
-            <svg class="svg--source" width="0" height="0" aria-hidden="true">
-              <symbol id="svg--instagram" viewBox="0 0 24 24">
-                <path
-                  d="M12 2.163c3.204 0 3.584 0.012 4.849 0.07 1.259 0.058 2.012 0.27 2.476 0.449 0.59 0.228 1.014 0.501 1.46 0.947 0.446 0.446 0.72 0.869 0.947 1.46 0.179 0.464 0.391 1.217 0.449 2.476 0.058 1.265 0.07 1.645 0.07 4.849s-0.012 3.584-0.07 4.849c-0.058 1.259-0.27 2.012-0.449 2.476-0.228 0.59-0.501 1.014-0.947 1.46-0.446 0.446-0.869 0.72-1.46 0.947-0.464 0.179-1.217 0.391-2.476 0.449-1.265 0.058-1.645 0.07-4.849 0.07s-3.584-0.012-4.849-0.07c-1.259-0.058-2.012-0.27-2.476-0.449-0.59-0.228-1.014-0.501-1.46-0.947-0.446-0.446-0.72-0.869-0.947-1.46-0.179-0.464-0.391-1.217-0.449-2.476-0.058-1.265-0.07-1.645-0.07-4.849s0.012-3.584 0.07-4.849c0.058-1.259 0.27-2.012 0.449-2.476 0.228-0.59 0.501-1.014 0.947-1.46 0.446-0.446 0.869-0.72 1.46-0.947 0.464-0.179 1.217-0.391 2.476-0.449 1.265-0.058 1.645-0.07 4.849-0.07m0-2.163c-3.259 0-3.667 0.012-4.947 0.071-1.307 0.062-2.211 0.276-3.013 0.58-0.824 0.313-1.516 0.733-2.217 1.433s-1.12 1.393-1.433 2.217c-0.304 0.802-0.518 1.706-0.58 3.013-0.059 1.28-0.071 1.688-0.071 4.947s0.012 3.667 0.071 4.947c0.062 1.307 0.276 2.211 0.58 3.013 0.313 0.824 0.733 1.516 1.433 2.217s1.393 1.12 2.217 1.433c0.802 0.304 1.706 0.518 3.013 0.58 1.28 0.059 1.688 0.071 4.947 0.071s3.667-0.012 4.947-0.071c1.307-0.062 2.211-0.276 3.013-0.58 0.824-0.313 1.516-0.733 2.217-1.433s1.12-1.393 1.433-2.217c0.304-0.802 0.518-1.706 0.58-3.013 0.059-1.28 0.071-1.688 0.071-4.947s-0.012-3.667-0.071-4.947c-0.062-1.307-0.276-2.211-0.58-3.013-0.313-0.824-0.733-1.516-1.433-2.217s-1.393-1.12-2.217-1.433c-0.802-0.304-1.706-0.518-3.013-0.58-1.28-0.059-1.688-0.071-4.947-0.071zM12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.324c-2.296 0-4.162-1.866-4.162-4.162s1.866-4.162 4.162-4.162 4.162 1.866 4.162 4.162-1.866 4.162-4.162 4.162zm6.406-11.845c-0.796 0-1.444 0.648-1.444 1.444s0.648 1.444 1.444 1.444 1.444-0.648 1.444-1.444-0.648-1.444-1.444-1.444z"
-                />
-              </symbol>
-              <symbol id="svg--linkedin" viewBox="0 0 24 24">
-                <path
-                  d="M4.984 3.984c0 1.109-0.891 2.016-2.016 2.016s-1.969-0.891-1.969-2.016c0-1.125 0.891-2.016 2.016-2.016s1.969 0.891 1.969 2.016zM5.016 8.016h-4.031v12h4.031v-12zM9.984 8.016h-0.047v12h4.031v-6.188c0-1.523 0.328-3.047 2.25-3.047 1.922 0 1.969 1.781 1.969 3.141v6.094h4.031v-6.75c0-3.422-1.781-5.016-4.312-5.016-1.688 0-2.531 0.938-2.953 1.594v-1.359h-4.031z"
-                />
-              </symbol>
+    <!-- Footer Content -->
+    <div id="footer">
+      <!-- The content that will be loaded from another file -->
+    </div>
 
-              <symbol id="svg--youtube" viewbox="-150 -150 800 800">
-                <path
-                  d="M459,61.2C443.7,56.1,349.35,51,255,51c-94.35,0-188.7,5.1-204,10.2C10.2,73.95,0,163.2,0,255s10.2,181.05,51,193.8
-			C66.3,453.9,160.65,459,255,459c94.35,0,188.7-5.1,204-10.2c40.8-12.75,51-102,51-193.8S499.8,73.95,459,61.2z M204,369.75v-229.5
-			L357,255L204,369.75z"
-                />
-              </symbol>
-            </svg>
-            <!-- for the social links  -->
-            <div class="wrapper">
-              <div class="connect">
-                <a
-                  href="https://www.instagram.com/changemakeratgeorgian/"
-                  class="share instagram"
-                >
-                  <svg role="presentation" class="svg--icon">
-                    <use xlink:href="#svg--instagram" />
-                  </svg>
-                  <span class="clip">Instagram</span>
-                </a>
-
-                <a
-                  href="https://www.linkedin.com/company/social-innovation-georgian-college/"
-                  rel="author"
-                  class="share linkedin"
-                >
-                  <svg role="presentation" class="svg--icon">
-                    <use xlink:href="#svg--linkedin"></use>
-                  </svg>
-                  <span class="clip">Linkedin</span>
-                </a>
-
-                <a
-                  href="https://www.youtube.com/@changemakingatgeorgian7197"
-                  class="share youtube"
-                >
-                  <svg role="presentation" class="svg--icon">
-                    <use xlink:href="#svg--youtube"></use>
-                  </svg>
-                  <span class="clip">YOU-TUBE</span>
-                </a>
-              </div>
-            </div>
-            <div class="navLinks">
-              <ul>
-                <li>
-                  <a href="../Homepage/index.html" target="_self">Home</a>
-                </li>
-                <li>
-                  <a href="../About Page/index.html" target="_self">About</a>
-                </li>
-                <li>
-                  <a href="../Contact Us/index.html" target="_self">Contact</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <svg style="position: fixed; top: 100vh">
-            <defs>
-              <filter id="blob">
-                <feGaussianBlur
-                  in="SourceGraphic"
-                  stdDeviation="10"
-                  result="blur"
-                ></feGaussianBlur>
-                <feColorMatrix
-                  in="blur"
-                  mode="matrix"
-                  values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 19 -9"
-                  result="blob"
-                ></feColorMatrix>
-              </filter>
-            </defs>
-          </svg>
-        </div>
-      </div>
-    </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Fetch and insert footer content into the footer div
+      fetch("../footer/index.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    });
+  </script>
+  </script>
+    <script src="JavaScript.js"></script>
+    <script src="../navbar/navbar.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="../footer/js/jquery-3.3.1.min.js"></script>
+    <script src="../footer/js/popper.min.js"></script>
+    <script src="../footer/js/bootstrap.min.js"></script>
   </body>
-  <script src="JavaScript.js"></script>
-  <script src="../navbar/navbar.js"></script>
-  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
 </html>

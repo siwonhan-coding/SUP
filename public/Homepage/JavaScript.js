@@ -1,51 +1,46 @@
-﻿﻿// Wait until the DOM is fully loaded
+﻿// Wait until the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
-  // Store references to each image's data with colors and text colors for each SDG
+  // Data for each SDG item, including title, description, color, and text color
   const imageData = {
     1: {
       title: "SDG 11",
-      description:
-        "Sustainable Cities and Communities aims to make cities inclusive, safe, resilient, and sustainable for everyone.",
+      description: "Sustainable Cities and Communities aims to make cities inclusive, safe, resilient, and sustainable for everyone.",
       color: "#ffa533",
       textColor: "#000000",
     },
     2: {
       title: "SDG 3",
-      description:
-        "Good Health and Well-being aims to ensure healthy lives and promote well-being for people of all ages.",
+      description: "Good Health and Well-being aims to ensure healthy lives and promote well-being for people of all ages.",
       color: "#33FF57",
       textColor: "#000000",
     },
     3: {
       title: "SDG 2",
-      description:
-        "Zero Hunger aims to end hunger, achieve food security, improve nutrition, and promote sustainable agriculture.",
+      description: "Zero Hunger aims to end hunger, achieve food security, improve nutrition, and promote sustainable agriculture.",
       color: "#ffcc00",
       textColor: "#000000",
     },
     4: {
       title: "SDG 1",
-      description:
-        "No Poverty aims to end poverty in all its forms everywhere and ensure everyone has basic living standards and social protection.",
+      description: "No Poverty aims to end poverty in all its forms everywhere and ensure everyone has basic living standards and social protection.",
       color: "#ff5050",
       textColor: "#000000",
     },
     5: {
       title: "SDG 17",
-      description:
-        "Partnerships for the Goals is about working together globally to achieve all the sustainable development goals.",
-      color: "  #2ba0ff",
+      description: "Partnerships for the Goals is about working together globally to achieve all the sustainable development goals.",
+      color: "#2ba0ff",
       textColor: "#000000",
     },
   };
 
-  // Select all carousel items and card elements
+  // Select elements for the SDG card
   const carouselItems = document.querySelectorAll(".carousel__item");
   const imageTitle = document.querySelector(".image-title");
   const imageDescription = document.querySelector(".image-description");
   const card = document.querySelector(".card");
 
-  // Add click event listener to each carousel item
+  // Add click event listener to each carousel item for updating the SDG card
   carouselItems.forEach((item, index) => {
     item.addEventListener("click", function () {
       const dataId = index + 1; // Get data based on item index (1-5)
@@ -58,96 +53,67 @@ document.addEventListener("DOMContentLoaded", function () {
       card.style.color = data.textColor;
     });
   });
-});
-document.addEventListener("DOMContentLoaded", function () {
-  const hiddenElements = document.querySelectorAll(".hidden"); // Ensure 'hidden' elements are selected properly
+
+  // Intersection Observer for revealing elements with 'hidden' class when in view
+  const hiddenElements = document.querySelectorAll(".hidden");
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("show"); // Add 'show' class when the element is in view
+        entry.target.classList.add("show");
       } else {
-        entry.target.classList.remove("show"); // Remove 'show' class when out of view
+        entry.target.classList.remove("show");
       }
     });
   });
 
-  hiddenElements.forEach((el) => observer.observe(el)); // Apply observer to each hidden element
+  hiddenElements.forEach((el) => observer.observe(el));
 });
+
+// Carousel state and elements
 const state = {};
 const carouselList = document.querySelector(".carousel__list");
 const carouselItems = document.querySelectorAll(".carousel__item");
 const elems = Array.from(carouselItems);
 
+// Event listener for carousel item clicks
 carouselList.addEventListener("click", function (event) {
-  var newActive = event.target;
-  var isItem = newActive.closest(".carousel__item");
+  const newActive = event.target.closest(".carousel__item");
 
-  if (!isItem || newActive.classList.contains("carousel__item_active")) {
+  if (!newActive || newActive.classList.contains("carousel__item_active")) {
     return;
   }
 
-  update(newActive);
+  updateCarousel(newActive);
 });
 
-const update = function (newActive) {
+// Function to update carousel items’ positions
+const updateCarousel = function (newActive) {
   const newActivePos = newActive.dataset.pos;
 
+  // Find elements with specific data positions
   const current = elems.find((elem) => elem.dataset.pos == 0);
   const prev = elems.find((elem) => elem.dataset.pos == -1);
   const next = elems.find((elem) => elem.dataset.pos == 1);
   const first = elems.find((elem) => elem.dataset.pos == -2);
   const last = elems.find((elem) => elem.dataset.pos == 2);
 
+  // Remove active class from the current item
   current.classList.remove("carousel__item_active");
 
+  // Update positions of carousel items
   [current, prev, next, first, last].forEach((item) => {
-    var itemPos = item.dataset.pos;
-
-    item.dataset.pos = getPos(itemPos, newActivePos);
+    const itemPos = item.dataset.pos;
+    item.dataset.pos = getPosition(itemPos, newActivePos);
   });
+
+  // Add active class to the new active item
+  newActive.classList.add("carousel__item_active");
 };
 
-const getPos = function (current, active) {
+// Function to calculate new positions for carousel items
+const getPosition = function (current, active) {
   const diff = current - active;
 
-  if (Math.abs(current - active) > 2) {
-    return -current;
-  }
-
-  return diff;
+  return Math.abs(current - active) > 2 ? -current : diff;
 };
-/**
- * ---------------------------------------
- * This demo was created using amCharts 4.
- *
- * For more information visit:
- * https://www.amcharts.com/
- *
- * Documentation is available at:
- * https://www.amcharts.com/docs/v4/
- * ---------------------------------------
- */
-
- // amCharts 4 Pie Chart Initialization
- am4core.useTheme(am4themes_animated);
- am4core.useTheme(am4themes_dataviz);
-
- // Create chart instance
- const chart = am4core.create("chartdiv", am4charts.PieChart);
-
- // Add data
- chart.data = [
-   { "category": "Single Parents", "percent": 28 },
-   { "category": "Unattached", "percent": 17 },
-   { "category": "Couples with Children", "percent": 10 },
-   { "category": "Couples without Children", "percent": 7 },
- ];
-
- // Add and configure Series
- const pieSeries = chart.series.push(new am4charts.PieSeries());
- pieSeries.dataFields.value = "percent";
- pieSeries.dataFields.category = "category";
-
- pieSeries.slices.template.showOnInit = true;
- pieSeries.slices.template.hiddenState.properties.shiftRadius = 1;

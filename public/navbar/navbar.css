@@ -140,7 +140,7 @@ body {
   color: #0e2431;
   z-index: 6; /* Ensure the logo is on top */
 }
-/* @media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .logo {
     font-size: 3em;
   }
@@ -155,7 +155,7 @@ body {
     padding-top: 30%;
   }
   .navbar .menu-items li {
-    display: block;
-    margin: 15% 0;
+    display: block; /* Each item is still a block element */
+    margin: 15% 0; /* Add vertical spacing between items */
   }
-} */
+}

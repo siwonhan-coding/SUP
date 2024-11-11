@@ -1,4 +1,4 @@
-﻿﻿/* General reset and body styling */
+﻿/* General reset and body styling */
 *,
 *::before,
 *::after {
@@ -6,6 +6,12 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  background-color: #effffa;
+  font-family: Arial, sans-serif;
+}
+
 .card {
   margin: 0 auto;
   width: 300px;
@@ -13,6 +19,8 @@
   text-align: center;
   border-radius: 25px;
   position: relative;
+  padding: 2em;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .bold-orange {
@@ -24,14 +32,17 @@
   font-weight: bold;
   color: orange;
   display: inline-block;
-  border-bottom: 2px solid #000; /* Adjust color and thickness as needed */
-  padding-bottom: 1px; /* Space between text and underline */
+  border-bottom: 2px solid #000;
+  padding-bottom: 1px;
 }
 
 .carousel {
   padding: 5%;
   display: flex;
+  width: 100%;
+  height: 100%;
   align-items: center;
+  justify-content: center;
 }
 
 .carousel__list {
@@ -60,28 +71,23 @@
 }
 
 .carousel__item:nth-child(1) {
-  background: url(image/E_WEB_11.png);
-  background-size: contain;
+  background: url(image/E_WEB_11.png) center/contain;
 }
 
 .carousel__item:nth-child(2) {
-  background: url(image/E_WEB_03.png);
-  background-size: contain;
+  background: url(image/E_WEB_03.png) center/contain;
 }
 
 .carousel__item:nth-child(3) {
-  background: url(image/E_WEB_02.png);
-  background-size: contain;
+  background: url(image/E_WEB_02.png) center/contain;
 }
 
 .carousel__item:nth-child(4) {
-  background: url(image/E_WEB_01.png);
-  background-size: contain;
+  background: url(image/E_WEB_01.png) center/contain;
 }
 
 .carousel__item:nth-child(5) {
-  background: url(image/E_WEB_17.png);
-  background-size: contain;
+  background: url(image/E_WEB_17.png) center/contain;
 }
 
 .carousel__item[data-pos="0"] {
@@ -93,7 +99,7 @@
 .carousel__item[data-pos="-2"],
 .carousel__item[data-pos="2"],
 .carousel__item[data-pos="0"] {
-  box-shadow: 0 5px 10px 2px rgba(0, 0, 0);
+  box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.1);
 }
 
 .carousel__item[data-pos="-1"] {
@@ -115,7 +121,8 @@
   transform: translateX(70%) scale(0.8);
   z-index: 3;
 }
-/* Adding animation for the card background */
+
+/* Background animation for the card */
 @property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
@@ -138,46 +145,46 @@
   );
   top: 50%;
   left: 50%;
-  translate: -50% -50%;
+  transform: translate(-50%, -50%);
   z-index: -1;
   border-radius: 30px;
-  animation: 3s spin linear infinite; /* Matching the second animation */
+  animation: spin 3s linear infinite;
 }
+
 .card::before {
-  border-radius: 30px;
-  filter: blur(1.5rem); /* Similar blur */
-  opacity: 0.5; /* Matching the opacity */
+  filter: blur(1.5rem);
+  opacity: 0.5;
 }
+
 main {
   color: black;
   font-size: 2em;
   padding: 10vh 10vw 0vh 10vw;
-  text-align: right; /* Aligns text to the right */
-  min-height: 10vh; /* Adjust the minimum height for better spacing */
+  text-align: right;
+  min-height: 10vh;
 }
+
 main h1 {
   padding-top: 5vh;
-  line-height: 0.9;
 }
-.image-description {
-  font-weight: 600;
-  line-height: 1.5;
-}
+
 .hidden {
   opacity: 0;
-  transform: translateX(-100%); /* Start hidden elements slightly below */
-  transition: all 1s; /* Smooth fade and slide-in */
+  transform: translateX(-100%);
+  transition: all 1s;
 }
 
 .show {
   opacity: 1;
   filter: blur(0);
-  transform: translateY(0); /* Smooth slide-in effect */
+  transform: translateY(0);
 }
+
 main p {
-  font-size: 1em; /* Smaller size for paragraphs */
+  font-size: 1em;
 }
-@media (prefers-reduces-motion) {
+
+@media (prefers-reduced-motion) {
   .hidden {
     transition: none;
   }
@@ -195,60 +202,27 @@ main p {
 
 /* Media Queries for Mobile Responsiveness */
 
-/* Adjusting for large screens */
+/* Large screens */
 @media (min-width: 1024px) {
-  body {
-    background-color: #effffa;
-  }
-
   .card {
-    width: 500px;
-    padding: 1.5em;
+    width: 300px;
+    padding: 2em;
   }
 }
 
-/* Adjusting for medium screens */
+/* Medium screens (Tablets) */
 @media (min-width: 768px) and (max-width: 1023px) {
-  body {
-    background-color: #d7f9f1;
-  }
   .card {
-    margin: 0 auto;
-    width: 300px;
-    background: #ffcc00;
-    text-align: center;
-    border-radius: 25px;
-    position: relative;
+    width: 500px;
+    font-size: 2em;
+    margin-top: 30%;
   }
+
   .carousel__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 0px;
-    width: 280px;
-    height: 270px;
-    border-radius: 12px;
-    box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
-    position: absolute;
-    transition: all 0.2s ease-in;
-    cursor: pointer;
+    width: 530px;
+    height: 500px;
   }
-  .carousel__list {
-    display: flex;
-    list-style: none;
-    position: relative;
-    width: 100%;
-    height: 300px;
-    justify-content: center;
-    perspective: 300px;
-  }
-  .image-title {
-    padding-top: 4%;
-  }
-  .image-description {
-    padding-bottom: 3%;
-  }
+
   .carousel__item[data-pos="-1"] {
     transform: translateX(-30%) scale(0.8);
   }
@@ -266,45 +240,20 @@ main p {
   }
 }
 
-/* Adjusting for small screens */
+/* Small screens (Phones) */
 @media (max-width: 767px) {
-  body {
+  .body {
     background-color: white;
   }
+
   .card {
     width: 280px;
     padding: 1em;
   }
-}
 
-/* Very small screens */
-@media (max-width: 480px) {
-  body {
-    background-color: #d7f9f1;
-  }
-  .carousel {
-    padding: 0;
-    padding-top: 10%;
-  }
-  .card {
-    width: 300px;
-    margin: 0 auto;
-  }
-  .image-description {
-    padding-top: 4%;
-  }
   .carousel__item {
     width: 200px;
     height: 200px;
-  }
-  .carousel__list {
-    display: flex;
-    list-style: none;
-    position: relative;
-    width: 100%;
-    height: 250px;
-    justify-content: center;
-    perspective: 300px;
   }
 
   .carousel__item[data-pos="-1"] {
@@ -324,85 +273,10 @@ main p {
   }
 }
 
-/* Footer icons */
-.clip {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-.svg--source {
-  display: none;
-}
-
-.svg--icon {
-  width: 100%;
-  max-width: 3rem;
-  height: 100%;
-  max-height: 5rem;
-  display: block;
-  margin: 0 auto;
-  fill: black;
-}
-
-.wrapper {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-}
-
-.share {
-  width: 5rem;
-  height: 5rem;
-  float: left;
-  margin: 0.5rem 1rem 0.5rem 0;
-  color: #353c4a;
-  border: 0.2rem solid black;
-  box-shadow: 0 0 8px 0 rgba(50, 50, 50, 0.15);
-  border-radius: 50%;
-  transition: 250ms;
-}
-
-.share:last-child {
-  margin-right: 0;
-}
-
-.share:focus {
-  outline-color: inherit;
-}
-
-.linkedin:hover,
-.linkedin:focus {
-  color: #00aced;
-  box-shadow: 0 0 24px 0 #00aced;
-  background-color: #00aced;
-}
-
-.youtube:hover,
-.youtube:focus {
-  color: #cd201f;
-  box-shadow: 0 0 24px 0 #cd201f;
-  background-color: #cd201f;
-}
-
-.instagram:hover,
-.instagram:focus {
-  color: #e4405f;
-  box-shadow: 0 0 24px 0 #e4405f;
-  background-color: #e4405f;
-}
-/* ----------------FOR FOOTER-------------------- */
+/* Footer styling */
 .footer {
   z-index: 1;
-  --footer-background: orange;
+  background-color: orange;
   display: grid;
   position: relative;
   grid-area: footer;
@@ -415,16 +289,16 @@ main p {
   top: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 70%; /* Adjust the width if you want more narrow bubbles */
-  height: 2rem; /* Adjust height for the bubble area */
-  background: var(--footer-background);
+  width: 70%;
+  height: 2rem;
+  /* background: orange; */
   filter: url("#blob");
 }
 
 .footer .bubbles .bubble {
   position: absolute;
   left: var(--position, 50%);
-  background: var(--footer-background);
+  background: orange;
   border-radius: 100%;
   animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
     bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
@@ -436,7 +310,7 @@ main p {
   grid-template-columns: 1fr auto;
   grid-gap: 4rem;
   padding: 2rem;
-  background: var(--footer-background);
+  background: orange;
 }
 
 .footer .content a,
@@ -460,14 +334,6 @@ main p {
   justify-content: center;
 }
 
-.footer .content > div > div {
-  margin: 0.25rem 0;
-}
-
-.footer .content > div > div > * {
-  margin-right: 0.5rem;
-}
-
 .footer .content .image {
   align-self: center;
   width: 4rem;
@@ -483,32 +349,41 @@ main p {
     width: var(--size, 4rem);
     height: var(--size, 4rem);
   }
-  100% {
-    width: 0rem;
-    height: 0rem;
+
+  50% {
+    width: var(--size, 3rem);
+    height: var(--size, 3rem);
   }
 }
 
 @keyframes bubble-move {
   0% {
-    bottom: -4rem;
+    transform: translateX(var(--position, 0%)) translateY(0);
   }
+
+  25% {
+    transform: translateX(var(--position, 0%)) translateY(10px);
+  }
+
+  50% {
+    transform: translateX(var(--position, 50%)) translateY(-10px);
+  }
+
+  75% {
+    transform: translateX(var(--position, 100%)) translateY(10px);
+  }
+
   100% {
-    bottom: var(--distance, 10rem);
+    transform: translateX(var(--position, 100%)) translateY(0);
   }
 }
-/* For thr pie chart */
 
-/* Ensure the container adjusts based on screen size */
-#chartdiv {
-  width: 100%;
-  height: 400px; 
-margin-right: 0;
-  margin: 20px auto;
-}
+@media (max-width: 1024px) {
+  .footer .bubbles {
+    width: 100%;
+  }
 
-@media (max-width: 600px) {
-  #chartdiv{
-    height: 200px; /* Reduce height for smaller screens */
+  .footer .content {
+    padding: 1rem;
   }
 }
