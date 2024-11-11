@@ -6,60 +6,9 @@
     <title>Homepage</title>
     <link rel="stylesheet" href="StyleSheet.css" />
     <link rel="stylesheet" href="../navbar/navbar.css" />
-    <link rel="stylesheet" href="../footer/fonts/icomoon/style.css" />
-    <link rel="stylesheet" href="../footer/css/style.css" />
-    <!-- <style>
-      /* Ensure the footer container has a relative position */
-      footer {
-        position: relative;
-        text-align: center;
-        padding: 40px 20px; /* Adjust padding to ensure enough space */
-      }
-
-      /* Positioning the bubbles */
-      .footer {
-        position: relative;
-        z-index: 1;
-      }
-
-      .bubbles {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        pointer-events: none; /* Prevent the bubbles from blocking clicks on footer content */
-      }
-
-      #footer {
-        position: relative;
-        z-index: 2; /* Ensure content appears above the bubbles */
-        color: white; /* Adjust text color if necessary */
-        padding: 20px;
-      }
-
-      .bubble {
-        position: absolute;
-        background-color: rgba(255, 255, 255, 0.5); /* Color of the bubbles */
-        border-radius: 50%;
-        animation: bubble-animation 10s infinite;
-      }
-
-      @keyframes bubble-animation {
-        0% {
-          transform: translateY(0);
-          opacity: 0.5;
-        }
-        50% {
-          transform: translateY(-50px);
-          opacity: 1;
-        }
-        100% {
-          transform: translateY(0);
-          opacity: 0.5;
-        }
-      }
-    </style> -->
+    <link rel="stylesheet" href="../footer/fonts/icomoon/style.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="../footer/css/style.css">
   </head>
   <body>
     <div id="navbar-placeholder"></div>
@@ -91,13 +40,29 @@
       <h1>What is household <div class="bold-orange" style="display: inline;">food insecurity</div>?</h1>
     </main>
     <main class="hidden">
-      <img src="../Homepage/image/DALL·E 2024-11-04 15.42.15 - A detailed scene depicting a small family in their modest kitchen, emphasizing a color palette of earthy tones with orange and yellow accents. The par.webp" alt="Food Insecurity" width="70%" style="border-radius: 15px;" />
+      <img src="../Homepage/image/image2.webp" alt="Food Insecurity" width="70%" style="border-radius: 15px;" />
     </main>
     <main class="hidden">
       <p>
         Household food insecurity refers to the <div class="underline-pseudo">lack of consistent</div><div class="underline-pseudo">access</div><div class="underline-pseudo"> to sufficient</div><div class="underline-pseudo">and nutritious food,</div> which impacts the health and well-being of families.
       </p>
     </main>
+    <!-- <div class="footer">
+      <div class="bubbles">
+        <script>
+          for (let i = 0; i < 128; i++) {
+            document.write(
+              `<div class="bubble" style="--size:${
+          4 + Math.random() * 6
+              }rem; --distance:${6 + Math.random() * 4}rem; --position:${
+          -5 + Math.random() * 110
+              }%; --time:${2 + Math.random() * 2}s; --delay:${
+          -1 * (2 + Math.random() * 2)
+              }s;"></div>`
+            );
+          }
+        </script>
+      </div> -->
     <!-- Footer Content -->
     <div id="footer">
       <!-- The content that will be loaded from another file -->

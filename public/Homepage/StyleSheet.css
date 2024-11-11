@@ -273,7 +273,7 @@ main p {
   }
 }
 
-/* Footer styling */
+/* Footer styling  */
 .footer {
   z-index: 1;
   background-color: orange;
@@ -291,9 +291,8 @@ main p {
   transform: translateX(-50%);
   width: 70%;
   height: 2rem;
-  /* background: orange; */
   filter: url("#blob");
-}
+} 
 
 .footer .bubbles .bubble {
   position: absolute;
