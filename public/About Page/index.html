@@ -80,36 +80,23 @@
 </div>
 
 </main>
-<footer class="footer">
-   <div class="social-buttons">
-      <a
-        href="#"
-        class="social-button social-button--instagram"
-        aria-label="Instagram"
-      >
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a
-        href="#"
-        class="social-button social-button--linkedin"
-        aria-label="LinkedIn"
-      >
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-      <a
-        href="#"
-        class="social-button social-button--youtube"
-        aria-label="YouTube"
-      >
-        <i class="fab fa-youtube"></i>
-      </a>
+  <!-- Footer Content -->
+  <div class="footer">
+    <!-- The content that will be loaded from another file -->
+    <div id="bubble">
+      <!-- The content that will be loaded from another file -->
     </div>
-  <br><br>
-
-  <p class="copyright">
-   @changeTheNow | All Rights Reserved
-  </p>
-</footer>
+  </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Fetch and insert footer content into the footer div
+    fetch("../footer/index.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("bubble").innerHTML = data;
+      });
+  });
+</script>
 <script>
   var typed = new Typed('#typed-text', {
     strings: ["OUR MISSION"],

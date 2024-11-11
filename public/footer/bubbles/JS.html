@@ -1,0 +1,16 @@
+<div class="footer">
+  <div class="bubbles">
+    <script>
+      for (let i = 0; i < 128; i++) {
+          document.write(
+            `<div class="bubble" style="
+              width: ${4 + Math.random() * 6}rem;
+              height: ${4 + Math.random() * 6}rem;
+              left: ${Math.random() * 100}%;
+              animation-duration: ${2 + Math.random() * 2}s;
+              animation-delay: ${-1 * (2 + Math.random() * 2)}s;">
+            </div>`
+          );
+    }
+      </script>
+  </div>
