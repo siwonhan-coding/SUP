@@ -20,6 +20,7 @@ a {
   margin: 0 0 1rem 0; /* Adjusted margin to decrease space */
   font-family: "Poppins", sans-serif;
   z-index: 2;
+  text-align: center;
   grid-template-columns: 1fr auto;
   grid-gap: 4rem;
   padding: 2rem;
