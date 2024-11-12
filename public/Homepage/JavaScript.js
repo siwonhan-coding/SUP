@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     2: {
       title: "SDG 3",
       description: "Good Health and Well-being aims to ensure healthy lives and promote well-being for people of all ages.",
-      color: "#33FF57",
+      color: "#4CBB17",
       textColor: "#000000",
     },
     3: {
