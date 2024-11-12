@@ -1,27 +1,16 @@
 
-* {
+al reset and body styling */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  border: none;
-  outline: none;
-  scroll-behavior: smooth;
-}
-
-
-
-:root {
-  --bg-color: wheat;
-  --second-bg-color: #001005;
-  --text-color: black;
-  --main-color: #3a393b;
-  --about-me-color: white;
 }
 
 body {
-  background: var(--bg-color);
-  color: var(--text-color);
+  background-color: #effffa;
+  font-family: Arial, sans-serif;
 }
 
 h4 {
@@ -117,46 +106,6 @@ section {
   text-align: left;
 }
 
-.footer {
-  background-color: var(--bg-color);
-  padding: 10px 0;
-  margin-top: 10px;
-}
-
-.footer .social-buttons {
-  text-align: center;
-  padding: 20px;
-}
-i {
-  font-size: 5rem;
-  padding: 10px;
-}
-
-footer ul {
-  text-align: center;
-  font-size: 1.8rem;
-}
-
-.footer ul li {
-  display: inline-block;
-  margin-left: 20px;
-}
-
-.footer ul li a {
-  color: white;
-  border-bottom: 3px solid transparent;
-  transition: 0.3s ease-in-out;
-}
-
-.footer ul li a:hover {
-  border-bottom: 3px solid var(--main-color);
-}
-
-.footer .copyright {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 16px;
-}
 
 @media (max-width: 1024px) {
   .about {

@@ -72,22 +72,18 @@
         </script>
       </div> -->
     <!-- Footer Content -->
-    <div class="footer">
-      <!-- The content that will be loaded from another file -->
-      <div id="bubble">
-        <!-- The content that will be loaded from another file -->
-      </div>
+    <div id="footer">
     </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Fetch and insert footer content into the footer div
-        fetch("../footer/index.html")
-          .then((response) => response.text())
-          .then((data) => {
-            document.getElementById("bubble").innerHTML = data;
-          });
-      });
-    </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Fetch and insert footer content into the footer div
+      fetch("../footer/index.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("bubble").innerHTML = data;
+        });
+    });
+  </script>
     <script src="JavaScript.js"></script>
     <script src="../navbar/navbar.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
