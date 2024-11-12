@@ -205,7 +205,11 @@ main p {
     transition: none;
   }
 }
-
+main .underline-pseudo:nth-child(2),
+main .underline-pseudo:nth-child(3) {
+  padding-left: 20px;
+  padding-left: 10px;
+}
 /* Spin animation keyframe */
 @keyframes spin {
   from {
