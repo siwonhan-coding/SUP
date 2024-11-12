@@ -142,11 +142,9 @@ main .underline-pseudo:nth-child(4) {
   width: 104%;
   background-image: conic-gradient(
     from var(--angle),
-    #fa1004,
-    #fd06d4,
-    #2206fd,
-    #a603fe,
-    #1982c4
+    var(--gradient-start, #fa1004),
+    var(--gradient-middle, #fd06d4),
+    var(--gradient-end, #2206fd)
   );
   top: 50%;
   left: 50%;

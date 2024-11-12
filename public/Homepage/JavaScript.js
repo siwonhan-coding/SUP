@@ -1,56 +1,87 @@
-﻿// Wait until the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", function () {
-  // Data for each SDG item, including title, description, color, and text color
+﻿document.addEventListener("DOMContentLoaded", function () {
   const imageData = {
     1: {
       title: "SDG 11",
-      description: "Sustainable Cities and Communities aims to make cities inclusive, safe, resilient, and sustainable for everyone.",
-      color: "#ffa533",
-      textColor: "#000000",
+      description:
+        "Sustainable Cities and Communities aims to make cities inclusive, safe, resilient, and sustainable for everyone.",
+      color: "#ffa533", // Background color
+      textColor: "#000000", // Text color
+      gradientColors: {
+        start: "#0d0e0e", // Custom gradient start color for SDG 11
+        middle: "#e9fcfc",
+        end: "#ffa533",
+      },
     },
     2: {
       title: "SDG 3",
-      description: "Good Health and Well-being aims to ensure healthy lives and promote well-being for people of all ages.",
+      description:
+        "Good Health and Well-being aims to ensure healthy lives and promote well-being for people of all ages.",
       color: "#4CBB17",
       textColor: "#000000",
+      gradientColors: {
+        start: "#0d0e0e", // Custom gradient for SDG 3
+        middle: "#e9fcfc",
+        end: "#4CBB17",
+      },
     },
     3: {
       title: "SDG 2",
-      description: "Zero Hunger aims to end hunger, achieve food security, improve nutrition, and promote sustainable agriculture.",
+      description:
+        "Zero Hunger aims to end hunger, achieve food security, improve nutrition, and promote sustainable agriculture.",
       color: "#ffcc00",
       textColor: "#000000",
+      gradientColors: {
+        start: "#0d0e0e", // Custom gradient for SDG 2
+        middle: "#e9fcfc",
+        end: "#ffcc00",
+      },
     },
     4: {
       title: "SDG 1",
-      description: "No Poverty aims to end poverty in all its forms everywhere and ensure everyone has basic living standards and social protection.",
+      description:
+        "No Poverty aims to end poverty in all its forms everywhere and ensure everyone has basic living standards and social protection.",
       color: "#ff5050",
       textColor: "#000000",
+      gradientColors: {
+        start: "#0d0e0e", // Custom gradient for SDG 1
+        middle: "#e9fcfc",
+        end: "#4cfe05",
+      },
     },
     5: {
       title: "SDG 17",
-      description: "Partnerships for the Goals is about working together globally to achieve all the sustainable development goals.",
+      description:
+        "Partnerships for the Goals is about working together globally to achieve all the sustainable development goals.",
       color: "#2ba0ff",
       textColor: "#000000",
+      gradientColors: {
+        start: "#0d0e0e", // Custom gradient for SDG 17
+        middle: "#e9fcfc",
+        end: "#fe8005",
+      },
     },
   };
 
-  // Select elements for the SDG card
   const carouselItems = document.querySelectorAll(".carousel__item");
   const imageTitle = document.querySelector(".image-title");
   const imageDescription = document.querySelector(".image-description");
   const card = document.querySelector(".card");
 
-  // Add click event listener to each carousel item for updating the SDG card
   carouselItems.forEach((item, index) => {
     item.addEventListener("click", function () {
-      const dataId = index + 1; // Get data based on item index (1-5)
-      const data = imageData[dataId]; // Get image data
+      const dataId = index + 1; // Get the ID based on the index (1-5)
+      const data = imageData[dataId]; // Fetch the corresponding SDG data
 
-      // Update card with selected data
+      // Update the card with new data
       imageTitle.textContent = data.title;
       imageDescription.textContent = data.description;
-      card.style.backgroundColor = data.color;
-      card.style.color = data.textColor;
+      card.style.backgroundColor = data.color; // Update card background color
+      card.style.color = data.textColor; // Update text color to ensure contrast
+
+      // Dynamically set the gradient colors using CSS variables
+      card.style.setProperty("--gradient-start", data.gradientColors.start);
+      card.style.setProperty("--gradient-middle", data.gradientColors.middle);
+      card.style.setProperty("--gradient-end", data.gradientColors.end);
     });
   });
 
