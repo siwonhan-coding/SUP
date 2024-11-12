@@ -31,13 +31,9 @@ body {
 .underline-pseudo {
   font-weight: bold;
   color: orange;
+  display: inline-block;
   border-bottom: 2px solid #000;
   padding-bottom: 1px;
-  display: inline;
-}
-main .underline-pseudo:nth-child(2),
-main .underline-pseudo:nth-child(4) {
-  padding-left: 20px; /* Example style for the second span */
 }
 
 .carousel {
@@ -167,13 +163,12 @@ main {
   text-align: right;
   min-height: 10vh;
 }
-  /* Align image to the right and increase its size */
-  .hidden img {
-    max-width: 100%; /* Increase image size */
-    margin-left: auto; /* Align image to the right */
-    display: block;
-    border-radius: 15px;
-  }
+.hidden img {
+  max-width: 85%; /* Increase image size */
+  margin-left: auto; /* Align image to the right */
+  display: block;
+  border-radius: 15px;
+}
 main h1 {
   padding-top: 5vh;
 }
@@ -192,7 +187,6 @@ main h1 {
 
 main p {
   font-size: 1em;
-  word-spacing: 10px;
 }
 
 @media (prefers-reduced-motion) {
@@ -219,10 +213,11 @@ main p {
     width: 300px;
     padding: 2em;
   }
-  .hidden:nth-of-type(2) {
-    width: 70%;
+  .hidden img {
+    max-width: 85%; /* Increase image size */
+    margin-left: auto; /* Align image to the right */
+    display: block;
     border-radius: 15px;
-    padding-right: 0;
   }
 }
 @media (max-width: 480px) {
@@ -236,11 +231,12 @@ main p {
     perspective: 300px;
   }
   .hidden img {
-    max-width: 100%; /* Increase image size */
+    max-width: 85%; /* Increase image size */
     margin-left: auto; /* Align image to the right */
     display: block;
     border-radius: 15px;
   }
+
 }
 /* Medium screens (Tablets) */
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -259,7 +255,7 @@ main p {
     height: 500px;
   } */
   .hidden img {
-    max-width: 100%; /* Increase image size */
+    max-width: 85%; /* Increase image size */
     margin-left: auto; /* Align image to the right */
     display: block;
     border-radius: 15px;
@@ -294,7 +290,7 @@ main p {
     padding: 1em;
   }
   .hidden img {
-    max-width:100%; /* Increase image size */
+    max-width: 85%; /* Increase image size */
     margin-left: auto; /* Align image to the right */
     display: block;
     border-radius: 15px;
@@ -303,7 +299,9 @@ main p {
     width: 200px;
     height: 200px;
   }
-
+main h1{
+  font-size: 1.7em;
+}
   .carousel__item[data-pos="-1"] {
     transform: translateX(-30%) scale(0.8);
   }
