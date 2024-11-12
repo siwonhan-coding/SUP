@@ -309,6 +309,7 @@ main p {
     font-weight: bolder;
   }
   .banner p {
+    padding-top: 3px;
     color: wheat;
     text-align: center;
     font-size: 1.2rem;
