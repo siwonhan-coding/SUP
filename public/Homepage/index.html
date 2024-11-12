@@ -6,8 +6,8 @@
     <title>Homepage</title>
     <link rel="stylesheet" href="StyleSheet.css" />
     <link rel="stylesheet" href="../navbar/navbar.css" />
-    <link rel="stylesheet" href="../footer/fonts/icomoon/style.css">
-    <link rel="stylesheet" href="../footer/css/style.css">
+    <link rel="stylesheet" href="../footer/fonts/icomoon/style.css" />
+    <link rel="stylesheet" href="../footer/css/style.css" />
   </head>
   <body>
     <div id="navbar-placeholder"></div>
@@ -36,14 +36,23 @@
       </p>
     </div>
     <main class="hidden">
-      <h1>What is household <div class="bold-orange" style="display: inline;">food insecurity</div>?</h1>
+      <h1>
+        What is household
+        <div class="bold-orange" style="display: inline">food insecurity</div>
+        ?
+      </h1>
     </main>
     <main class="hidden">
-      <img src="../Homepage/image/image2.webp" alt="Food Insecurity"  />
+      <img src="../Homepage/image/image2.webp" alt="Food Insecurity" />
     </main>
     <main class="hidden">
       <p>
-        Household food insecurity refers to the <div class="underline-pseudo">lack of consistent</div><div class="underline-pseudo">access</div><div class="underline-pseudo"> to sufficient</div><div class="underline-pseudo">and nutritious food,</div> which impacts the health and well-being of families.
+        Household food insecurity refers to the
+        <span class="underline-pseudo">lack of consistent</span
+        ><span class="underline-pseudo">access</span
+        ><span class="underline-pseudo"> to sufficient</span
+        ><span class="underline-pseudo">and nutritious food,</span> which
+        impacts the health and well-being of families.
       </p>
     </main>
     <!-- <div class="footer">
@@ -62,19 +71,22 @@
           }
         </script>
       </div> -->
-    <!-- Footer Content -->
-    <div id="footer">
+    <div class="footer">
+      <!-- The content that will be loaded from another file -->
+      <div id="bubble">
+        <!-- The content that will be loaded from another file -->
+      </div>
     </div>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Fetch and insert footer content into the footer div
-      fetch("../footer/index.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("footer").innerHTML = data;
-        });
-    });
-  </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Fetch and insert footer content into the footer div
+        fetch("../footer/index.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("bubble").innerHTML = data;
+          });
+      });
+    </script>
     <script src="JavaScript.js"></script>
     <script src="../navbar/navbar.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
