@@ -1,6 +1,4 @@
-
-al reset and body styling */
-*,
+al reset and body styling */ *,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -105,7 +103,6 @@ section {
 .skill-info li {
   text-align: left;
 }
-
 
 @media (max-width: 1024px) {
   .about {
@@ -308,7 +305,20 @@ section {
     text-align: center;
   }
 }
-
+.banner {
+  height: 55px;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  background-color: black;
+  font-weight: bolder;
+  margin-top: 20px;
+}
+.banner p {
+  color: wheat;
+  text-align: center;
+  font-size: 2.5em;
+}
 /* Extra Small Devices, Phones */
 @media only screen and (min-width: 480px) and (max-width: 765px) {
   #textSlider.row {
@@ -494,5 +504,21 @@ section {
 @media (max-width: 600px) {
   #typed-text {
     font-size: 1.5em; /* Adjust for smaller screens */
+  }
+}
+@media (max-width: 767px) {
+  .banner {
+    height: 30px;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    background-color: black;
+    font-weight: bolder;
+  }
+  .banner p {
+    padding-top: 3px;
+    color: wheat;
+    text-align: center;
+    font-size: 1.2rem;
   }
 }

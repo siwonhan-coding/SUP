@@ -94,7 +94,7 @@ body {
     position: relative;
     grid-area: footer;
     min-height: 12rem;
-    padding-top: 3rem;
+    /* padding-top: 3rem; */
   }
   
   .footer .bubbles {
