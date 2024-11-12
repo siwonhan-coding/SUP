@@ -298,7 +298,9 @@ main p {
     width: 200px;
     height: 200px;
   }
-
+main h1{
+  font-size: 1.7em;
+}
   .carousel__item[data-pos="-1"] {
     transform: translateX(-30%) scale(0.8);
   }
