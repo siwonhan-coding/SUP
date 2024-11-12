@@ -99,7 +99,7 @@ body {
 .carousel__item[data-pos="-2"],
 .carousel__item[data-pos="2"],
 .carousel__item[data-pos="0"] {
-  box-shadow: 0 0 30px 10px rgba(0, 0, 0);
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0);
 }
 
 .carousel__item[data-pos="-1"] {
