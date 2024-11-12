@@ -31,9 +31,13 @@ body {
 .underline-pseudo {
   font-weight: bold;
   color: orange;
-  display: inline-block;
   border-bottom: 2px solid #000;
   padding-bottom: 1px;
+  display: inline;
+}
+main .underline-pseudo:nth-child(2),
+main .underline-pseudo:nth-child(4) {
+  padding-left: 20px; /* Example style for the second span */
 }
 
 .carousel {
@@ -186,6 +190,7 @@ main h1 {
 
 main p {
   font-size: 1em;
+  word-spacing: 10px;
 }
 
 @media (prefers-reduced-motion) {
