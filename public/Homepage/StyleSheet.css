@@ -194,14 +194,13 @@ main p {
   font-size: 1em;
 }
 .banner {
-  height: 50px;
+  height: 55px;
   position: -webkit-sticky;
   position: sticky;
   bottom: 0;
   background-color: black;
-  text-transform: uppercase;
   font-weight: bolder;
-  text-shadow: 2px 0 2px white;
+  margin-top: 20px;
 }
 .banner p {
   color: wheat;
@@ -249,7 +248,7 @@ main p {
     justify-content: center;
     perspective: 300px;
   }
- 
+
   .hidden img {
     max-width: 85%; /* Increase image size */
     margin-left: auto; /* Align image to the right */
@@ -301,7 +300,19 @@ main p {
   .body {
     background-color: white;
   }
-  
+  .banner {
+    height: 30px;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    background-color: black;
+    font-weight: bolder;
+  }
+  .banner p {
+    color: wheat;
+    text-align: center;
+    font-size: 1.2rem;
+  }
   .carousel {
     padding: 15% 0 0 0;
   }
