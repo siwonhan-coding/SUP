@@ -17,7 +17,7 @@ a {
 
 .footer-16371 {
   padding: 0;
-  margin: 0 0 1rem 0; /* Adjusted margin to decrease space */
+  margin: 0; /* Adjusted margin to decrease space */
   font-family: "Poppins", sans-serif;
   z-index: 2;
   text-align: center;
