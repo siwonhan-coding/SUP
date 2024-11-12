@@ -248,3 +248,8 @@ a {
     opacity: 0;
   }
 } */
+
+.icon-twitter::before{
+	content:"𝕏";
+	font-size:1.2em;
+}
