@@ -9,6 +9,42 @@
   body {
     background-color: #d7f9f1;
   }
+  .banner {
+    height: 55px;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    background-color: black;
+    font-weight: bolder;
+    margin-top: 20px;
+  }
+  .banner p {
+    color: wheat;
+    text-align: center;
+    font-size: 2.5em;
+  }
+}
+@media (max-width: 767px) {
+  .body {
+    background-color: white;
+  }
+  .carousel {
+    padding: 15% 0 0 0;
+  }
+  .banner {
+    height: 30px;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    background-color: black;
+    font-weight: bolder;
+  }
+  .banner p {
+    padding-top: 3px;
+    color: wheat;
+    text-align: center;
+    font-size: 1.2rem;
+  }
 }
 .banner {
   height: 30px;
@@ -23,18 +59,4 @@
   color: wheat;
   text-align: center;
   font-size: 1.2rem;
-}
-.banner {
-  height: 55px;
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: 0;
-  background-color: black;
-  font-weight: bolder;
-  margin-top: 20px;
-}
-.banner p {
-  color: wheat;
-  text-align: center;
-  font-size: 2.5em;
 }
