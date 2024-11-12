@@ -137,9 +137,11 @@ body {
   width: 104%;
   background-image: conic-gradient(
     from var(--angle),
-    var(--gradient-start, #fa1004),
-    var(--gradient-middle, #fd06d4),
-    var(--gradient-end, #2206fd)
+    #fa1004,
+    #fd06d4,
+    #2206fd,
+    #a603fe,
+    #1982c4
   );
   top: 50%;
   left: 50%;
@@ -186,30 +188,13 @@ main h1 {
 main p {
   font-size: 1em;
 }
-.banner {
-  height: 55px;
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: 0;
-  background-color: black;
-  font-weight: bolder;
-  margin-top: 20px;
-}
-.banner p {
-  color: wheat;
-  text-align: center;
-  font-size: 2.5em;
-}
+
 @media (prefers-reduced-motion) {
   .hidden {
     transition: none;
   }
 }
-main .underline-pseudo:nth-child(2),
-main .underline-pseudo:nth-child(3) {
-  padding-left: 20px;
-  padding-left: 10px;
-}
+
 /* Spin animation keyframe */
 @keyframes spin {
   from {
@@ -251,6 +236,7 @@ main .underline-pseudo:nth-child(3) {
     display: block;
     border-radius: 15px;
   }
+
 }
 /* Medium screens (Tablets) */
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -299,37 +285,22 @@ main .underline-pseudo:nth-child(3) {
   .carousel {
     padding: 15% 0 0 0;
   }
-  .banner {
-    height: 30px;
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0;
-    background-color: black;
-    font-weight: bolder;
-  }
-  .banner p {
-    padding-top: 3px;
-    color: wheat;
-    text-align: center;
-    font-size: 1.2rem;
-  }
   .card {
     width: 280px;
     padding: 1em;
   }
   .hidden.show {
-    float: right; /* Align image to the right */
     border-radius: 15px;
-    padding: 4vh 10vw 4vh 0; /* Add 10px padding to the right */
+    padding: 4vh 10vw; /* Add 10px padding to the right */
     max-width: 85%; /* Decrease image size */
   }
   .carousel__item {
     width: 200px;
     height: 200px;
   }
-  main h1 {
-    font-size: 1.7em;
-  }
+main h1{
+  font-size: 1.7em;
+}
   .carousel__item[data-pos="-1"] {
     transform: translateX(-30%) scale(0.8);
   }
@@ -346,6 +317,7 @@ main .underline-pseudo:nth-child(3) {
     transform: translateX(50%) scale(0.7);
   }
 }
+
 
 @keyframes bubble-size {
   0%,
@@ -392,16 +364,14 @@ main .underline-pseudo:nth-child(3) {
   }
 }
 
-.hidden-1,
-.hidden-2 {
+.hidden-1, .hidden-2 {
   text-align: right;
 }
 
-.hidden-3,
-.hidden-4 {
+
+.hidden-3 , .hidden-4 {
   text-align: left;
-<<<<<<< HEAD
-  padding: auto;
+  padding: 0 5% 0 5%;
 }
 
 .hidden-5 {
@@ -410,6 +380,3 @@ main .underline-pseudo:nth-child(3) {
   padding: 50px 5px 50px 5px;
   text-align: center;
 }
-=======
-}
->>>>>>> 5f2a05ac4e068032fbf4d5239529549c390e402b
