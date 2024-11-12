@@ -63,11 +63,7 @@
         </script>
       </div> -->
     <!-- Footer Content -->
-    <div class="footer">
-      <!-- The content that will be loaded from another file -->
-      <div id="bubble">
-        <!-- The content that will be loaded from another file -->
-      </div>
+    <div id="footer">
     </div>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -75,7 +71,7 @@
       fetch("../footer/index.html")
         .then((response) => response.text())
         .then((data) => {
-          document.getElementById("bubble").innerHTML = data;
+          document.getElementById("footer").innerHTML = data;
         });
     });
   </script>
