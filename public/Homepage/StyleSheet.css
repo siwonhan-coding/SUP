@@ -34,11 +34,6 @@ body {
   display: inline-block;
   border-bottom: 2px solid #000;
   padding-bottom: 1px;
-  display: inline;
-}
-main .underline-pseudo:nth-child(2),
-main .underline-pseudo:nth-child(4) {
-  padding-left: 10px; /* Example style for the second span */
 }
 
 .carousel {
@@ -163,7 +158,7 @@ main {
   color: black;
   font-size: 2em;
   padding: 10vh 10vw 0vh 10vw;
-  text-align: right;
+  /* text-align: right; */
   min-height: 10vh;
 }
 .hidden img {
@@ -191,20 +186,7 @@ main h1 {
 main p {
   font-size: 1em;
 }
-.banner {
-  height: 55px;
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: 0;
-  background-color: black;
-  font-weight: bolder;
-  margin-top: 20px;
-}
-.banner p {
-  color: wheat;
-  text-align: center;
-  font-size: 2.5em;
-}
+
 @media (prefers-reduced-motion) {
   .hidden {
     transition: none;
@@ -246,13 +228,13 @@ main p {
     justify-content: center;
     perspective: 300px;
   }
-
   .hidden img {
     max-width: 85%; /* Increase image size */
     margin-left: auto; /* Align image to the right */
     display: block;
     border-radius: 15px;
   }
+
 }
 /* Medium screens (Tablets) */
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -298,20 +280,6 @@ main p {
   .body {
     background-color: white;
   }
-  .banner {
-    height: 30px;
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0;
-    background-color: black;
-    font-weight: bolder;
-  }
-  .banner p {
-    padding-top: 3px;
-    color: wheat;
-    text-align: center;
-    font-size: 1.2rem;
-  }
   .carousel {
     padding: 15% 0 0 0;
   }
@@ -319,19 +287,19 @@ main p {
     width: 280px;
     padding: 1em;
   }
-  .hidden img {
-    max-width: 85%; /* Increase image size */
-    margin-left: auto; /* Align image to the right */
-    display: block;
+  .hidden.show {
+    float: right; /* Align image to the right */ 
     border-radius: 15px;
+    padding: 4vh 10vw 4vh 0; /* Add 10px padding to the right */
+    max-width: 85%; /* Decrease image size */
   }
   .carousel__item {
     width: 200px;
     height: 200px;
   }
-  main h1 {
-    font-size: 1.7em;
-  }
+main h1{
+  font-size: 1.7em;
+}
   .carousel__item[data-pos="-1"] {
     transform: translateX(-30%) scale(0.8);
   }
@@ -349,74 +317,6 @@ main p {
   }
 }
 
-/* Footer styling  */
-.footer {
-  z-index: 1;
-  background-color: orange;
-  display: grid;
-  position: relative;
-  grid-area: footer;
-  min-height: 12rem;
-  padding-top: 3rem;
-}
-
-.footer .bubbles {
-  position: absolute;
-  top: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 70%;
-  height: 2rem;
-  filter: url("#blob");
-}
-
-.footer .bubbles .bubble {
-  position: absolute;
-  left: var(--position, 50%);
-  background: orange;
-  border-radius: 100%;
-  animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
-    bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
-  transform: translate(-50%, 100%);
-}
-
-.footer .content {
-  z-index: 2;
-  grid-template-columns: 1fr auto;
-  grid-gap: 4rem;
-  padding: 2rem;
-  background: orange;
-}
-
-.footer .content a,
-.footer .content p {
-  color: #f5f7fa;
-  text-decoration: none;
-}
-
-.footer .content b {
-  color: white;
-}
-
-.footer .content p {
-  margin: 0;
-  font-size: 0.75rem;
-}
-
-.footer .content > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.footer .content .image {
-  align-self: center;
-  width: 4rem;
-  height: 4rem;
-  margin: 0.25rem 0;
-  background-size: cover;
-  background-position: center;
-}
 
 @keyframes bubble-size {
   0%,
@@ -461,4 +361,14 @@ main p {
   .footer .content {
     padding: 1rem;
   }
+}
+
+.hidden-1, .hidden-2 {
+  text-align: right;
+}
+
+
+.hidden-3 , .hidden-4 {
+  text-align: left;
+
 }
