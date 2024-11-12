@@ -214,7 +214,7 @@ main p {
     padding: 2em;
   }
   .hidden img {
-    max-width: 90%; /* Increase image size */
+    max-width: 85%; /* Increase image size */
     margin-left: auto; /* Align image to the right */
     display: block;
     border-radius: 15px;
@@ -236,6 +236,7 @@ main p {
     display: block;
     border-radius: 15px;
   }
+
 }
 /* Medium screens (Tablets) */
 @media (min-width: 768px) and (max-width: 1023px) {
