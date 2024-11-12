@@ -206,6 +206,11 @@ a {
   margin-bottom: 1rem;
 }
 
+
+.bubbles {
+  opacity: 0 ;
+}
+
 /* .footer {
   position: relative;
   overflow: hidden;  
