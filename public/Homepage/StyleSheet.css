@@ -160,15 +160,15 @@ main {
   color: black;
   font-size: 2em;
   padding: 10vh 10vw 0vh 10vw;
-  text-align: right;
+  /* text-align: right; */
   min-height: 10vh;
 }
-.hidden img {
-  max-width: 85%; /* Increase image size */
-  margin-left: auto; /* Align image to the right */
+/* .hidden img {
+  max-width: 85%; Increase image size
+  margin-left: auto; /* Align image to the right 
   display: block;
   border-radius: 15px;
-}
+} */
 main h1 {
   padding-top: 5vh;
 }
@@ -177,6 +177,13 @@ main h1 {
   opacity: 0;
   transform: translateX(-100%);
   transition: all 1s;
+}
+
+.hidden-5.show {
+  float: left; /* Align image to the right */ 
+  border-radius: 15px;
+  padding: 4vh 10vw 4vh 0; /* Add 10px padding to the right */
+  max-width: 85%; /* Decrease image size */
 }
 
 .show {
@@ -289,11 +296,17 @@ main p {
     width: 280px;
     padding: 1em;
   }
-  .hidden img {
-    max-width: 85%; /* Increase image size */
-    margin-left: auto; /* Align image to the right */
-    display: block;
+  .hidden.show {
+    float: right; /* Align image to the right */ 
     border-radius: 15px;
+    padding: 4vh 10vw 4vh 0; /* Add 10px padding to the right */
+    max-width: 85%; /* Decrease image size */
+  }
+  .hidden-5.show {
+    float: left; /* Align image to the right */ 
+    border-radius: 15px;
+    padding: 4vh 10vw 4vh 0; /* Add 10px padding to the right */
+    max-width: 85%; /* Decrease image size */
   }
   .carousel__item {
     width: 200px;
@@ -319,74 +332,6 @@ main h1{
   }
 }
 
-/* Footer styling  */
-.footer {
-  z-index: 1;
-  background-color: orange;
-  display: grid;
-  position: relative;
-  grid-area: footer;
-  min-height: 12rem;
-  padding-top: 3rem;
-}
-
-.footer .bubbles {
-  position: absolute;
-  top: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 70%;
-  height: 2rem;
-  filter: url("#blob");
-}
-
-.footer .bubbles .bubble {
-  position: absolute;
-  left: var(--position, 50%);
-  background: orange;
-  border-radius: 100%;
-  animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
-    bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
-  transform: translate(-50%, 100%);
-}
-
-.footer .content {
-  z-index: 2;
-  grid-template-columns: 1fr auto;
-  grid-gap: 4rem;
-  padding: 2rem;
-  background: orange;
-}
-
-.footer .content a,
-.footer .content p {
-  color: #f5f7fa;
-  text-decoration: none;
-}
-
-.footer .content b {
-  color: white;
-}
-
-.footer .content p {
-  margin: 0;
-  font-size: 0.75rem;
-}
-
-.footer .content > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.footer .content .image {
-  align-self: center;
-  width: 4rem;
-  height: 4rem;
-  margin: 0.25rem 0;
-  background-size: cover;
-  background-position: center;
-}
 
 @keyframes bubble-size {
   0%,
@@ -431,4 +376,14 @@ main h1{
   .footer .content {
     padding: 1rem;
   }
+}
+
+.hidden-1, .hidden-2 {
+  text-align: right;
+}
+
+
+.hidden-3 , .hidden-4 {
+  text-align: left;
+
 }
