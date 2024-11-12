@@ -34,11 +34,6 @@ body {
   display: inline-block;
   border-bottom: 2px solid #000;
   padding-bottom: 1px;
-  display: inline;
-}
-main .underline-pseudo:nth-child(2),
-main .underline-pseudo:nth-child(4) {
-  padding-left: 10px; /* Example style for the second span */
 }
 
 .carousel {
@@ -168,12 +163,12 @@ main {
   /* text-align: right; */
   min-height: 10vh;
 }
-/* .hidden img {
-  max-width: 85%; Increase image size
-  margin-left: auto; /* Align image to the right 
+.hidden img {
+  max-width: 85%; /* Increase image size */
+  margin-left: auto; /* Align image to the right */
   display: block;
   border-radius: 15px;
-} */
+}
 main h1 {
   padding-top: 5vh;
 }
@@ -182,13 +177,6 @@ main h1 {
   opacity: 0;
   transform: translateX(-100%);
   transition: all 1s;
-}
-
-.hidden-5.show {
-  float: left; /* Align image to the right */ 
-  border-radius: 15px;
-  padding: 4vh 10vw 4vh 0; /* Add 10px padding to the right */
-  max-width: 85%; /* Decrease image size */
 }
 
 .show {
@@ -200,20 +188,7 @@ main h1 {
 main p {
   font-size: 1em;
 }
-.banner {
-  height: 55px;
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: 0;
-  background-color: black;
-  font-weight: bolder;
-  margin-top: 20px;
-}
-.banner p {
-  color: wheat;
-  text-align: center;
-  font-size: 2.5em;
-}
+
 @media (prefers-reduced-motion) {
   .hidden {
     transition: none;
@@ -255,13 +230,13 @@ main p {
     justify-content: center;
     perspective: 300px;
   }
-
   .hidden img {
     max-width: 85%; /* Increase image size */
     margin-left: auto; /* Align image to the right */
     display: block;
     border-radius: 15px;
   }
+
 }
 /* Medium screens (Tablets) */
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -307,20 +282,6 @@ main p {
   .body {
     background-color: white;
   }
-  .banner {
-    height: 30px;
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0;
-    background-color: black;
-    font-weight: bolder;
-  }
-  .banner p {
-    padding-top: 3px;
-    color: wheat;
-    text-align: center;
-    font-size: 1.2rem;
-  }
   .carousel {
     padding: 15% 0 0 0;
   }
@@ -334,19 +295,13 @@ main p {
     padding: 4vh 10vw 4vh 0; /* Add 10px padding to the right */
     max-width: 85%; /* Decrease image size */
   }
-  .hidden-5.show {
-    float: left; /* Align image to the right */ 
-    border-radius: 15px;
-    padding: 4vh 10vw 4vh 0; /* Add 10px padding to the right */
-    max-width: 85%; /* Decrease image size */
-  }
   .carousel__item {
     width: 200px;
     height: 200px;
   }
-  main h1 {
-    font-size: 1.7em;
-  }
+main h1{
+  font-size: 1.7em;
+}
   .carousel__item[data-pos="-1"] {
     transform: translateX(-30%) scale(0.8);
   }
