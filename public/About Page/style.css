@@ -1,13 +1,32 @@
+body {
+  background-color: #e2dfda;
+  font-family: Arial, sans-serif;
+}
+
 h2{
-  padding-top: 2rem;
+  padding-top: 3rem;
   text-align: center;
 }
-
+h3{
+  text-align: center;
+}
 p{
   padding-top: 0.5rem;
-  font-size: 0.5ren;
+  font-size: 1rem;
+  /* text-decoration: solid; */
+  text-align: left;
 
 }
+.underline {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: orange;
+  padding: 0px  3px 0px 3px;
+  display: inline-block;
+  border-bottom: 2px solid #000;
+  padding-bottom: 1px;
+}
+
 
 .skills {
   background-color: var(--bg-color);
@@ -16,11 +35,11 @@ p{
 
 .skills-container {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 0.5fr;
   grid-template-rows: repeat(auto-fit, minmax(100px, auto));
   align-items: center;
   gap: 2.5rem;
-  padding-top: 5rem;
+  padding-top: 2rem;
 }
 
 .skill-box {
@@ -41,7 +60,7 @@ p{
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  padding: 5rem;
+ padding: 5rem;
 }
 
 .skill-info i {
