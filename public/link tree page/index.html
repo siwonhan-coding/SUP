@@ -24,13 +24,32 @@
     </div>
     <div style="text-align: center; margin-top: 20px;">
       <div style="display: inline-block; text-align: center;">
-        <a href="https://211ontario.ca" style="display: block; border-radius: 25px; padding: 10px; background-color: #e6a535; margin: 5px; text-decoration: none; color: black;">211 Ontario</a>
-        <a href="https://cmhastarttalking.ca/youth-3/crisis-services/" style="display: block; border-radius: 25px; padding: 10px; background-color: #e6a535; margin: 5px; text-decoration: none; color: black;">CMHA Simcoe County - 24/7 Crisis Line</a>
-        <a href="https://www.simcoemuskokahealth.org" style="display: block; border-radius: 25px; padding: 10px; background-color: #e6a535; margin: 5px; text-decoration: none; color: black;">Simcoe Muskoka District Health Unit - Emergency Line</a>
-        <a href="https://www.salvationarmy.ca" style="display: block; border-radius: 25px; padding: 10px; background-color: #e6a535; margin: 5px; text-decoration: none; color: black;">Salvation Army Housing and Homelessness Services</a>
-        <a href="https://kidshelpphone.ca" style="display: block; border-radius: 25px; padding: 10px; background-color: #e6a535; margin: 5px; text-decoration: none; color: black;">Kids Help Phone (Youth Support)</a>
+      <a href="https://211ontario.ca" class="hover-link">211 Ontario</a>
+      <a href="https://cmhastarttalking.ca/youth-3/crisis-services/" class="hover-link">CMHA Simcoe County - 24/7 Crisis Line</a>
+      <a href="https://www.simcoemuskokahealth.org" class="hover-link">Simcoe Muskoka District Health Unit - Emergency Line</a>
+      <a href="https://www.salvationarmy.ca" class="hover-link">Salvation Army Housing and Homelessness Services</a>
+      <a href="https://kidshelpphone.ca" class="hover-link">Kids Help Phone (Youth Support)</a>
       </div>
     </div>
+
+    <style>
+      .hover-link {
+      display: block;
+      border-radius: 25px;
+      padding: 10px;
+      background-color: #e6a535;
+      margin: 5px;
+      text-decoration: none;
+      color: black;
+      transition: background-color 0.3s, color 0.3s, transform 0.3s;
+      }
+
+      .hover-link:hover {
+      background-color: #d4942e;
+      color: white;
+      transform: scale(1.1);
+      }
+    </style>
     <script>
       // Fetch and insert the navbar content
       fetch("../navbar/navbar.html")
