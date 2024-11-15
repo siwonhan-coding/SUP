@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../navbar/navbar.css" />
+    <link rel="stylesheet" href="../temp page/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  </head>
+  <body>
+    <div id="navbar-placeholder"></div>
+    <h1 style="text-align: center; padding: 20px;">
+      "🚧 Hold tight, adventurer! This page is still under construction, but we promise it’ll be worth the wait. Think of it as a digital makeover—coming soon with extra sparkle and awesomeness! ✨ Stay tuned!"
+    </h1></h1>
+    <script>
+      // Fetch and insert the navbar content
+      fetch("../navbar/navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-placeholder").innerHTML = data;
+        });
+    </script>
+    <div class="banner">
+      <p>#NoHomeLeftHungry:FoodForAll</p>
+    </div>
+    <div class="footer">
+      <!-- The content that will be loaded from another file -->
+      <div id="bubble">
+        <!-- The content that will be loaded from another file -->
+      </div>
+    </div>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Fetch and insert footer content into the footer div
+        fetch("../footer/index.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("bubble").innerHTML = data;
+          });
+      });
+    </script>
+    <script src="JavaScript.js"></script>
+    <script src="../navbar/navbar.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="../footer/js/jquery-3.3.1.min.js"></script>
+    <script src="../footer/js/popper.min.js"></script>
+    <script src="../footer/js/bootstrap.min.js"></script>
+  </body>
+</html>
+</html>
