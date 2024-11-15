@@ -172,7 +172,7 @@ main {
 main h1 {
   padding-top: 5vh;
 }
-
+/* 
 .hidden {
   opacity: 0;
   transform: translateX(-100%);
@@ -183,7 +183,7 @@ main h1 {
   opacity: 1;
   filter: blur(0);
   transform: translateY(0);
-}
+} */
 
 main p {
   font-size: 1em;
@@ -213,12 +213,12 @@ main p {
     width: 300px;
     padding: 2em;
   }
-  .hidden img {
-    max-width: 85%; /* Increase image size */
-    margin-left: auto; /* Align image to the right */
+  /* .hidden img {
+    max-width: 85%;  
+    margin-left: auto; 
     display: block;
     border-radius: 15px;
-  }
+  } */
 }
 @media (max-width: 480px) {
   .carousel__list {
@@ -230,12 +230,12 @@ main p {
     justify-content: center;
     perspective: 300px;
   }
-  .hidden img {
-    max-width: 85%; /* Increase image size */
-    margin-left: auto; /* Align image to the right */
+  /* .hidden img {
+    max-width: 85%; 
+    margin-left: auto;  
     display: block;
     border-radius: 15px;
-  }
+  } */
 
   .banner {
     height: 55px;
@@ -270,12 +270,12 @@ main p {
     width: 530px;
     height: 500px;
   } */
-  .hidden img {
-    max-width: 85%; /* Increase image size */
-    margin-left: auto; /* Align image to the right */
+  /* .hidden img {
+    max-width: 85%;  
+    margin-left: auto; 
     display: block;
     border-radius: 15px;
-  }
+  } */
   .carousel__item[data-pos="-1"] {
     transform: translateX(-30%) scale(0.8);
   }
@@ -321,11 +321,11 @@ main p {
     width: 280px;
     padding: 1em;
   }
-  .hidden.show {
+  /* .hidden.show {
     border-radius: 15px;
-    padding: 4vh 10vw; /* Add 10px padding to the right */
-    max-width: 85%; /* Decrease image size */
-  }
+    padding: 4vh 10vw;  
+    max-width: 85%;  
+  } */
   .carousel__item {
     width: 200px;
     height: 200px;
