@@ -363,7 +363,7 @@ main h1{
     border-radius: 15%;
     display: block;
     float: left;
-    padding: 30px 35px 30px 20px;
+    padding: 30px 20px 30px 20px;
   }
 }
 
@@ -423,6 +423,10 @@ main h1{
   padding: 0 5% 0 5%;
 }
 
+.hidden-6 { 
+  padding: 50px 0 0 0; 
+}
+
 .hidden-5 {
   font-size: 1em;
   font-family: 'Courier New', Courier, monospace;
@@ -444,3 +448,47 @@ main h1{
   text-align: center;
   font-size: 1.2rem;
 } 
+
+
+.arrow {
+  margin-left: 50%;
+  margin-top: 10%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: rotate(360deg);
+  cursor: pointer;
+}
+
+.arrow span {
+  display: block;
+  width: 5vw;
+  height: 5vw;
+  border-bottom: 5px solid orange;
+  border-right: 5px solid orange;
+  transform: rotate(45sdeg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes animate {
+  0% {
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+      transform: rotate(45deg) translate(20px, 20px);
+  }
+}
