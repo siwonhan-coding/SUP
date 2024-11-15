@@ -3,19 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Page</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="../navbar/navbar.css">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../navbar/navbar.css" />
+    <link rel="stylesheet" href="../About Page/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
-
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'/>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  </head>
   <body>
-<div id="navbar-placeholder"></div>
+    <div id="navbar-placeholder"></div>
     <script>
       // Fetch and insert the navbar content
       fetch("../navbar/navbar.html")
@@ -24,92 +27,50 @@
           document.getElementById("navbar-placeholder").innerHTML = data;
         });
     </script>
-<section class="skills" id="skills">
-  <h2 class="animated-text" id="typed-text"></h2>
-  <h4> To provide awareness of the growing food insecurity in simcoe county and whole canada here is a short video</h4>
-  <div class="skills-container">
-
-    <div class="skill-box">
-      <div class="skill-info">
-      <i class="bx bxs-devices"></i>
-      <ul>
-        <!-- Content to be soon -->
-    </ul>
+    <section class="skills" id="skills">
+      <h2> About Us</h2>
+      <h3> Together, we stand for a community where no one goes  <span class="underline"> hungry </span> United by compassion, we work to ensure everyone has access to the food they deserve.</h3>
+      <div class="skills-container">
+        <div class="skill-box">
+          <div class="skill-info">
+          <i class="bx bxs-devices"></i>
+          <ul>
+            <!-- Content to be soon -->
+        </ul>
       </div>
     </div>
-    <div class="skill-box">
-      <div class="skill-info">
-      <i class='bx bx-code'></i>
-      <ul>
-        <!-- Content to be soon -->
-      </ul>
-      </div>
-    </div>
-  </div>
-
-<main>
-  <div id="textSlider" class="row">
-					<div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 slideCol">
-						<div class="scroller">
-							<div class="inner">
-								<p>PriscilaCunha</p>
-								<p>Web Developer</p>
-								<p>Web Designer</p>
-								<p>Aprendiz Jedi</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-<div class="logo-container">
-  <h1 id="page-logo">LOGO</h1>
-  <h2 id="page2-logo">LOGO</h2>
-</div>
-
-<div class="content">
-  
-  <div class="marquee">
-    <div class="marquee_blur" aria-hidden="true">
-      <p class="marquee_text">A peaceful evening breeze sweeps through the trees, carrying scents of autumn leaves and distant fires, wrapping everything in tranquility.</p>
-    </div>
-    <div class="marquee_clear">
-      <p class="marquee_text">A peaceful evening breeze sweeps through the trees, carrying scents of autumn leaves and distant fires, wrapping everything in tranquility.</p>
-    </div>
-  </div>
-
-</div>
-</section>
-<div class="banner">
+    <p> <span class="underline"> Our vision is to </span>inspire a community where everyone takes action to create positive change for a sustainable future. Through Georgian's <span class="underline"> #CTN </span> Movement, we’re committed to driving impact and leading the way toward a <span class="underline"> Better World </span> .</p>
+    <div class="skills-container">
+      <div class="skill-box">
+        <div class="skill-info">
+        <i class="bx bxs-devices"></i>
+    </section>
+    <div class="banner">
       <p>#NoHomeLeftHungry:FoodForAll</p>
     </div>
-</main>
-  <!-- Footer Content -->
-  <div class="footer">
-    <!-- The content that will be loaded from another file -->
-    <div id="bubble">
+    <div class="footer">
       <!-- The content that will be loaded from another file -->
+      <div id="bubble">
+        <!-- The content that will be loaded from another file -->
+      </div>
     </div>
-  </div>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Fetch and insert footer content into the footer div
-    fetch("../footer/index.html")
-      .then((response) => response.text())
-      .then((data) => {
-        document.getElementById("bubble").innerHTML = data;
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Fetch and insert footer content into the footer div
+        fetch("../footer/index.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("bubble").innerHTML = data;
+          });
       });
-  });
-</script>
-<script>
-  var typed = new Typed('#typed-text', {
-    strings: ["OUR MISSION"],
-    typeSpeed: 50,
-    backSpeed: 25,
-    loop: true,
-    showCursor: false
-  });
-</script>
-    <script src="script.js"></script>
+    </script>
+    <script src="JavaScript.js"></script>
     <script src="../navbar/navbar.js"></script>
-</body>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="../footer/js/jquery-3.3.1.min.js"></script>
+    <script src="../footer/js/popper.min.js"></script>
+    <script src="../footer/js/bootstrap.min.js"></script>
+  </body>
+</html>
 </html>
