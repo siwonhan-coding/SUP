@@ -1,4 +1,4 @@
-﻿/* General reset and body styling */
+/* General reset and body styling */
 *,
 *::before,
 *::after {
@@ -443,4 +443,5 @@ main h1{
   color: wheat;
   text-align: center;
   font-size: 1.2rem;
-} 
+}
+

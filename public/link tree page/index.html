@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../navbar/navbar.css" />
+    <link rel="stylesheet" href="../temp page/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  </head>
+  <body>
+    <div id="navbar-placeholder"></div>
+    <div style="text-align: center; margin-top: 20px;">
+      <img src="../Homepage/image/CTN_Facebook_Feed_Graphic_2020-02.avif" alt="Placeholder Image" style="border-radius: 50%; width: 100px; height: 100px;" />
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+      <div style="display: inline-block; text-align: center;">
+        <a href="https://211ontario.ca" style="display: block; border-radius: 25px; padding: 10px; background-color: #e6a535; margin: 5px; text-decoration: none; color: black;">211 Ontario</a>
+        <a href="https://www.talknow.ca" style="display: block; border-radius: 25px; padding: 10px; background-color: #e6a535; margin: 5px; text-decoration: none; color: black;">Talk Now Simcoe Muskoka - 24/7 Crisis Line</a>
+        <a href="https://www.simcoemuskokahealth.org" style="display: block; border-radius: 25px; padding: 10px; background-color: #e6a535; margin: 5px; text-decoration: none; color: black;">Simcoe Muskoka District Health Unit - Emergency Line</a>
+        <a href="https://www.salvationarmy.ca" style="display: block; border-radius: 25px; padding: 10px; background-color: #e6a535; margin: 5px; text-decoration: none; color: black;">Salvation Army Housing and Homelessness Services</a>
+        <a href="https://kidshelpphone.ca" style="display: block; border-radius: 25px; padding: 10px; background-color: #e6a535; margin: 5px; text-decoration: none; color: black;">Kids Help Phone (Youth Support)</a>
+      </div>
+    </div>
+    <script>
+      // Fetch and insert the navbar content
+      fetch("../navbar/navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-placeholder").innerHTML = data;
+        });
+    </script>
+    <div class="banner">
+      <p>#NoHomeLeftHungry:FoodForAll</p>
+    </div>
+    <div class="footer">
+      <!-- The content that will be loaded from another file -->
+      <div id="bubble">
+        <!-- The content that will be loaded from another file -->
+      </div>
+    </div>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Fetch and insert footer content into the footer div
+        fetch("../footer/index.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("bubble").innerHTML = data;
+          });
+      });
+    </script>
+    <script src="JavaScript.js"></script>
+    <script src="../navbar/navbar.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="../footer/js/jquery-3.3.1.min.js"></script>
+    <script src="../footer/js/popper.min.js"></script>
+    <script src="../footer/js/bootstrap.min.js"></script>
+  </body>
+</html>
+</html>
