@@ -99,6 +99,41 @@
   });
 
   hiddenElements.forEach((el) => observer.observe(el));
+
+  // Auto Rotate for Carousel
+  const autoRotateCarousel = () => {
+    let currentIndex = 0;
+
+    setInterval(() => {
+      const nextIndex = (currentIndex + 1) % carouselItems.length;
+      carouselItems[nextIndex].click(); // Simulate click on next item
+      currentIndex = nextIndex;
+    }, 4000); // Change every 3 seconds
+  };
+
+  // Auto Rotate for Card (change SDG periodically)
+  const autoRotateCard = () => {
+    let currentSDG = 3;
+
+    setInterval(() => {
+      const data = imageData[currentSDG];
+      // Update the card with new data
+      imageTitle.textContent = data.title;
+      imageDescription.textContent = data.description;
+      card.style.backgroundColor = data.color;
+      card.style.color = data.textColor;
+      card.style.setProperty("--gradient-start", data.gradientColors.start);
+      card.style.setProperty("--gradient-middle", data.gradientColors.middle);
+      card.style.setProperty("--gradient-end", data.gradientColors.end);
+
+      // Move to the next SDG
+      currentSDG = (currentSDG % Object.keys(imageData).length) + 1;
+    }, 8000); // Change every 5 seconds
+  };
+
+  // Start auto-rotation for both carousel and card
+  autoRotateCarousel();
+  autoRotateCard();
 });
 
 // Carousel state and elements
