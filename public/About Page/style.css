@@ -1,131 +1,92 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
 body {
   background-color: #e2dfda;
   font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
 }
 
-h2{
-  padding-top: 3rem;
-  text-align: center;
+/* Navbar Placeholder */
+#navbar-placeholder {
+  margin: 0;
+  padding: 0;
 }
-h3{
-  text-align: center;
-  
-}
-p{
-  padding-top: 0.5rem;
-  font-size: 1rem;
-  /* text-decoration: solid; */
-  text-align: left;
 
+/* About Section */
+.about {
+  padding: 2rem 10%;
+  text-align: center;
 }
-.underline {
-  font-weight: bold;
+
+.about h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.about h3 {
   font-size: 1.5rem;
-  color: orange;
-  padding: 0px  3px 0px 3px;
-  display: inline-block;
-  border-bottom: 2px solid #000;
-  padding-bottom: 1px;
+  color: #555;
+  margin-bottom: 1.5rem;
 }
 
-
-.skills {
-  background-color: var(--bg-color);
-  padding-top: 0;
+.about p {
+  font-size: 1.2rem;
+  color: #555;
+  text-align: left;
+  padding-left: 2rem;
 }
 
-.skills-container {
+.videos-container {
   display: grid;
-  grid-template-columns: 0.5fr;
-  grid-template-rows: repeat(auto-fit, minmax(100px, auto));
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fit, minmax(200px, auto));
   align-items: center;
   gap: 2.5rem;
   padding-top: 2rem;
 }
 
-.skill-box {
+.video-box {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: var(--main-color);
-  height: 300px;
-  border-radius: 3rem;
+  height: 350px;
+  border-radius: 2rem;
+  border: 4px solid transparent;
+  padding: 2rem;
   cursor: pointer;
-  border: 5px solid transparent;
   transition: 0.4s ease-in-out;
-
 }
 
-.skill-info {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
- padding: 5rem;
+.video-box iframe {
+  width: 70%;
+  height: 250px; /* Increased height of video */
+  border-radius: 1rem;
+}
+.video-box iframe:nth-of-type(){
+  width: 20%;
+  height: 250px; /* Increased height of video */
+  border-radius: 1rem;
 }
 
-.skill-info i {
-  font-size: 8rem;
+.underline {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: orange;
+  display: inline-block;
+  border-bottom: 2px solid #000;
+  padding-bottom: 2px;
 }
 
-.skill-info {
-  margin: 2rem 0;
-  font-weight: 800;
-}
-
-.skill-info ul {
-  font-size: 1.4rem;
-  font-weight: 600;
-  line-height: 1.7;
-}
-
-.skill-info li {
-  text-align: left;
-}
-
-section {
-  min-height: 100vh;
-  padding: 10rem 12%;
-}
-@media (max-width: 480px) {
-
-  .banner {
-    height: 55px;
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0;
-    background-color: black;
-    font-weight: bolder;
-    margin-top: 20px;
-  }
-  .banner p {
-    color: wheat;
-    text-align: center;
-    font-size: 2.5em;
-  }
-}
-
-
-/* Medium screens (Tablets) */
-@media (min-width: 768px) and (max-width: 1023px) {
-
-  .banner {
-    height: 30px;
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0;
-    background-color: black;
-    font-weight: bolder;
-  }
-  .banner p {
-    padding-top: 3px;
-    color: wheat;
-    text-align: center;
-    font-size: 1.2rem;
-  }
-}
-
-
+/* Banner Styling */
 .banner {
   height: 30px;
   position: -webkit-sticky;
@@ -134,6 +95,7 @@ section {
   background-color: black;
   font-weight: bolder;
 }
+
 .banner p {
   padding-top: 3px;
   color: wheat;
@@ -141,3 +103,96 @@ section {
   font-size: 1.2rem;
 }
 
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about {
+    padding: 2rem 5%;
+  }
+
+  .about h2 {
+    font-size: 2.2rem;
+  }
+
+  .about h3 {
+    font-size: 1.4rem;
+  }
+
+  .about p {
+    font-size: 1.1rem;
+  }
+
+  .video-box iframe {
+    width: 80%;
+  }
+  
+}
+
+/* For screens smaller than 768px (mobile phones) */
+@media (max-width: 768px) {
+  .about {
+    padding: 1.5rem 3%;
+  }
+
+  .about h2 {
+    font-size: 1.8rem;
+  }
+
+  .about h3 {
+    font-size: 1.2rem;
+  }
+
+  .about p {
+    font-size: 1rem;
+    padding-left: 0;
+    padding-top: 2rem;
+  }
+
+  .videos-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .video-box {
+    flex-direction: column;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .video-box iframe {
+    width: 100%;
+    height: 200px; /* Adjusting iframe size */
+  }
+
+  .banner p {
+    font-size: 1rem;
+  }
+}
+
+/* For smaller screens (e.g., extra small phones) */
+@media (max-width: 480px) {
+  .about h2 {
+    font-size: 1.6rem;
+  }
+
+  .about h3 {
+    font-size: 1.1rem;
+  }
+
+  .about p {
+    font-size: 0.9rem;
+  }
+
+  .video-box {
+    padding: 1rem;
+  }
+
+  .video-box iframe {
+    height: 180px;
+  }
+
+  .banner p {
+    font-size: 0.9rem;
+  }
+}
