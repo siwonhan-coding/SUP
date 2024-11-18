@@ -4,10 +4,24 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+h1 {
+  text-align: center;
+  padding: 20px;
+}
+.underline-pseudo {
+  font-weight: bold;
+  color: orange;
+  display: inline-block;
+  border-bottom: 2px solid #000;
+  padding-bottom: 1px;
+  background-color: black;
+}
 @media (max-width: 480px) {
   body {
     background-color: #d7f9f1;
+  }
+  h1 {
+    font-size: 20px;
   }
   .banner {
     height: 55px;
@@ -27,7 +41,7 @@
 @media (max-width: 767px) {
   .body {
     background-color: white;
-  } 
+  }
   .banner {
     height: 30px;
     position: -webkit-sticky;
@@ -56,4 +70,14 @@
   color: wheat;
   text-align: center;
   font-size: 1.2rem;
+}
+.hover-link {
+  display: block;
+  border-radius: 25px;
+  padding: 10px;
+  background-color: #e6a535;
+  margin: 5px;
+  text-decoration: none;
+  color: black;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
