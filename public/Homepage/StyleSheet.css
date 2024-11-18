@@ -1,10 +1,21 @@
 ﻿/* General reset and body styling */
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+.hidden-5 > p {
+  font-family: "Exo 2", serif;
+  font-size: 30px;
+  font-weight: bolder;
+}
+.hidden-5 > p .underline-pseudo {
+  color: red;
+  display: inline-block;
+  font-size: 40px;
 }
 
 body {
@@ -207,7 +218,6 @@ main p {
 
 /* Media Queries for Mobile Responsiveness */
 
-
 @media (min-width: 1024px) {
   .card {
     width: 400px;
@@ -246,14 +256,13 @@ main p {
     transform: translateX(60%) scale(0.75);
   }
 
-  img.one{
-    
-      width: 40%;
-      height: auto;
-      border-radius: 10%;
-      float: right;
-      display: block;
-      margin: 20px; /* Adds space around the image */
+  img.one {
+    width: 40%;
+    height: auto;
+    border-radius: 10%;
+    float: right;
+    display: block;
+    margin: 20px; /* Adds space around the image */
   }
   img.two {
     width: 30%;
@@ -317,13 +326,21 @@ main p {
   }
 }
 
-
 /* Medium screens (Tablets) */
 @media (min-width: 768px) and (max-width: 1023px) {
   .card {
     width: 500px;
     font-size: 2em;
     margin-top: 30%;
+  }
+  .hidden-5 > p {
+    font-family: "Exo 2", serif;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  .hidden-5 > p .underline-pseudo {
+    color: red;
+    font-size: 30px;
   }
   .carousel {
     padding-top: 15%;
@@ -356,7 +373,6 @@ main p {
     transform: translateX(50%) scale(0.7);
   }
 
-
   .banner {
     height: 30px;
     position: -webkit-sticky;
@@ -385,6 +401,15 @@ main p {
     width: 280px;
     padding: 1em;
   }
+  .hidden-5 > p {
+    font-family: "Exo 2", serif;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  .hidden-5 > p .underline-pseudo {
+    color: red;
+    font-size: 30px;
+  }
   /* .hidden.show {
     border-radius: 15px;
     padding: 4vh 10vw;  
@@ -394,9 +419,9 @@ main p {
     width: 200px;
     height: 200px;
   }
-main h1{
-  font-size: 1.7em;
-}
+  main h1 {
+    font-size: 1.7em;
+  }
   .carousel__item[data-pos="-1"] {
     transform: translateX(-30%) scale(0.8);
   }
@@ -414,7 +439,7 @@ main h1{
   }
 
   img.one {
-    width: 85%;  
+    width: 85%;
     height: 85%;
     border-radius: 15%;
     display: block;
@@ -422,7 +447,7 @@ main h1{
     padding: 30px 35px 30px 20px;
   }
   img.two {
-    width: 85%;  
+    width: 85%;
     height: 85%;
     border-radius: 15%;
     display: block;
@@ -430,57 +455,53 @@ main h1{
     padding: 30px 20px 30px 20px;
   }
 
-
-  .hidden-6 { 
-    padding: 60px 0 0 0; 
+  .hidden-6 {
+    padding: 60px 0 0 0;
   }
 
+  .arrow {
+    margin-left: 50%;
+    margin-top: 10%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: rotate(360deg);
+    cursor: pointer;
+  }
 
-.arrow {
-  margin-left: 50%;
-  margin-top: 10%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transform: rotate(360deg);
-  cursor: pointer;
-}
+  .arrow span {
+    display: block;
+    width: 5vw;
+    height: 5vw;
+    border-bottom: 5px solid orange;
+    border-right: 5px solid orange;
+    transform: rotate(45sdeg);
+    margin: -10px;
+    animation: animate 2s infinite;
+  }
 
-.arrow span {
-  display: block;
-  width: 5vw;
-  height: 5vw;
-  border-bottom: 5px solid orange;
-  border-right: 5px solid orange;
-  transform: rotate(45sdeg);
-  margin: -10px;
-  animation: animate 2s infinite;
-}
+  .arrow span:nth-child(2) {
+    animation-delay: -0.2s;
+  }
 
-.arrow span:nth-child(2) {
-  animation-delay: -0.2s;
-}
+  .arrow span:nth-child(3) {
+    animation-delay: -0.4s;
+  }
 
-.arrow span:nth-child(3) {
-  animation-delay: -0.4s;
-}
-
-@keyframes animate {
-  0% {
+  @keyframes animate {
+    0% {
       opacity: 0;
       transform: rotate(45deg) translate(-20px, -20px);
-  }
-  50% {
+    }
+    50% {
       opacity: 1;
-  }
-  100% {
+    }
+    100% {
       opacity: 0;
       transform: rotate(45deg) translate(20px, 20px);
+    }
   }
 }
-
-}
-
 
 @keyframes bubble-size {
   0%,
@@ -527,19 +548,20 @@ main h1{
   }
 }
 
-.hidden-1, .hidden-2 {
+.hidden-1,
+.hidden-2 {
   text-align: right;
 }
 
-
-.hidden-3 , .hidden-4 {
+.hidden-3,
+.hidden-4 {
   text-align: left;
   padding: 0 5% 0 5%;
 }
 
 .hidden-5 {
   font-size: 1em;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   padding: 50px 5px 50px 5px;
   text-align: center;
 }
@@ -557,8 +579,7 @@ main h1{
   color: wheat;
   text-align: center;
   font-size: 1.2rem;
-} 
-
+}
 
 .arrow {
   margin-left: 48%;
@@ -590,18 +611,17 @@ main h1{
 
 @keyframes animate {
   0% {
-      opacity: 0;
-      transform: rotate(45deg) translate(-20px, -20px);
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
   }
   50% {
-      opacity: 1;
+    opacity: 1;
   }
   100% {
-      opacity: 0;
-      transform: rotate(45deg) translate(20px, 20px);
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
   }
 }
-
 
 /* img.one {
   width: 50%;  
