@@ -174,27 +174,27 @@ main {
   /* text-align: right; */
   min-height: 10vh;
 }
-/* .hidden img {
+.hidden img {
   max-width: 85%;  
   margin-left: auto;  
   display: block;
   border-radius: 15px;
-} */
+}
 main h1 {
   padding-top: 5vh;
 }
-/* 
-.hidden {
+
+.hidden,.hidden-1,.hidden-2,.hidden-3,.hidden-4 {
   opacity: 0;
   transform: translateX(-100%);
   transition: all 1s;
 }
 
-.show {
+.show,.show1{
   opacity: 1;
   filter: blur(0);
   transform: translateY(0);
-} */
+}
 
 main p {
   font-size: 1em;
