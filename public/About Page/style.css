@@ -7,7 +7,7 @@
 
 /* Body Styling */
 body {
-  background-color: #e2dfda;
+  background-color: #f8e5d7;
   font-family: Arial, sans-serif;
   line-height: 1.6;
   margin: 0;
@@ -49,7 +49,6 @@ h2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* For responsive layout */
   grid-gap: 2.5rem;
-  
 }
 
 
@@ -57,13 +56,13 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items:center;
-  background-color: var(--main-color);
+  background-color: rgb(238, 215, 173);
   height: 350px;
-  border-radius: 2rem;
-  border: 4px solid transparent;
+  margin: 0;
   padding: 2rem;
   cursor: pointer;
   transition: 0.4s ease-in-out;
+
 }
 
 .video-box iframe {
@@ -75,9 +74,9 @@ h2 {
   display: flex;
   justify-content: right;
   align-items: center;
-  background-color: var(--main-color);
+  background-color:#f8e5d7;
   height: 350px;
-  border-radius: 2rem;
+ 
   border: 4px solid transparent;
   padding: 2rem;
   cursor: pointer;
@@ -129,6 +128,32 @@ h2 {
   text-align: center;
   font-size: 1.2rem;
 }
+.video-box-3 {
+  display: flex;
+  justify-content: flex-start; /* Align items to the start of the container */
+  align-items: flex-start; /* Align items to the top of the container */
+  background-color: rgb(238, 215, 173);
+  height: auto;
+  border: 4px solid transparent;
+  padding: 2rem;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+  position: relative; /* Allow absolute positioning inside this box */
+}
+
+.video-box-3 img {
+  width: 200px; /* Set the width */
+  height: 200px; /* Set the height (must match width for a perfect circle) */
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image is cropped to fit the circle */
+ 
+}
+
+.upa-img {
+  margin-left: auto; /* Pushes the Upa image to the far right */
+  margin-top: 8rem; /* Lowers the Upa image position */
+}
+
 
 
 
@@ -144,9 +169,7 @@ h2 {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .about {
-    padding: 2rem 5%;
-  }
+
 
   .about h2 {
     font-size: 2.2rem;
@@ -169,7 +192,7 @@ h2 {
 /* For screens smaller than 768px (mobile phones) */
 @media (max-width: 768px) {
   .about {
-    padding: 1.5rem 3%;
+    padding: 1.5rem 0%;
   }
 
   .about h2 {
@@ -195,6 +218,7 @@ h2 {
     flex-direction: column;
     height: auto;
     padding: 1.5rem;
+    margin-top: 0rem;
   }
     .video-box-2 iframe {
       width: 90%;
@@ -207,6 +231,32 @@ h2 {
       height: auto;
       padding: 1.5rem;
     }
+    .video-box-3 {
+      display: flex;
+      justify-content: flex-start; /* Align items to the start of the container */
+      align-items: flex-start; /* Align items to the top of the container */
+      background-color: rgb(238, 215, 173);
+      height: auto;
+      border: 4px solid transparent;
+      padding: 2rem;
+      cursor: pointer;
+      transition: 0.4s ease-in-out;
+      position: relative; /* Allow absolute positioning inside this box */
+    }
+    
+    .video-box-3 img {
+      width: 200px; /* Set the width */
+      height: 200px; /* Set the height (must match width for a perfect circle) */
+      border-radius: 50%; /* Makes the image circular */
+      object-fit: cover; /* Ensures the image is cropped to fit the circle */
+      border-color: #000;
+    }
+    
+    .upa-img {
+      margin-left: auto; /* Pushes the Upa image to the far right */
+      margin-top: 8rem; /* Lowers the Upa image position */
+    }
+    
   }
 
   .banner p {
@@ -229,7 +279,7 @@ h2 {
   }
 
   .video-box {
-    padding: 1rem;
+    padding-top: 3rem;
   }
 
   .video-box iframe {
@@ -238,5 +288,29 @@ h2 {
 
   .banner p {
     font-size: 0.9rem;
+  }
+  .video-box-3 {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start of the container */
+    align-items: flex-start; /* Align items to the top of the container */
+    background-color: rgb(238, 215, 173);
+    height: auto;
+    border: 4px solid transparent;
+    padding: 2rem;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    position: relative; /* Allow absolute positioning inside this box */
+  }
+  
+  .video-box-3 img {
+    width: 150px; /* Set the width */
+    height: 150px; /* Set the height (must match width for a perfect circle) */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image is cropped to fit the circle */
+  }
+  
+  .upa-img {
+    margin-left: auto; /* Pushes the Upa image to the far right */
+    margin-top: 8rem; /* Lowers the Upa image position */
   }
 }
