@@ -113,7 +113,7 @@
 
   // Auto Rotate for Card (change SDG periodically)
   const autoRotateCard = () => {
-    let currentSDG = 3;
+    let currentSDG = 1;
 
     setInterval(() => {
       const data = imageData[currentSDG];
