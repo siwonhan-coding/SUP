@@ -392,7 +392,7 @@ main p {
 /* Small screens (Phones) */
 @media (max-width: 767px) {
   .body {
-    background-color: white;
+    background-color: #effffa;
   }
   .carousel {
     padding: 15% 0 0 0;
