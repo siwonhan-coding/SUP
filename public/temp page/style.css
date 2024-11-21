@@ -57,3 +57,16 @@
   text-align: center;
   font-size: 1.2rem;
 }
+
+.bold-orange {
+  font-weight: bold;
+  color: orange;
+}
+
+.underline-pseudo {
+  font-weight: bold;
+  color: orange;
+  display: inline-block;
+  border-bottom: 2px solid #000;
+  padding-bottom: 1px;
+}
