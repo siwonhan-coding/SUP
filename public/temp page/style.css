@@ -69,6 +69,7 @@
   display: inline-block;
   border-bottom: 2px solid #000;
   padding-bottom: 1px;
+  font-size: 25px;
 }
 .helper {
   padding: 20px;
@@ -85,4 +86,19 @@
   border-radius: 50%;
   width: 140px;
   height: 140px;
+}
+.thanks {
+  font-size: 20px;
+  font-weight: bold;
+}
+p {
+  line-height: 1.8;
+}
+@media (max-width: 767px) {
+  .helper {
+   width: 100%;
+  }
+  p{
+    line-height: 1.4;
+  }
 }
