@@ -27,7 +27,7 @@
 @media (max-width: 767px) {
   .body {
     background-color: white;
-  } 
+  }
   .banner {
     height: 30px;
     position: -webkit-sticky;
@@ -69,4 +69,20 @@
   display: inline-block;
   border-bottom: 2px solid #000;
   padding-bottom: 1px;
+}
+.helper {
+  padding: 20px;
+  border-radius: 50px;
+  background-color: wheat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px auto;
+  width: 80%;
+}
+.helper-images img {
+  padding: 10px;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
 }
