@@ -623,6 +623,10 @@ main p {
   }
 }
 
+.hidden{
+  text-align: right;
+}
+
 /* img.one {
   width: 50%;  
   height: 50%; 
