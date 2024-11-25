@@ -86,7 +86,9 @@
   });
 
   // Intersection Observer for revealing elements with 'hidden' class when in view
-  const hiddenElements = document.querySelectorAll(".hidden,.hidden-1,.hidden-2,.hidden-3,.hidden-4,.hidden-5");
+  const hiddenElements = document.querySelectorAll(
+    ".hidden,.hidden-1,.hidden-2,.hidden-3,.hidden-4,.hidden-5"
+  );
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -113,7 +115,7 @@
 
   // Auto Rotate for Card (change SDG periodically)
   const autoRotateCard = () => {
-    let currentSDG = 1;
+    let currentSDG = 3;
 
     setInterval(() => {
       const data = imageData[currentSDG];
