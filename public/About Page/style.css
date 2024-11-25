@@ -167,10 +167,18 @@ h2 {
   width: 140px;
   height: 140px;
 }
-
-
-
-
+.thanks {
+  font-size: 20px;
+  font-weight: bold;
+}
+.underline-pseudo {
+  font-weight: bold;
+  color: orange;
+  display: inline-block;
+  border-bottom: 2px solid #000;
+  padding-bottom: 1px;
+  font-size: 25px;
+}
 
 @keyframes rotate-img {
   0% {
