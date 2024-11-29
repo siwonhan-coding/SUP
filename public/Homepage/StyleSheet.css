@@ -1,4 +1,4 @@
-/* General reset and body styling */
+﻿/* General reset and body styling */
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
 *,
 *::before,
@@ -434,6 +434,9 @@ main p {
   .hidden-5 > p .underline-pseudo {
     color: red;
     font-size: 30px;
+  }
+  .hidden-4 > p .underline-pseudo {
+    font-size: 26px;
   }
   /* .hidden.show {
     border-radius: 15px;
