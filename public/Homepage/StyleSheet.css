@@ -117,7 +117,14 @@ body {
   transform: translateX(-40%) scale(0.9);
   z-index: 4;
 }
-
+h3 {
+  font-size: 3rem;
+  padding-left: 30px;
+}
+h5 {
+  font-size: 1.5rem;
+  text-align: center;
+}
 .carousel__item[data-pos="1"] {
   transform: translateX(40%) scale(0.9);
   z-index: 4;
@@ -175,8 +182,8 @@ main {
   min-height: 10vh;
 }
 .hidden img {
-  max-width: 85%;  
-  margin-left: auto;  
+  max-width: 85%;
+  margin-left: auto;
   display: block;
   border-radius: 15px;
 }
@@ -184,13 +191,18 @@ main h1 {
   padding-top: 5vh;
 }
 
-.hidden,.hidden-1,.hidden-2,.hidden-3,.hidden-4 {
+.hidden,
+.hidden-1,
+.hidden-2,
+.hidden-3,
+.hidden-4 {
   opacity: 0;
   transform: translateX(-100%);
   transition: all 1s;
 }
 
-.show,.show1{
+.show,
+.show1 {
   opacity: 1;
   filter: blur(0);
   transform: translateY(0);
@@ -387,6 +399,9 @@ main p {
     text-align: center;
     font-size: 1.2rem;
   }
+  h3 {
+    font-size: 1.7rem;
+  }
 }
 
 /* Small screens (Phones) */
@@ -394,6 +409,16 @@ main p {
   .body {
     background-color: #effffa;
   }
+  h3 {
+    font-size: 1.7rem;
+    padding-left: 10px;
+  }
+  h5 {
+    font-size: 20px;
+    text-align: end;
+    padding-right: 10px;
+  }
+
   .carousel {
     padding: 15% 0 0 0;
   }
@@ -409,6 +434,9 @@ main p {
   .hidden-5 > p .underline-pseudo {
     color: red;
     font-size: 30px;
+  }
+  .hidden-4 > p .underline-pseudo {
+    font-size: 26px;
   }
   /* .hidden.show {
     border-radius: 15px;
@@ -623,7 +651,7 @@ main p {
   }
 }
 
-.hidden{
+.hidden {
   text-align: right;
 }
 

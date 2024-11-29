@@ -1,4 +1,4 @@
-﻿document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   const imageData = {
     1: {
       title: "SDG 11",
@@ -115,7 +115,7 @@
 
   // Auto Rotate for Card (change SDG periodically)
   const autoRotateCard = () => {
-    let currentSDG = 3;
+    let currentSDG = 4;
 
     setInterval(() => {
       const data = imageData[currentSDG];
