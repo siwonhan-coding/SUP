@@ -78,8 +78,8 @@ body {
   width: 90%;
   height: auto;
   transform-box: fill-box;
-  fill: #2B3338;
-  stroke: #2B3338;
+  fill: #2b3338;
+  stroke: #2b3338;
   stroke-width: 0.05em;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -134,4 +134,3 @@ body {
     transform: rotate(-360deg);
   }
 }
-
