@@ -4,13 +4,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: #effffa;
 }
+
+/* Media Queries */
 @media (max-width: 480px) {
   body {
     background-color: #effffa;
   }
+
   .banner {
     height: 55px;
     position: -webkit-sticky;
@@ -20,19 +24,23 @@ body {
     font-weight: bolder;
     margin-top: 20px;
   }
+
   .banner p {
     color: wheat;
     text-align: center;
     font-size: 2.5em;
   }
 }
+
 @media (max-width: 767px) {
   .body {
     background-color: #effffa;
   }
+
   .carousel {
     padding: 15% 0 0 0;
   }
+
   .banner {
     height: 30px;
     position: -webkit-sticky;
@@ -41,6 +49,7 @@ body {
     background-color: black;
     font-weight: bolder;
   }
+
   .banner p {
     padding-top: 3px;
     color: wheat;
@@ -48,6 +57,8 @@ body {
     font-size: 1.2rem;
   }
 }
+
+/* Banner Styles */
 .banner {
   height: 30px;
   position: -webkit-sticky;
@@ -56,6 +67,7 @@ body {
   background-color: black;
   font-weight: bolder;
 }
+
 .banner p {
   padding-top: 3px;
   color: wheat;
@@ -63,6 +75,7 @@ body {
   font-size: 1.2rem;
 }
 
+/* Link Styles */
 .link {
   width: 10rem;
   height: 10rem;
@@ -84,13 +97,6 @@ body {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-
-/* .link__cloud {
-  transform-origin: 50% 50%;
-  animation: rotate 60s linear infinite;
- 
-  font-weight: 100px;
-} */
 
 .link__face,
 .link__arrow {
@@ -123,6 +129,7 @@ body {
   word-spacing: 0;
 }
 
+/* Keyframe Animations */
 @keyframes rotate {
   to {
     transform: rotate(360deg);
@@ -132,5 +139,109 @@ body {
 @keyframes rotateReverse {
   to {
     transform: rotate(-360deg);
+  }
+}
+
+/* .wrapper {
+  position: relative;
+  top: 70%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  padding-bottom: 20%;
+} */
+
+.wrapper {
+  padding-top: 20px;
+  padding-bottom: 5%;
+  position: relative; /* Keeps the button visible during scrolling */
+  display: flex; /* Enables flexbox */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  width: 100%; /* Takes full width of the viewport */
+  height: 100%; /* Takes full height of the viewport */
+  z-index: 1000; /* Ensures visibility above other elements */
+}
+
+.link_wrapper {
+  position: absolute;
+}
+
+.shopify {
+  border-radius: 10px;
+  display: block;
+  width: 200px;
+  height: 50px;
+  line-height: 37px;
+  font-weight: bold;
+  text-decoration: none;
+  background: orange;
+  text-align: center;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 5px solid black;
+  transition: all 0.35s;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  border: 3px solid transparent;
+  position: absolute;
+  transform: rotate(45deg);
+  right: 0;
+  top: 0;
+  z-index: -1;
+  transition: all 0.35s;
+}
+
+.icon svg {
+  width: 30px;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  transform: rotate(-45deg);
+  fill: #2ecc71;
+  transition: all 0.35s;
+}
+
+.shopify:hover {
+  width: 200px;
+  border: 3px solid #2ecc71;
+  background: transparent;
+  color: #2ecc71;
+}
+
+.shopify:hover + .icon {
+  border: 3px solid #2ecc71;
+  right: -25%;
+}
+
+/* Ring animation container */
+.ring_animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -2; /* Ensures it is behind the button */
+  width: 300px;
+  height: 300px;
+  animation: ring 1.5s infinite;
+  border-radius: 50%;
+  border: 6px double rgb(46, 204, 113); /* Green translucent border */
+}
+
+/* Keyframes for ring animation */
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
   }
 }
