@@ -14,7 +14,7 @@ The Food Insecurity Awareness Website is designed to educate and inform people a
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-<h>Acknowledgments</h>
+<h2>Acknowledgments</h2>
 -Developed as part of the #ChangeTheNow initiative.
 -Special thanks to the team members for their contributions and support.
 -Inspired by real-world challenges in food insecurity.
