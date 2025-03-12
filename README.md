@@ -11,7 +11,7 @@ The Food Insecurity Awareness Website is designed to educate and inform people a
 -Resources for community support and food assistance programs<br>
 -Mobile-responsive design for accessibility across devices<br>
 -Shopify merchandise store to support fundraising efforts<br>
-
+<br>
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 <h2>Acknowledgments</h2>
