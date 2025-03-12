@@ -19,4 +19,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 -Special thanks to the team members for their contributions and support.<br>
 -Inspired by real-world challenges in food insecurity.<br>
 -Newsletter subscription form powered by Visme Forms for updates and engagement.<br>
+<br>
 [Link to Live Page](https://siwonhan-coding.github.io/SUP/public/Homepage/)
