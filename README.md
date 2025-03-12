@@ -4,7 +4,7 @@
 <h2>Overview</h2>
 The Food Insecurity Awareness Website is designed to educate and inform people about the issue of household food insecurity in Simcoe Muskoka. The website provides insights into its causes, consequences, and possible solutions while encouraging community engagement and action.
 
-<h>Features</h2>
+<h2>Features</h2>
 -Informative sections on what food insecurity is, its impact, and ways to help
 -Interactive visuals and statistics to highlight key issues
 -User-friendly interface for easy navigation
